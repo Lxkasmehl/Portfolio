@@ -1,6 +1,12 @@
 /**
- * Sports data: PBs, progression, recent results, pre-college (LADV), links.
- * Sources: TFRRS, LADV. Update when new results are in.
+ * Sports data: PBs, progression, recent results, pre-college (LADV), yearly distance, links.
+ * Sources: TFRRS, LADV, Strava (for yearly km). Update when new results are in.
+ *
+ * Auto-update from TFRRS/LADV: Neither site offers a public API. Options:
+ * - Manual: keep this file in sync when new results appear on TFRRS/LADV.
+ * - Scraping: e.g. GitHub Actions cron + script (cheerio/puppeteer) to scrape athlete
+ *   pages and update RECENT_RESULTS / PERSONAL_BESTS. TFRRS HTML can change; check ToS.
+ *   Community tools: e.g. github.com/mitchellggreenhalgh/mid-distance-webscrapers
  */
 
 export const SPORTS_LINKS = {
@@ -141,60 +147,20 @@ export const PRE_COLLEGE_HIGHLIGHTS: PreCollegeResult[] = [
   { event: "800 m", time: "2:23.20", date: "2020-01", location: "Leverkusen", ageGroup: "M15", note: "Jugend-Hallensportfest U14/U16 (Halle)" },
 ];
 
-/** Short reflection from Instagram (date = YYYY-MM-DD, caption = snippet). */
-export interface InstagramReflection {
-  date: string;
-  caption: string;
-  eventLabel?: string;
+/** Yearly running distance in km (training + races). Update from Strava/yearly totals. */
+export interface YearlyDistance {
+  year: number;
+  km: number;
 }
 
-// —— Instagram reflections (from posts.json / posts_1.json, sorted newest first) ——
-export const INSTAGRAM_REFLECTIONS: InstagramReflection[] = [
-  {
-    date: "2026-02-07",
-    eventLabel: "Washburn Open 5k",
-    caption:
-      "First indoor 5k of the season — 14:54. Not really happy with it, but not terrible either. I'll keep working and hopefully run a few faster times over the next couple of weeks.",
-  },
-  {
-    date: "2026-01-16",
-    eventLabel: "Washburn Rust Buster 3k",
-    caption:
-      "It was called rust buster, and that's exactly how it felt. Running that fast was tough, and honestly I had hoped for a bit more. But as long as things only get better from here, I can't really complain.",
-  },
-  {
-    date: "2026-01-01",
-    eventLabel: "Silvesterlauf Aachen",
-    caption:
-      "Haven't had this much fun at a race in a long time. 3rd place in the 4.5 km and 1st place in the 9 km race.",
-  },
-  {
-    date: "2025-11-22",
-    eventLabel: "NCAA DII XC Nationals",
-    caption:
-      "My first season at Washburn — Nationals were an awesome way to finish. We hoped for more than 22nd as a team, and I would have liked to hold my pace to the end. Overall really happy with the season. Now recover and build for indoor.",
-  },
-  {
-    date: "2025-11-08",
-    eventLabel: "NCAA DII Central Region",
-    caption:
-      "First XC 10k at Regionals — not my best race, but the important part: second place as a team and direct qualification for Nationals. Full focus on Kenosha.",
-  },
-  {
-    date: "2025-10-25",
-    eventLabel: "MIAA XC Championships",
-    caption:
-      "Quite a muddy race in Pittsburg, but a lot of fun. 32nd individually, 3rd with the team. Felt like I had more in me — hopefully that works out at regionals.",
-  },
-  {
-    date: "2025-09-26",
-    eventLabel: "Gans Creek 8k",
-    caption:
-      "25:03 — 19s faster than my course best, new 8k XC PR (old one from a faster course), 81s faster than season opener last year. Season opener went very well.",
-  },
-  {
-    date: "2022-04-24",
-    eventLabel: "Kraremanns Lauf Simmerath",
-    caption: "1st place over 4 km.",
-  },
-];
+/** Average pace (min per km) for rough time estimate. e.g. 4.5 = 4:30/km. */
+export const ROUGH_AVERAGE_PACE_MIN_PER_KM = 4.5;
+
+// —— Yearly running distance (km). Source: Strava / training log. Newest first. ——
+export const YEARLY_RUNNING_KM: YearlyDistance[] = [
+  { year: 2025, km: 5951 },
+  { year: 2024, km: 5428 },
+  { year: 2023, km: 4418 },
+  { year: 2022, km: 2810 },
+  { year: 2021, km: 2257 },
+].sort((a, b) => b.year - a.year);

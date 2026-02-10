@@ -5,7 +5,6 @@ import { copy } from "@/content/copy";
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from "@mantine/core";
 import { AppShell } from "@/components/AppShell";
 import { LangProvider } from "@/components/LangContext";
-import { ThemeProvider } from "@/components/ThemeContext";
 
 export const metadata: Metadata = {
   title: copy.en.meta.title,
@@ -28,9 +27,7 @@ export default function RootLayout({
       <body>
         <MantineProvider defaultColorScheme="light">
           <LangProvider>
-            <ThemeProvider>
-              <AppShell>{children}</AppShell>
-            </ThemeProvider>
+            <AppShell>{children}</AppShell>
           </LangProvider>
         </MantineProvider>
       </body>

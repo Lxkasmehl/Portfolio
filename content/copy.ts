@@ -13,7 +13,7 @@ export const copy = {
       name: "Lukas Mehl",
       headline:
         "CIS Student @ Washburn University · Undergraduate Research Assistant (K-INBRE, SCWTE) · Working Student – Web Application Development @ Pentos",
-      location: "Topeka Metropolitan Area",
+      location: "Topeka, KS | Würselen, DE",
     },
     about: {
       title: "About",
@@ -112,9 +112,6 @@ export const copy = {
         "8th place nationwide, German Startup Award for Students (Deutscher Gründerpreis für Schüler:innen), May 2022",
         "Existenzia für Schüler – Wie erstelle ich einen Geschäftsplan? (GründerRegion Aachen), Mar 2021",
         "Sports Medal of the City of Würselen (Jan 2024) — Awarded for achievements in long-distance running at the Würselen Sports Matinee.",
-        "1st Place Heart of America Outdoor Conference Championships 10,000 m (May 2025, May 2024)",
-        "1st Place Heart of America Indoor Conference Championships 5,000 m (Feb 2025)",
-        "8th Place German Championships 10 km Road Racing U18 (DLV, Sep 2022)",
       ],
     },
     skills: {
@@ -173,8 +170,12 @@ export const copy = {
       recentResultsSub: "Chronological, newest first",
       preCollegeHeading: "Pre-college (Germany)",
       preCollegeIntro: "Selected results from LADV (DJK Armada Euchen-Würselen, Nordrhein) before college in the US.",
-      reflectionsHeading: "Race reflections",
-      reflectionsSub: "From Instagram",
+      yearlyDistanceHeading: "Yearly distance",
+      yearlyDistanceSub: "Total running distance per year (training + races).",
+      lifetimeLabel: "Lifetime total",
+      timeEstimateLabel: "Rough time at ~4:30/km:",
+      hours: "hours",
+      days: "days",
       _bestsPlaceholder: [
         "800 m: 2:06.91 · 1500 m: 4:13.92 · Mile: 4:28.65 · 3000 m: 8:38.08",
         "5000 m: 14:47.21 · 10,000 m: 31:14.41",
@@ -224,7 +225,7 @@ export const copy = {
       name: "Lukas Mehl",
       headline:
         "CIS-Student @ Washburn University · Undergraduate Research Assistant (K-INBRE, SCWTE) · Werkstudent Web Application Development @ Pentos",
-      location: "Großraum Topeka",
+      location: "Topeka, KS | Würselen, DE",
     },
     about: {
       title: "Über mich",
@@ -323,9 +324,6 @@ export const copy = {
         "8. Platz bundesweit, Deutscher Gründerpreis für Schüler:innen, Mai 2022",
         "Existenzia für Schüler – Wie erstelle ich einen Geschäftsplan? (GründerRegion Aachen), Mär 2021",
         "Sportmedaille der Stadt Würselen (Jan 2024) — Verliehen für Langstreckenlauf bei der Würselener Sportmatinée.",
-        "1. Platz Heart of America Outdoor Conference Championships 10.000 m (Mai 2025, Mai 2024)",
-        "1. Platz Heart of America Indoor Conference Championships 5.000 m (Feb 2025)",
-        "8. Platz Deutsche Meisterschaft 10 km Straßenlauf U18 (DLV, Sep 2022)",
       ],
     },
     skills: {
@@ -384,8 +382,12 @@ export const copy = {
       recentResultsSub: "Chronologisch, neueste zuerst",
       preCollegeHeading: "Vor dem College (Deutschland)",
       preCollegeIntro: "Ausgewählte Ergebnisse aus der LADV (DJK Armada Euchen-Würselen, Nordrhein) vor dem Studium in den USA.",
-      reflectionsHeading: "Rennen & Reflexionen",
-      reflectionsSub: "Von Instagram",
+      yearlyDistanceHeading: "Jahreskilometer",
+      yearlyDistanceSub: "Gelaufene Kilometer pro Jahr (Training + Wettkämpfe).",
+      lifetimeLabel: "Gesamt (alle Jahre)",
+      timeEstimateLabel: "Grobe Laufzeit bei ~4:30/km:",
+      hours: "Stunden",
+      days: "Tage",
       highlights: "Auszeichnungen & Meisterschaften",
       photoAlt: "Sport",
       photosNote: "Fotos folgen.",
