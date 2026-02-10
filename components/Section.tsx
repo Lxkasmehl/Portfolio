@@ -6,13 +6,13 @@ type Props = {
 export function Section({ title, children }: Props) {
   return (
     <section
-      className="pt-8 mt-8 first:mt-0 first:pt-0 first:border-0 border-t"
+      className="pt-10 mt-10 first:mt-0 first:pt-0 first:border-0 border-t"
       style={{ borderColor: "var(--color-border)" }}
     >
       {title ? (
         <h2
-          className="text-xs font-semibold uppercase tracking-wider mb-4"
-          style={{ color: "var(--color-text-muted)" }}
+          className="font-display text-lg font-bold mb-5"
+          style={{ color: "var(--color-accent)" }}
         >
           {title}
         </h2>

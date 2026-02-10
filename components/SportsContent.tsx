@@ -1,6 +1,6 @@
 "use client";
 
-import { Title, Text, SimpleGrid, Box, Anchor } from "@mantine/core";
+import { Text, SimpleGrid, Box, Anchor } from "@mantine/core";
 import { copy } from "@/content/copy";
 import { useLang } from "@/components/LangContext";
 
@@ -12,14 +12,19 @@ export function SportsContent() {
 
   return (
     <div>
-      <Title
-        order={1}
-        className="text-xl font-bold mb-6"
-        style={{ color: "var(--color-text)" }}
+      <h1
+        className="font-display text-2xl sm:text-3xl font-bold mb-4"
+        style={{ color: "var(--color-accent-3)" }}
       >
         {c.sports.title}
-      </Title>
-      <Text size="sm" className="mb-6 leading-relaxed" style={{ color: "var(--color-text)" }}>
+      </h1>
+      <p
+        className="text-base sm:text-lg max-w-2xl leading-relaxed mb-6"
+        style={{ color: "var(--color-text)", fontFamily: "var(--font-serif)" }}
+      >
+        {c.sports.storyLead}
+      </p>
+      <Text size="sm" className="mb-8 leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
         {c.sports.intro}
       </Text>
 
@@ -33,26 +38,24 @@ export function SportsContent() {
         {c.sports.tfrrsLabel} →
       </Anchor>
 
-      <Title
-        order={2}
-        className="text-xs font-semibold uppercase tracking-wider mb-3"
-        style={{ color: "var(--color-text-muted)" }}
+      <h2
+        className="font-display text-lg font-bold mb-3"
+        style={{ color: "var(--color-accent-3)" }}
       >
         {c.sports.collegeBests}
-      </Title>
+      </h2>
       <ul className="list-none space-y-1 text-sm mb-8" style={{ color: "var(--color-text)" }}>
         {c.sports.bests.map((line, i) => (
           <li key={i}>{line}</li>
         ))}
       </ul>
 
-      <Title
-        order={2}
-        className="text-xs font-semibold uppercase tracking-wider mb-3"
-        style={{ color: "var(--color-text-muted)" }}
+      <h2
+        className="font-display text-lg font-bold mb-3"
+        style={{ color: "var(--color-accent-3)" }}
       >
         {c.sports.recentHeading}
-      </Title>
+      </h2>
       <ul className="list-none space-y-2 text-sm mb-8" style={{ color: "var(--color-text)" }}>
         {c.sports.recent.map((item, i) => (
           <li key={i} className="leading-relaxed">
@@ -61,32 +64,30 @@ export function SportsContent() {
         ))}
       </ul>
 
-      <Title
-        order={2}
-        className="text-xs font-semibold uppercase tracking-wider mb-3"
-        style={{ color: "var(--color-text-muted)" }}
+      <h2
+        className="font-display text-lg font-bold mb-3"
+        style={{ color: "var(--color-accent-3)" }}
       >
         {c.sports.highlights}
-      </Title>
+      </h2>
       <ul className="list-none space-y-1.5 text-sm mb-8" style={{ color: "var(--color-text)" }}>
         {c.certifications.items.slice(2, 6).map((item, i) => (
           <li key={i}>{item}</li>
         ))}
       </ul>
 
-      <Title
-        order={2}
-        className="text-xs font-semibold uppercase tracking-wider mb-3"
-        style={{ color: "var(--color-text-muted)" }}
+      <h2
+        className="font-display text-lg font-bold mb-3"
+        style={{ color: "var(--color-accent-3)" }}
       >
         {c.sports.photoAlt}
-      </Title>
+      </h2>
       <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="md" className="mb-4">
         {SPORTS_IMAGE_SLOTS.map((src, i) => (
           <Box
             key={src}
-            className="aspect-[4/3] rounded-xl overflow-hidden"
-            style={{ backgroundColor: "var(--color-border)" }}
+            className="aspect-[4/3] rounded-3xl overflow-hidden border-2"
+            style={{ backgroundColor: "var(--color-surface)", borderColor: "var(--color-border)" }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img

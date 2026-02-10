@@ -5,6 +5,7 @@ import { copy } from "@/content/copy";
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from "@mantine/core";
 import { AppShell } from "@/components/AppShell";
 import { LangProvider } from "@/components/LangContext";
+import { ThemeProvider } from "@/components/ThemeContext";
 
 export const metadata: Metadata = {
   title: copy.en.meta.title,
@@ -21,13 +22,15 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
         <ColorSchemeScript defaultColorScheme="light" />
       </head>
       <body>
         <MantineProvider defaultColorScheme="light">
           <LangProvider>
-            <AppShell>{children}</AppShell>
+            <ThemeProvider>
+              <AppShell>{children}</AppShell>
+            </ThemeProvider>
           </LangProvider>
         </MantineProvider>
       </body>

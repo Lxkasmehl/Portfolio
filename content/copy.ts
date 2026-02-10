@@ -15,6 +15,8 @@ export const copy = {
         "CIS Student @ Washburn University · Undergraduate Research Assistant (K-INBRE, SCWTE) · Working Student – Web Application Development @ Pentos",
       location: "Topeka Metropolitan Area",
     },
+    cvLead:
+      "Not a copy of my LinkedIn — here's how the pieces fit together: building software, research, and running.",
     about: {
       title: "About",
       paragraphs: [
@@ -119,13 +121,19 @@ export const copy = {
     },
     skills: {
       title: "Skills",
-      list: "JavaScript, React, TypeScript, Java, Python, HTML/CSS, SAP SuccessFactors, Kotlin, Playwright, Selenium, Agile, SCRUM, MS Office, Adobe.",
+      categoryFrontend: "Frontend",
+      categoryLanguages: "Languages",
+      categoryTesting: "Testing",
+      categoryTools: "Tools & infra",
+      categoryPlatforms: "Platforms",
+      list: "Agile, SCRUM, MS Office, Adobe.",
     },
     languages: {
       title: "Languages",
       list: "German (native), English (fluent), Latin (elementary).",
     },
     footer: {
+      findMe: "Find me",
       linkedIn: "LinkedIn",
       instagram: "Instagram",
     },
@@ -149,6 +157,7 @@ export const copy = {
     },
     sports: {
       title: "Competitive sports",
+      storyLead: "Same idea as with the 10,000 hours: progress comes from deliberate practice. Here's where running fits in — and a few numbers that matter to me.",
       intro:
         "I run Track and Field and Cross Country at Washburn University (previously Park University). Focus: middle- and long-distance — 800 m up to 10,000 m and cross country (6k, 8k, 10k). I share training and race reflections on Instagram and Strava.",
       tfrrsUrl: "https://www.tfrrs.org/athletes/8625664/Washburn/Lukas_Mehl.html",
@@ -177,6 +186,19 @@ export const copy = {
       codingGoal: "Goal: 10,000 hours",
       githubContributions: "GitHub contributions",
       githubPlaceholder: "Set GITHUB_USERNAME in config.ts to show your contribution chart.",
+      gladwellHeadline: "The 10,000 Hour Rule",
+      gladwellIntro:
+        "In Outliers, Malcolm Gladwell popularized the idea that it takes roughly 10,000 hours of deliberate practice to achieve world-class mastery in a field. The number comes from research by Anders Ericsson on expert performance — not a magic threshold, but a reminder that excellence is built in small, consistent steps.",
+      gladwellQuote:
+        "Practice isn't the thing you do once you're good. It's the thing you do that makes you good.",
+      myJourney: "My coding journey",
+      hoursToGo: "hours to go",
+      milestoneLabel: "milestone",
+      whatCounts: "What I count",
+      whatCountsText:
+        "Focused coding: building, debugging, learning from docs and code. Not passive consumption. Same idea as in sports — deliberate practice, not just volume.",
+      githubAsTrace: "One visible trace",
+      githubAsTraceText: "GitHub is one footprint of that practice. Here's the contribution graph.",
     },
   },
   de: {
@@ -190,6 +212,8 @@ export const copy = {
         "CIS-Student @ Washburn University · Undergraduate Research Assistant (K-INBRE, SCWTE) · Werkstudent Web Application Development @ Pentos",
       location: "Großraum Topeka",
     },
+    cvLead:
+      "Kein LinkedIn-Abzug — hier fügt sich zusammen: Software, Forschung, Laufen.",
     about: {
       title: "Über mich",
       paragraphs: [
@@ -294,13 +318,19 @@ export const copy = {
     },
     skills: {
       title: "Kenntnisse",
-      list: "JavaScript, React, TypeScript, Java, Python, HTML/CSS, SAP SuccessFactors, Kotlin, Playwright, Selenium, Agile, SCRUM, MS Office, Adobe.",
+      categoryFrontend: "Frontend",
+      categoryLanguages: "Sprachen",
+      categoryTesting: "Testing",
+      categoryTools: "Tools & Infra",
+      categoryPlatforms: "Plattformen",
+      list: "Agile, SCRUM, MS Office, Adobe.",
     },
     languages: {
       title: "Sprachen",
       list: "Deutsch (Muttersprache), Englisch (fließend), Latein (Grundkenntnisse).",
     },
     footer: {
+      findMe: "Finde mich",
       linkedIn: "LinkedIn",
       instagram: "Instagram",
     },
@@ -324,6 +354,7 @@ export const copy = {
     },
     sports: {
       title: "Leistungssport",
+      storyLead: "Wie bei den 10.000 Stunden: Fortschritt entsteht durch gezieltes Training. Hier ist der Platz des Laufens — und ein paar Zahlen, die mir etwas sagen.",
       intro:
         "Ich laufe Leichtathletik und Cross Country an der Washburn University (zuvor Park University). Schwerpunkt: Mittel- und Langstrecke von 800 m bis 10.000 m sowie Cross Country (6k, 8k, 10k). Training und Rennen reflektiere ich auf Instagram und Strava.",
       tfrrsUrl: "https://www.tfrrs.org/athletes/8625664/Washburn/Lukas_Mehl.html",
@@ -352,6 +383,19 @@ export const copy = {
       codingGoal: "Ziel: 10.000 Stunden",
       githubContributions: "GitHub-Contributions",
       githubPlaceholder: "GITHUB_USERNAME in config.ts eintragen.",
+      gladwellHeadline: "Die 10.000-Stunden-Regel",
+      gladwellIntro:
+        "In Outliers hat Malcolm Gladwell die Idee bekannt gemacht: Etwa 10.000 Stunden gezielte Übung braucht es, um in einem Bereich Weltklasse zu erreichen. Die Zahl stammt aus der Expertise-Forschung von Anders Ericsson — kein magischer Schwellenwert, sondern die Erinnerung, dass Exzellenz in kleinen, konstanten Schritten entsteht.",
+      gladwellQuote:
+        "Übung ist nicht das, was du machst, wenn du gut bist. Es ist das, was dich gut macht.",
+      myJourney: "Mein Coding-Weg",
+      hoursToGo: "Stunden noch",
+      milestoneLabel: "Meilenstein",
+      whatCounts: "Was ich zähle",
+      whatCountsText:
+        "Fokussiertes Coding: bauen, debuggen, aus Doku und Code lernen. Kein passives Konsumieren. Wie im Sport — deliberate practice, nicht nur Masse.",
+      githubAsTrace: "Eine sichtbare Spur",
+      githubAsTraceText: "GitHub ist ein Abdruck davon. Hier der Contribution-Graph.",
     },
   },
 } as const;

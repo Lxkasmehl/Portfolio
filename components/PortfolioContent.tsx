@@ -4,10 +4,9 @@ import { copy } from "@/content/copy";
 import { useLang } from "@/components/LangContext";
 import { Section } from "@/components/Section";
 import { PortraitImage } from "@/components/PortraitImage";
+import { TechStack } from "@/components/TechStack";
+import { SocialLinks } from "@/components/SocialLinks";
 import { Text, List, Anchor } from "@mantine/core";
-
-const LINKEDIN_URL = "https://www.linkedin.com/in/lukas-mehl-61922423a";
-const INSTAGRAM_URL = "https://www.instagram.com/lxkasmehl/";
 
 export function PortfolioContent() {
   const { lang } = useLang();
@@ -15,30 +14,39 @@ export function PortfolioContent() {
 
   return (
     <div>
-      <header className="flex gap-6 items-start mb-12">
-        <div
-          className="shrink-0 w-20 rounded-xl overflow-hidden"
-          style={{
-            aspectRatio: "1/1",
-            backgroundColor: "var(--color-border)",
-          }}
-        >
-          <PortraitImage alt={c.home.photoAlt} />
-        </div>
-        <div>
-          <h1
-            className="text-2xl font-bold tracking-tight"
-            style={{ color: "var(--color-text)" }}
+      <header className="mb-12">
+        <div className="flex gap-6 items-start mb-6">
+          <div
+            className="shrink-0 w-24 rounded-3xl overflow-hidden border-2"
+            style={{
+              aspectRatio: "1/1",
+              backgroundColor: "var(--color-surface)",
+              borderColor: "var(--color-border)",
+            }}
           >
-            {c.intro.name}
-          </h1>
-          <p className="mt-1 text-sm max-w-xl" style={{ color: "var(--color-text-muted)" }}>
-            {c.intro.headline}
-          </p>
-          <p className="mt-0.5 text-sm" style={{ color: "var(--color-text-muted)" }}>
-            {c.intro.location}
-          </p>
+            <PortraitImage alt={c.home.photoAlt} />
+          </div>
+          <div>
+            <h1
+              className="font-display text-2xl sm:text-3xl font-bold tracking-tight m-0"
+              style={{ color: "var(--color-text)" }}
+            >
+              {c.intro.name}
+            </h1>
+            <p className="mt-2 text-sm max-w-xl" style={{ color: "var(--color-text-muted)" }}>
+              {c.intro.headline}
+            </p>
+            <p className="mt-1 text-sm" style={{ color: "var(--color-text-muted)" }}>
+              {c.intro.location}
+            </p>
+          </div>
         </div>
+        <p
+          className="text-sm max-w-2xl leading-relaxed m-0"
+          style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-serif)" }}
+        >
+          {c.cvLead}
+        </p>
       </header>
 
       <main>
@@ -216,9 +224,12 @@ export function PortfolioContent() {
         </Section>
 
         <Section title={c.skills.title}>
-          <p className="text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
-            {c.skills.list}
-          </p>
+          <div className="space-y-4">
+            <TechStack />
+            <p className="text-sm leading-relaxed pt-2" style={{ color: "var(--color-text-muted)" }}>
+              {c.skills.list}
+            </p>
+          </div>
         </Section>
 
         <Section title={c.languages.title}>
@@ -229,15 +240,13 @@ export function PortfolioContent() {
       </main>
 
       <footer
-        className="mt-16 pt-8 flex gap-6 text-sm"
-        style={{ borderColor: "var(--color-border)", borderTopWidth: "1px", color: "var(--color-text-muted)" }}
+        className="mt-16 pt-10 border-t"
+        style={{ borderColor: "var(--color-border)" }}
       >
-        <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="link-accent">
-          {c.footer.linkedIn}
-        </a>
-        <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="link-accent">
-          {c.footer.instagram}
-        </a>
+        <p className="text-sm font-display font-bold mb-3" style={{ color: "var(--color-text-muted)" }}>
+          {c.footer.findMe}
+        </p>
+        <SocialLinks size="md" />
       </footer>
     </div>
   );

@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Group, Anchor, Box, Container } from "@mantine/core";
 import { copy } from "@/content/copy";
 import { LanguageToggle } from "@/components/LanguageToggle";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { useLang } from "@/components/LangContext";
 
 const NAV_LINKS: { href: string; key: keyof typeof copy.en.nav }[] = [
@@ -21,39 +21,53 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const c = copy[lang];
 
   return (
-    <Box className="min-h-screen" style={{ backgroundColor: "var(--color-bg)" }}>
-      <Container size="md" className="py-5">
-        <Group justify="space-between" wrap="nowrap">
-          <Group gap="xl" wrap="nowrap">
+    <div className="min-h-screen" style={{ backgroundColor: "var(--color-bg)" }}>
+      {/* Sticky header – verspielt mit Pills */}
+      <header
+        className="sticky top-0 z-50 border-b-2"
+        style={{
+          backgroundColor: "var(--color-surface)",
+          borderColor: "var(--color-border)",
+          boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
+        }}
+      >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+          <Link
+            href="/"
+            className="font-display text-xl sm:text-2xl font-bold no-underline"
+            style={{ color: "var(--color-text)" }}
+          >
+            Lukas
+          </Link>
+          <nav className="flex items-center gap-2 flex-wrap">
             {NAV_LINKS.map(({ href, key }) => {
               const active = pathname === href;
               return (
-                <Anchor
+                <Link
                   key={href}
-                  component={Link}
                   href={href}
-                  size="sm"
-                  fw={active ? 600 : 500}
+                  className={`nav-pill ${active ? "active" : ""}`}
                   style={{
-                    color: active ? "var(--color-accent)" : "var(--color-text-muted)",
-                    textDecoration: "none",
+                    color: active ? undefined : "var(--color-text-muted)",
+                    backgroundColor: active ? undefined : "transparent",
+                    border: active ? undefined : "2px solid var(--color-border)",
                   }}
-                  className="hover:opacity-80"
                 >
                   {c.nav[key]}
-                </Anchor>
+                </Link>
               );
             })}
-          </Group>
-          <LanguageToggle lang={lang} setLang={setLang} />
-        </Group>
-      </Container>
-      <Box
-        className="border-t min-h-[calc(100vh-56px)]"
-        style={{ borderColor: "var(--color-border)" }}
-      >
-        <Box className="max-w-content mx-auto px-5 py-10 sm:py-14">{children}</Box>
-      </Box>
-    </Box>
+            <span className="inline-flex items-center gap-2 ml-2 pl-2 border-l-2" style={{ borderColor: "var(--color-border)" }}>
+              <LanguageToggle lang={lang} setLang={setLang} />
+              <ThemeToggle />
+            </span>
+          </nav>
+        </div>
+      </header>
+
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+        {children}
+      </main>
+    </div>
   );
 }

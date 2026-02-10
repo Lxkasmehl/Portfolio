@@ -1,6 +1,6 @@
 "use client";
 
-import { Title, Text, Anchor, List, Box } from "@mantine/core";
+import { Text, Anchor, List, Box } from "@mantine/core";
 import { copy } from "@/content/copy";
 import { useLang } from "@/components/LangContext";
 import { Section } from "@/components/Section";
@@ -11,18 +11,20 @@ export function ProjectsContent() {
 
   return (
     <div>
-      <Title
-        order={1}
-        className="text-xl font-bold mb-8"
-        style={{ color: "var(--color-text)" }}
+      <h1
+        className="font-display text-2xl sm:text-3xl font-bold mb-8"
+        style={{ color: "var(--color-accent-2)" }}
       >
         {c.projects.title}
-      </Title>
+      </h1>
 
-      <div className="space-y-10">
+      <div className="space-y-8">
         {/* TurtleTracker */}
         <Section title="">
-          <Box>
+          <Box
+            className="rounded-3xl p-6 border-2 card-playful"
+            style={{ borderColor: "var(--color-accent-2)", backgroundColor: "var(--color-surface-elevated)" }}
+          >
             <Text fw={600} size="md" style={{ color: "var(--color-text)" }}>
               {c.projects.turtletracker.name}
             </Text>
@@ -43,7 +45,10 @@ export function ProjectsContent() {
 
         {/* RunSync */}
         <Section title="">
-          <Box>
+          <Box
+            className="rounded-3xl p-6 border-2 card-playful"
+            style={{ borderColor: "var(--color-accent-2)", backgroundColor: "var(--color-surface-elevated)" }}
+          >
             <Text fw={600} size="md" style={{ color: "var(--color-text)" }}>
               {c.projects.runsync.name}
             </Text>
@@ -58,7 +63,10 @@ export function ProjectsContent() {
 
         {/* Heiligtumsfahrtquiz */}
         <Section title="">
-          <Box>
+          <Box
+            className="rounded-3xl p-6 border-2 card-playful"
+            style={{ borderColor: "var(--color-accent-2)", backgroundColor: "var(--color-surface-elevated)" }}
+          >
             <Text fw={600} size="md" style={{ color: "var(--color-text)" }}>
               {c.projects.heiligtumsfahrt.name}
             </Text>
