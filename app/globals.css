@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #f6f5f3;
+  --color-surface: #ffffff;
+  --color-text: #1c1917;
+  --color-text-muted: #57534e;
+  --color-accent: #0f766e;
+  --color-accent-hover: #0d9488;
+  --color-border: #e7e5e4;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+.prose-custom {
+  color: var(--color-text);
+  line-height: 1.65;
+}
+.prose-custom p {
+  margin-bottom: 0.875rem;
+}
+.prose-custom p:last-child {
+  margin-bottom: 0;
+}
+
+/* Subtle animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+.animate-in-delay-1 { animation-delay: 0.06s; }
+.animate-in-delay-2 { animation-delay: 0.12s; }
+.animate-in-delay-3 { animation-delay: 0.18s; }
+.animate-in-delay-4 { animation-delay: 0.24s; }
+
+.animate-in {
+  opacity: 0;
+}
+
+/* Card hover */
+.card-hover {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card-hover:hover {
+  box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+/* Links */
+a.link-accent {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+a.link-accent:hover {
+  color: var(--color-accent-hover);
+}
