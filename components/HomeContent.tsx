@@ -25,8 +25,9 @@ export function HomeContent() {
     <Stack gap="xl">
       <Box className="flex flex-col sm:flex-row gap-8 sm:gap-10 items-start">
         <Box
-          className="shrink-0 w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden animate-in"
+          className="shrink-0 w-24 sm:w-28 rounded-2xl overflow-hidden animate-in"
           style={{
+            aspectRatio: "1/1",
             backgroundColor: "var(--color-border)",
             boxShadow: "0 4px 20px rgba(0,0,0,0.06)",
           }}

@@ -28,8 +28,8 @@ Edit `config.ts`:
 
 ## Images
 
-- **Professional photo:** Add `public/portrait.jpg`. Shown on Home and in the CV header.
-- **Sports photos:** Add `public/sports/1.jpg`, `public/sports/2.jpg`, `public/sports/3.jpg`. Shown on `/sports`. If a file is missing, a placeholder is shown.
+- **Professional photo:** Copy the photo you like best to `public/portrait.jpg` (replace the file to switch). Shown in 3:4 portrait crop with focus on face; used on Home and CV header. If missing, a placeholder is shown.
+- **Sports photos:** Optional. Add `public/sports/1.jpg`, `public/sports/2.jpg`, `public/sports/3.jpg` later; shown on `/sports`. Placeholder if missing.
 
 ## Page structure
 

@@ -150,9 +150,26 @@ export const copy = {
     sports: {
       title: "Competitive sports",
       intro:
-        "I run Track and Field and Cross Country at Washburn University. Focus: middle- and long-distance (5,000 m, 10,000 m, cross country). Top-10 at German Championships, multiple conference wins, former school record before transferring.",
-      highlights: "Selected results",
+        "I run Track and Field and Cross Country at Washburn University (previously Park University). Focus: middle- and long-distance — 800 m up to 10,000 m and cross country (6k, 8k, 10k). I share training and race reflections on Instagram and Strava.",
+      tfrrsUrl: "https://www.tfrrs.org/athletes/8625664/Washburn/Lukas_Mehl.html",
+      tfrrsLabel: "Full results & progression on TFRRS",
+      collegeBests: "College bests",
+      bests: [
+        "800 m: 2:06.91 · 1500 m: 4:13.92 · Mile: 4:28.65 · 3000 m: 8:38.08",
+        "5000 m: 14:47.21 · 10,000 m: 31:14.41",
+        "6k XC: 19:37.0 · 8k XC: 24:49.1 · 10k XC: 31:57.1",
+      ],
+      recentHeading: "2025–2026 highlights",
+      recent: [
+        "Washburn Open indoor 5k 14:54 (Jan 2026); Washburn Rust Buster 3k 8:43.56 (Jan 2026).",
+        "NCAA DII Cross Country Nationals 2025 (10k); Central Region 41st, team qualified; MIAA XC 32nd.",
+        "First sub-25 8k XC at DBU Old Glory Gallop (24:49). Gans Creek 8k 25:03 — course PR and 8k XC PR at season opener.",
+        "Heart of America Conference: 1st 10,000 m (2025, 2024), 1st 5000 m indoor (2025); Iowa State Holiday 3000 m 1st.",
+        "New Year’s Eve Aachen: 3rd 4.5 km, 1st 9 km. 1st Kraremanns Lauf Simmerath 4 km.",
+      ],
+      highlights: "Awards & championships",
       photoAlt: "Sports",
+      photosNote: "Photos to come.",
     },
     stats: {
       title: "Stats",
@@ -308,9 +325,26 @@ export const copy = {
     sports: {
       title: "Leistungssport",
       intro:
-        "Ich laufe Leichtathletik und Cross Country an der Washburn University. Schwerpunkt: Mittel- und Langstrecke (5.000 m, 10.000 m, Cross Country). Top-10 bei Deutschen Meisterschaften, mehrere Conference-Siege, ehemaliger Schulrekord vor dem Wechsel.",
-      highlights: "Ausgewählte Ergebnisse",
+        "Ich laufe Leichtathletik und Cross Country an der Washburn University (zuvor Park University). Schwerpunkt: Mittel- und Langstrecke von 800 m bis 10.000 m sowie Cross Country (6k, 8k, 10k). Training und Rennen reflektiere ich auf Instagram und Strava.",
+      tfrrsUrl: "https://www.tfrrs.org/athletes/8625664/Washburn/Lukas_Mehl.html",
+      tfrrsLabel: "Alle Zeiten & Verlauf auf TFRRS",
+      collegeBests: "College-Besten",
+      bests: [
+        "800 m: 2:06.91 · 1500 m: 4:13.92 · Mile: 4:28.65 · 3000 m: 8:38.08",
+        "5000 m: 14:47.21 · 10.000 m: 31:14.41",
+        "6k XC: 19:37.0 · 8k XC: 24:49.1 · 10k XC: 31:57.1",
+      ],
+      recentHeading: "Highlights 2025–2026",
+      recent: [
+        "Washburn Open Indoor 5k 14:54 (Jan 2026); Washburn Rust Buster 3k 8:43.56 (Jan 2026).",
+        "NCAA DII Cross Country Nationals 2025 (10k); Central Region 41., Team qualifiziert; MIAA XC 32.",
+        "Erstes Sub-25 8k XC beim DBU Old Glory Gallop (24:49). Gans Creek 8k 25:03 — Course-PR und 8k-XC-PR zum Saisonauftakt.",
+        "Heart of America Conference: 1. Platz 10.000 m (2025, 2024), 1. Platz 5000 m Indoor (2025); Iowa State Holiday 3000 m 1.",
+        "Silvesterlauf Aachen: 3. Platz 4,5 km, 1. Platz 9 km. 1. Kraremanns Lauf Simmerath 4 km.",
+      ],
+      highlights: "Auszeichnungen & Meisterschaften",
       photoAlt: "Sport",
+      photosNote: "Fotos folgen.",
     },
     stats: {
       title: "Stats",

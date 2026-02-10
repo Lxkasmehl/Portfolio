@@ -17,8 +17,11 @@ export function PortfolioContent() {
     <div>
       <header className="flex gap-6 items-start mb-12">
         <div
-          className="shrink-0 w-24 h-24 rounded-xl overflow-hidden"
-          style={{ backgroundColor: "var(--color-border)" }}
+          className="shrink-0 w-20 rounded-xl overflow-hidden"
+          style={{
+            aspectRatio: "1/1",
+            backgroundColor: "var(--color-border)",
+          }}
         >
           <PortraitImage alt={c.home.photoAlt} />
         </div>

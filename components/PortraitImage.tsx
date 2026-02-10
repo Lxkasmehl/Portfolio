@@ -23,7 +23,7 @@ export function PortraitImage({ alt }: Props) {
     <img
       src="/portrait.jpg"
       alt={alt}
-      className="w-full h-full object-cover"
+      className="w-full h-full object-cover object-[50%_20%]"
       onError={() => setFailed(true)}
     />
   );
