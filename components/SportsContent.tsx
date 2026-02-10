@@ -8,6 +8,7 @@ import {
   PERSONAL_BESTS,
   RECENT_RESULTS,
   PRE_COLLEGE_HIGHLIGHTS,
+  CHAMPIONSHIP_HIGHLIGHTS,
   YEARLY_RUNNING_KM,
   ROUGH_AVERAGE_PACE_MIN_PER_KM,
   PROGRESSION_3000,
@@ -15,6 +16,7 @@ import {
   PROGRESSION_10000,
   PROGRESSION_8K_XC,
   type ProgressionPoint,
+  type ChampionshipHighlight,
 } from "@/content/sportsData";
 import { SOCIAL_LINKS } from "@/config";
 
@@ -27,8 +29,36 @@ function formatDate(dateStr: string, lang: "en" | "de"): string {
   return `${month} ${y}`;
 }
 
-/** Simple horizontal bar chart: best time = 100%, others relative. */
-function ProgressionChart({
+/** Sort championship highlights: 1st first, then 2nd, 3rd, 4th… then "—". Within same place, newest first. */
+function sortChampionshipsByPlace(highlights: ChampionshipHighlight[]): ChampionshipHighlight[] {
+  const placeRank = (place: string): number => {
+    if (place === "—") return 9999;
+    const n = parseInt(place.replace(/\D/g, ""), 10);
+    return Number.isNaN(n) ? 9998 : n;
+  };
+  return [...highlights].sort((a, b) => {
+    const ra = placeRank(a.place);
+    const rb = placeRank(b.place);
+    if (ra !== rb) return ra - rb;
+    return b.date.localeCompare(a.date);
+  });
+}
+
+const MEDAL_STYLES = {
+  "1st": { bg: "#d4a017", color: "#1a1a1a", border: "#b8860b" },
+  "2nd": { bg: "#c0c0c0", color: "#1a1a1a", border: "#a0a0a0" },
+  "3rd": { bg: "#cd7f32", color: "#1a1a1a", border: "#a66b2a" },
+} as const;
+
+/** Format seconds as m:ss or mm:ss for axis labels. */
+function formatTimeAxis(seconds: number): string {
+  const m = Math.floor(seconds / 60);
+  const s = Math.round(seconds % 60);
+  return s < 10 ? `${m}:0${s}` : `${m}:${s}`;
+}
+
+/** Line chart: year (x) vs season best time (y). Lower/faster = higher on chart. */
+function ProgressionLineChart({
   data,
   title,
   sub,
@@ -40,48 +70,115 @@ function ProgressionChart({
   accentColor: string;
 }) {
   const withSeconds = data.filter((p) => p.timeSeconds != null) as (ProgressionPoint & { timeSeconds: number })[];
-  const bestSec = withSeconds.length ? Math.min(...withSeconds.map((p) => p.timeSeconds)) : 0;
-  const worstSec = withSeconds.length ? Math.max(...withSeconds.map((p) => p.timeSeconds)) : 0;
-  const range = worstSec - bestSec || 1;
+  if (withSeconds.length === 0) return null;
+
+  const years = withSeconds.map((p) => p.year);
+  const times = withSeconds.map((p) => p.timeSeconds);
+  const minYear = Math.min(...years);
+  const maxYear = Math.max(...years);
+  const minSec = Math.min(...times);
+  const maxSec = Math.max(...times);
+  const yearRange = maxYear - minYear || 1;
+  const secRange = maxSec - minSec || 1;
+  const secPadding = secRange * 0.08;
+  const secMin = minSec - secPadding;
+  const secMax = maxSec + secPadding;
+
+  const w = 280;
+  const h = 180;
+  const padLeft = 44;
+  const padRight = 8;
+  const padTop = 8;
+  const padBottom = 28;
+  const plotW = w - padLeft - padRight;
+  const plotH = h - padTop - padBottom;
+
+  const x = (year: number) => padLeft + ((year - minYear) / yearRange) * plotW;
+  const y = (sec: number) => padTop + plotH - ((sec - secMin) / (secMax - secMin)) * plotH;
+
+  const pathD = withSeconds
+    .map((p, i) => `${i === 0 ? "M" : "L"} ${x(p.year)} ${y(p.timeSeconds)}`)
+    .join(" ");
+
+  const yTicks = [secMin, secMin + (secMax - secMin) * 0.5, secMax].filter((t, i, a) => a.indexOf(t) === i);
 
   return (
-    <Box className="rounded-2xl p-4 border-2" style={{ borderColor: "var(--color-border)", backgroundColor: "var(--color-surface-elevated)" }}>
+    <Box
+      className="rounded-2xl p-4 border-2"
+      style={{ borderColor: "var(--color-border)", backgroundColor: "var(--color-surface-elevated)" }}
+    >
       <Text size="sm" fw={600} style={{ color: "var(--color-accent-3)" }} className="mb-0.5">
         {title}
       </Text>
       <Text size="xs" style={{ color: "var(--color-text-muted)" }} className="mb-3">
         {sub}
       </Text>
-      <Stack gap="xs">
-        {data.map((p) => {
-          const sec = p.timeSeconds ?? 0;
-          // Faster time = longer bar (best = 100%)
-          const pct = range && sec > 0 ? Math.round(((worstSec - sec) / range) * 80) + 20 : 100;
-          return (
-            <Box key={p.year} className="flex items-center gap-3">
-              <span className="text-xs font-medium tabular-nums shrink-0" style={{ color: "var(--color-text-muted)" }}>
-                {p.year}
+      <Box style={{ width: "100%", maxWidth: w, margin: "0 auto" }}>
+        <svg width="100%" height={h} viewBox={`0 0 ${w} ${h}`} preserveAspectRatio="xMidYMid meet" className="overflow-visible">
+          {/* Y-axis labels */}
+          {yTicks.map((t) => (
+            <g key={t}>
+              <line
+                x1={padLeft}
+                y1={y(t)}
+                x2={padLeft - 6}
+                y2={y(t)}
+                stroke="var(--color-border)"
+                strokeWidth={1}
+              />
+              <text
+                x={padLeft - 8}
+                y={y(t)}
+                textAnchor="end"
+                dominantBaseline="middle"
+                style={{ fontSize: 10, fontVariantNumeric: "tabular-nums", fill: "var(--color-text-muted)" }}
+              >
+                {formatTimeAxis(t)}
+              </text>
+            </g>
+          ))}
+          {/* X-axis labels */}
+          {withSeconds.map((p) => (
+            <text
+              key={p.year}
+              x={x(p.year)}
+              y={h - 6}
+              textAnchor="middle"
+              style={{ fontSize: 10, fontVariantNumeric: "tabular-nums", fill: "var(--color-text-muted)" }}
+            >
+              {p.year}
+              {p.note ? "*" : ""}
+            </text>
+          ))}
+          {/* Line */}
+          <path
+            d={pathD}
+            fill="none"
+            stroke={accentColor}
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          {/* Points */}
+          {withSeconds.map((p) => (
+            <g key={p.year}>
+              <circle
+                cx={x(p.year)}
+                cy={y(p.timeSeconds)}
+                r={5}
+                fill="var(--color-bg)"
+                stroke={accentColor}
+                strokeWidth={2}
+              />
+              <title>
+                {p.time}
+                {p.indoor ? " (i)" : ""} — {p.meet ?? p.year}
                 {p.note ? ` (${p.note})` : ""}
-              </span>
-              <Box className="flex-1 min-w-0">
-                <Box
-                  className="h-6 rounded-md flex items-center justify-end pr-2"
-                  style={{
-                    width: `${Math.max(20, pct)}%`,
-                    backgroundColor: accentColor,
-                    opacity: 0.85,
-                  }}
-                >
-                  <span className="text-xs font-semibold tabular-nums" style={{ color: "var(--color-bg)" }}>
-                    {p.time}
-                    {p.indoor ? " (i)" : ""}
-                  </span>
-                </Box>
-              </Box>
-            </Box>
-          );
-        })}
-      </Stack>
+              </title>
+            </g>
+          ))}
+        </svg>
+      </Box>
     </Box>
   );
 }
@@ -182,31 +279,83 @@ export function SportsContent() {
         {c.sports.progressionSub}
       </Text>
       <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md" className="mb-10">
-        <ProgressionChart
+        <ProgressionLineChart
           data={PROGRESSION_3000}
           title="3,000 m"
-          sub="Indoor season bests"
+          sub="Season bests by year"
           accentColor="var(--color-accent-3)"
         />
-        <ProgressionChart
+        <ProgressionLineChart
           data={PROGRESSION_5000}
           title="5,000 m"
           sub="Indoor / outdoor"
           accentColor="var(--color-accent)"
         />
-        <ProgressionChart
+        <ProgressionLineChart
           data={PROGRESSION_10000}
           title={c.sports.progression10kTitle}
           sub={c.sports.progression10kSub}
           accentColor="var(--color-accent-4)"
         />
-        <ProgressionChart
+        <ProgressionLineChart
           data={PROGRESSION_8K_XC}
           title="8k (XC)"
           sub="Cross country"
           accentColor="var(--color-accent-2)"
         />
       </SimpleGrid>
+
+      {/* Championship results (place over time) */}
+      <h2
+        className="font-display text-lg font-bold mb-2"
+        style={{ color: "var(--color-accent-3)" }}
+      >
+        {c.sports.championshipHeading}
+      </h2>
+      <Text size="sm" className="mb-4" style={{ color: "var(--color-text-muted)" }}>
+        {c.sports.championshipSub}
+      </Text>
+      <ul className="list-none space-y-3 mb-10" style={{ color: "var(--color-text)" }}>
+        {sortChampionshipsByPlace(CHAMPIONSHIP_HIGHLIGHTS).map((h, i) => (
+          <li key={i} className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+            {h.place !== "—" ? (
+              <span
+                className="shrink-0 inline-flex items-center justify-center min-w-[2.5rem] px-2 py-0.5 rounded-md text-xs font-bold tabular-nums"
+                style={
+                  h.place === "1st" || h.place === "2nd" || h.place === "3rd"
+                    ? {
+                        backgroundColor: MEDAL_STYLES[h.place].bg,
+                        color: MEDAL_STYLES[h.place].color,
+                        border: `1px solid ${MEDAL_STYLES[h.place].border}`,
+                      }
+                    : {
+                        backgroundColor: "var(--color-surface-elevated)",
+                        color: "var(--color-text)",
+                        border: "1px solid var(--color-border)",
+                      }
+                }
+              >
+                {h.place}
+              </span>
+            ) : (
+              <span className="text-xs shrink-0 font-medium" style={{ color: "var(--color-text-muted)" }}>
+                {h.level === "youth" ? (lang === "de" ? "Jugend" : "Youth") : ""}
+              </span>
+            )}
+            <span className="font-medium">{h.meet}</span>
+            <span>{h.event}</span>
+            {h.time && <span className="tabular-nums text-sm" style={{ color: "var(--color-text-muted)" }}>{h.time}</span>}
+            <span className="text-xs tabular-nums shrink-0" style={{ color: "var(--color-text-muted)" }}>
+              {formatDate(h.date, lang)}
+            </span>
+            {h.note && (
+              <span className="text-xs italic w-full sm:w-auto" style={{ color: "var(--color-text-muted)" }}>
+                — {h.note}
+              </span>
+            )}
+          </li>
+        ))}
+      </ul>
 
       {/* Recent results timeline */}
       <h2
