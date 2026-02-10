@@ -15,8 +15,6 @@ export const copy = {
         "CIS Student @ Washburn University · Undergraduate Research Assistant (K-INBRE, SCWTE) · Working Student – Web Application Development @ Pentos",
       location: "Topeka Metropolitan Area",
     },
-    cvLead:
-      "Not a copy of my LinkedIn — here's how the pieces fit together: building software, research, and running.",
     about: {
       title: "About",
       paragraphs: [
@@ -228,8 +226,6 @@ export const copy = {
         "CIS-Student @ Washburn University · Undergraduate Research Assistant (K-INBRE, SCWTE) · Werkstudent Web Application Development @ Pentos",
       location: "Großraum Topeka",
     },
-    cvLead:
-      "Kein LinkedIn-Abzug — hier fügt sich zusammen: Software, Forschung, Laufen.",
     about: {
       title: "Über mich",
       paragraphs: [

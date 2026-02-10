@@ -41,12 +41,6 @@ export function PortfolioContent() {
             </p>
           </div>
         </div>
-        <p
-          className="text-sm max-w-2xl leading-relaxed m-0"
-          style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-serif)" }}
-        >
-          {c.cvLead}
-        </p>
       </header>
 
       <main>
