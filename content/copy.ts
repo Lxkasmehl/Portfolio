@@ -1,5 +1,5 @@
 /**
- * Portfolio copy — from LinkedIn. EN and DE.
+ * Portfolio copy - from LinkedIn. EN and DE.
  */
 export type Lang = "en" | "de";
 
@@ -111,7 +111,7 @@ export const copy = {
       items: [
         "8th place nationwide, German Startup Award for Students (Deutscher Gründerpreis für Schüler:innen), May 2022",
         "Existenzia für Schüler – Wie erstelle ich einen Geschäftsplan? (GründerRegion Aachen), Mar 2021",
-        "Sports Medal of the City of Würselen (Jan 2024) — Awarded for achievements in long-distance running at the Würselen Sports Matinee.",
+        "Sports Medal of the City of Würselen (Jan 2024) - Awarded for achievements in long-distance running at the Würselen Sports Matinee.",
       ],
     },
     skills: {
@@ -152,13 +152,13 @@ export const copy = {
     },
     sports: {
       title: "Competitive sports",
-      storyLead: "Same idea as with the 10,000 hours: progress comes from deliberate practice. Here's where running fits in — and a few numbers that matter to me.",
+      storyLead: "Progress comes from deliberate practice. Here's where running fits in, and a few numbers that matter to me.",
       intro:
-        "I run Track and Field and Cross Country at Washburn University (previously Park University). Focus: middle- and long-distance — 800 m up to 10,000 m and cross country (6k, 8k, 10k). I share training and race reflections on Instagram and Strava.",
+        "I run Track and Field and Cross Country at Washburn University (previously Park University). Focus: middle- and long-distance, 3,000 m up to 10,000 m and cross country (6k, 8k, 10k). I share training and race reflections on Instagram and Strava.",
       linksHeading: "Results & training",
-      tfrrsLabel: "TFRRS — full results & progression",
-      ladvLabel: "LADV — German pre-college results",
-      stravaLabel: "Strava — training & activities",
+      tfrrsLabel: "TFRRS - full results & progression",
+      ladvLabel: "LADV - German pre-college results",
+      stravaLabel: "Strava - training & activities",
       personalBestsHeading: "Personal bests",
       personalBestsTrack: "Track",
       personalBestsXC: "Cross country",
@@ -169,7 +169,9 @@ export const copy = {
       recentResultsHeading: "Recent results",
       recentResultsSub: "Chronological, newest first",
       championshipHeading: "Championship results",
-      championshipSub: "Placements at conference, regional, and national-level meets — where the result is the place, not just the time.",
+      championshipSub: "Placements at conference, regional, and national-level meets, where the result is the place, not just the time.",
+      teamsHeading: "Teams",
+      teamsSub: "Clubs and universities I've run for.",
       preCollegeHeading: "Pre-college (Germany)",
       preCollegeIntro: "Selected results from LADV (DJK Armada Euchen-Würselen, Nordrhein) before college in the US.",
       yearlyDistanceHeading: "Yearly distance",
@@ -187,7 +189,7 @@ export const copy = {
       recent: [
         "Washburn Open indoor 5k 14:54 (Jan 2026); Washburn Rust Buster 3k 8:43.56 (Jan 2026).",
         "NCAA DII Cross Country Nationals 2025 (10k); Central Region 41st, team qualified; MIAA XC 32nd.",
-        "First sub-25 8k XC at DBU Old Glory Gallop (24:49). Gans Creek 8k 25:03 — course PR and 8k XC PR at season opener.",
+        "First sub-25 8k XC at DBU Old Glory Gallop (24:49). Gans Creek 8k 25:03, course PR and 8k XC PR at season opener.",
         "Heart of America Conference: 1st 10,000 m (2025, 2024), 1st 5000 m indoor (2025); Iowa State Holiday 3000 m 1st.",
         "New Year’s Eve Aachen: 3rd 4.5 km, 1st 9 km. 1st Kraremanns Lauf Simmerath 4 km.",
       ],
@@ -205,7 +207,7 @@ export const copy = {
       githubPlaceholder: "Set GITHUB_USERNAME in config.ts to show your contribution chart.",
       gladwellHeadline: "The 10,000 Hour Rule",
       gladwellIntro:
-        "In Outliers, Malcolm Gladwell popularized the idea that it takes roughly 10,000 hours of deliberate practice to achieve world-class mastery in a field. The number comes from research by Anders Ericsson on expert performance — not a magic threshold, but a reminder that excellence is built in small, consistent steps.",
+        "In Outliers, Malcolm Gladwell popularized the idea that it takes roughly 10,000 hours of deliberate practice to achieve world-class mastery in a field. The number comes from research by Anders Ericsson on expert performance: not a magic threshold, but a reminder that excellence is built in small, consistent steps.",
       gladwellQuote:
         "Practice isn't the thing you do once you're good. It's the thing you do that makes you good.",
       myJourney: "My coding journey",
@@ -213,7 +215,7 @@ export const copy = {
       milestoneLabel: "milestone",
       whatCounts: "What I count",
       whatCountsText:
-        "Focused coding: building, debugging, learning from docs and code. Not passive consumption. Same idea as in sports — deliberate practice, not just volume.",
+        "Focused coding: building, debugging, learning from docs and code. Not passive consumption. Same idea as in sports: deliberate practice, not just volume.",
       githubAsTrace: "One visible trace",
       githubAsTraceText: "GitHub is one footprint of that practice. Here's the contribution graph.",
     },
@@ -325,7 +327,7 @@ export const copy = {
       items: [
         "8. Platz bundesweit, Deutscher Gründerpreis für Schüler:innen, Mai 2022",
         "Existenzia für Schüler – Wie erstelle ich einen Geschäftsplan? (GründerRegion Aachen), Mär 2021",
-        "Sportmedaille der Stadt Würselen (Jan 2024) — Verliehen für Langstreckenlauf bei der Würselener Sportmatinée.",
+        "Sportmedaille der Stadt Würselen (Jan 2024) - Verliehen für Langstreckenlauf bei der Würselener Sportmatinée.",
       ],
     },
     skills: {
@@ -366,13 +368,13 @@ export const copy = {
     },
     sports: {
       title: "Leistungssport",
-      storyLead: "Wie bei den 10.000 Stunden: Fortschritt entsteht durch gezieltes Training. Hier ist der Platz des Laufens — und ein paar Zahlen, die mir etwas sagen.",
+      storyLead: "Fortschritt entsteht durch gezieltes Training. Hier ist der Platz des Laufens, und ein paar Zahlen, die mir etwas sagen.",
       intro:
-        "Ich laufe Leichtathletik und Cross Country an der Washburn University (zuvor Park University). Schwerpunkt: Mittel- und Langstrecke von 800 m bis 10.000 m sowie Cross Country (6k, 8k, 10k). Training und Rennen reflektiere ich auf Instagram und Strava.",
+        "Ich laufe Leichtathletik und Cross Country an der Washburn University (zuvor Park University). Schwerpunkt: Mittel- und Langstrecke von 3,000 m bis 10.000 m sowie Cross Country (6k, 8k, 10k). Training und Rennen reflektiere ich auf Instagram und Strava.",
       linksHeading: "Ergebnisse & Training",
-      tfrrsLabel: "TFRRS — alle Zeiten & Verlauf",
-      ladvLabel: "LADV — deutsche Ergebnisse vor College",
-      stravaLabel: "Strava — Training & Aktivitäten",
+      tfrrsLabel: "TFRRS - alle Zeiten & Verlauf",
+      ladvLabel: "LADV - deutsche Ergebnisse vor College",
+      stravaLabel: "Strava - Training & Aktivitäten",
       personalBestsHeading: "Persönliche Bestzeiten",
       personalBestsTrack: "Bahn",
       personalBestsXC: "Cross",
@@ -383,7 +385,9 @@ export const copy = {
       recentResultsHeading: "Letzte Ergebnisse",
       recentResultsSub: "Chronologisch, neueste zuerst",
       championshipHeading: "Meisterschaftserfolge",
-      championshipSub: "Platzierungen bei Conference-, Regional- und nationalen Meisterschaften — wo das Ergebnis der Platz ist, nicht nur die Zeit.",
+      championshipSub: "Platzierungen bei Conference-, Regional- und nationalen Meisterschaften, wo das Ergebnis der Platz ist, nicht nur die Zeit.",
+      teamsHeading: "Vereine & Unis",
+      teamsSub: "Vereine und Unis, für die ich bisher gelaufen bin.",
       preCollegeHeading: "Vor dem College (Deutschland)",
       preCollegeIntro: "Ausgewählte Ergebnisse aus der LADV (DJK Armada Euchen-Würselen, Nordrhein) vor dem Studium in den USA.",
       yearlyDistanceHeading: "Jahreskilometer",
@@ -406,7 +410,7 @@ export const copy = {
       githubPlaceholder: "GITHUB_USERNAME in config.ts eintragen.",
       gladwellHeadline: "Die 10.000-Stunden-Regel",
       gladwellIntro:
-        "In Outliers hat Malcolm Gladwell die Idee bekannt gemacht: Etwa 10.000 Stunden gezielte Übung braucht es, um in einem Bereich Weltklasse zu erreichen. Die Zahl stammt aus der Expertise-Forschung von Anders Ericsson — kein magischer Schwellenwert, sondern die Erinnerung, dass Exzellenz in kleinen, konstanten Schritten entsteht.",
+        "In Outliers hat Malcolm Gladwell die Idee bekannt gemacht: Etwa 10.000 Stunden gezielte Übung braucht es, um in einem Bereich Weltklasse zu erreichen. Die Zahl stammt aus der Expertise-Forschung von Anders Ericsson: kein magischer Schwellenwert, sondern die Erinnerung, dass Exzellenz in kleinen, konstanten Schritten entsteht.",
       gladwellQuote:
         "Übung ist nicht das, was du machst, wenn du gut bist. Es ist das, was dich gut macht.",
       myJourney: "Mein Coding-Weg",
@@ -414,7 +418,7 @@ export const copy = {
       milestoneLabel: "Meilenstein",
       whatCounts: "Was ich zähle",
       whatCountsText:
-        "Fokussiertes Coding: bauen, debuggen, aus Doku und Code lernen. Kein passives Konsumieren. Wie im Sport — deliberate practice, nicht nur Masse.",
+        "Fokussiertes Coding: bauen, debuggen, aus Doku und Code lernen. Kein passives Konsumieren. Wie im Sport: deliberate practice, nicht nur Masse.",
       githubAsTrace: "Eine sichtbare Spur",
       githubAsTraceText: "GitHub ist ein Abdruck davon. Hier der Contribution-Graph.",
     },

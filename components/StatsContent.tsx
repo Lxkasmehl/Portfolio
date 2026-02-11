@@ -95,7 +95,7 @@ export function StatsContent() {
                 >
                   <div
                     className={`milestone-dot ${reached ? "reached" : ""}`}
-                    title={`${m.toLocaleString()} h — ${c.stats.milestoneLabel}`}
+                    title={`${m.toLocaleString()} h - ${c.stats.milestoneLabel}`}
                   />
                   <Text
                     size="xs"

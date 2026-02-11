@@ -15,6 +15,36 @@ export const SPORTS_LINKS = {
   strava: "https://www.strava.com/athletes/68981361",
 } as const;
 
+/** Club or university team; logo is optional (path under /sports/logos/). */
+export interface Team {
+  id: string;
+  nameEn: string;
+  nameDe: string;
+  periodEn: string;
+  periodDe: string;
+  logoPath: string | null;
+}
+
+/** Teams I've run for, chronological: Germany → Park → Washburn. */
+export const TEAMS: Team[] = [
+  { id: "djk-armada", nameEn: "DJK Armada Euchen-Würselen", nameDe: "DJK Armada Euchen-Würselen", periodEn: "Germany", periodDe: "Deutschland", logoPath: "/sports/logos/Logo-Armada-2025.jpg" },
+  { id: "park", nameEn: "Park University", nameDe: "Park University", periodEn: "2023–2025", periodDe: "2023–2025", logoPath: "/sports/logos/park-pirates-logo-color.avif" },
+  { id: "washburn", nameEn: "Washburn University", nameDe: "Washburn University", periodEn: "2025–", periodDe: "2025–", logoPath: "/sports/logos/Washburn_Ichabods_logo.svg" },
+];
+
+/** Hero image (big banner on Sports page). File in public/sports/. */
+export const SPORTS_HERO_IMAGE = "/sports/7A1A8471.jpg";
+
+/** Gallery images (grid on Sports page). Files in public/sports/. */
+export const SPORTS_GALLERY = [
+  "/sports/DSC_3946.jpg",
+  "/sports/DSC_6452.jpg",
+  "/sports/DSC_5932.jpg",
+  "/sports/PXL_20240504_010836955.jpg",
+  "/sports/Photo Jan 30 2026, 6 28 50 PM (1).jpg",
+  "/sports/Photo Jan 30 2026, 6 37 08 PM.jpg",
+];
+
 /** Personal best per event. time in display format (e.g. "14:47.21"); date YYYY-MM or meet name. */
 export interface PersonalBest {
   event: string;
@@ -66,7 +96,7 @@ export interface ChampionshipHighlight {
   level?: "conference" | "regional" | "national" | "youth";
 }
 
-// —— Personal Bests (all-time, college + post-college) ——
+// -- Personal Bests (all-time, college + post-college) --
 export const PERSONAL_BESTS: PersonalBest[] = [
   { event: "800 m", time: "2:06.91", date: "2024-04", meet: "Kip Janvrin Open", indoor: false },
   { event: "1,000 m", time: "2:40.00", date: "2025-01", meet: "Coach Alsup Invite", indoor: true },
@@ -80,7 +110,7 @@ export const PERSONAL_BESTS: PersonalBest[] = [
   { event: "10k (XC)", time: "31:57.1", date: "2025-11", meet: "NCAA DII Central Region", xc: true },
 ];
 
-// —— Progression by event (year → best that season) for charts ——
+// -- Progression by event (year -> best that season) for charts --
 // Includes LADV pre-college where applicable (e.g. 3k 2022, 2023 Rostock).
 export const PROGRESSION_3000: ProgressionPoint[] = [
   { year: 2022, time: "9:05.05", timeSeconds: 545.05, meet: "Bergisch Gladbach", note: "U18" },
@@ -110,7 +140,7 @@ export const PROGRESSION_8K_XC: ProgressionPoint[] = [
   { year: 2025, time: "24:49.1", timeSeconds: 1489.1, meet: "DBU Old Glory Gallop" },
 ];
 
-// —— Recent results timeline (chronological: newest first). Source: TFRRS. ——
+// -- Recent results timeline (chronological: newest first). Source: TFRRS. --
 export const RECENT_RESULTS: ResultEntry[] = [
   { date: "2026-01-30", meet: "Washburn Open", event: "5,000 m", time: "14:54.09", place: "22nd" },
   { date: "2026-01-16", meet: "Washburn Rust Buster", event: "3,000 m", time: "8:43.56", place: "13th" },
@@ -166,7 +196,7 @@ export const RECENT_RESULTS: ResultEntry[] = [
   { date: "2023-09-01", meet: "Griffon Twilight", event: "6k", time: "19:37.0", place: "33rd" },
 ];
 
-// —— Pre-college / LADV (Germany) — all results from LADV database ——
+// -- Pre-college / LADV (Germany) - all results from LADV database --
 // Source: https://ladv.de/leistungsdatenbank/athletenprofil/436700/Lukas-Mehl.htm
 // Sorted by date descending (newest first).
 export const PRE_COLLEGE_HIGHLIGHTS: PreCollegeResult[] = [
@@ -194,8 +224,8 @@ export const PRE_COLLEGE_HIGHLIGHTS: PreCollegeResult[] = [
   { event: "3,000 m", time: "10:26.19", date: "2019-06", location: "Siegburg", ageGroup: "U16" },
 ];
 
-// —— Championship highlights (placements at conference, regional, national, youth) ——
-// Display order: by place (1st, 2nd, 3rd … then "—"), then by date descending. See SportsContent.
+// -- Championship highlights (placements at conference, regional, national, youth) --
+// Display order: by place (1st, 2nd, 3rd … then "-"), then by date descending. See SportsContent.
 export const CHAMPIONSHIP_HIGHLIGHTS: ChampionshipHighlight[] = [
   { meet: "Heart of America Outdoor Championships", event: "10,000 m", place: "1st", date: "2025-05", time: "31:52.23", level: "conference" },
   { meet: "Heart of America Outdoor Championships", event: "5,000 m", place: "4th", date: "2025-05", time: "15:10.62", level: "conference" },
@@ -224,7 +254,7 @@ export interface YearlyDistance {
 /** Average pace (min per km) for rough time estimate. e.g. 4.5 = 4:30/km. */
 export const ROUGH_AVERAGE_PACE_MIN_PER_KM = 4.5;
 
-// —— Yearly running distance (km). Source: Strava / training log. Newest first. ——
+// -- Yearly running distance (km). Source: Strava / training log. Newest first. --
 export const YEARLY_RUNNING_KM: YearlyDistance[] = [
   { year: 2025, km: 5951 },
   { year: 2024, km: 5428 },

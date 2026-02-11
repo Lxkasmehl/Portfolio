@@ -13,7 +13,7 @@ export function PortraitImage({ alt }: Props) {
         className="w-full h-full bg-neutral-300 flex items-center justify-center text-neutral-500 text-xs"
         aria-hidden
       >
-        —
+        –
       </div>
     );
   }

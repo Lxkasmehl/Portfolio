@@ -23,8 +23,8 @@ Output in `out/`. Deploy anywhere as static files.
 
 Edit `config.ts`:
 
-- **GITHUB_USERNAME** — Your GitHub username for the contribution chart on `/stats`.
-- **CODING_HOURS_CURRENT** — Current tracked coding hours (goal: 10,000). Update as you go.
+- **GITHUB_USERNAME** - Your GitHub username for the contribution chart on `/stats`.
+- **CODING_HOURS_CURRENT** - Current tracked coding hours (goal: 10,000). Update as you go.
 
 ## Images
 
@@ -33,10 +33,10 @@ Edit `config.ts`:
 
 ## Page structure
 
-- **Home** — Short intro, portrait, links to subpages.
-- **CV** — Full CV (About, Experience, Education, Projects, Certifications, Skills, Languages). Portrait in header. Footer: LinkedIn, Instagram.
-- **Projects** — RunSync, Heiligtumsfahrtquiz.
-- **Sports** — Competitive sports intro (Track & Field, Cross Country), selected results, optional sports images.
-- **Stats** — Coding hours progress (10k goal), GitHub contribution chart.
+- **Home** - Short intro, portrait, links to subpages.
+- **CV** - Full CV (About, Experience, Education, Projects, Certifications, Skills, Languages). Portrait in header. Footer: LinkedIn, Instagram.
+- **Projects** - RunSync, Heiligtumsfahrtquiz.
+- **Sports** - Competitive sports intro (Track & Field, Cross Country), selected results, optional sports images.
+- **Stats** - Coding hours progress (10k goal), GitHub contribution chart.
 
 Content source: LinkedIn. No backend, no CMS.
