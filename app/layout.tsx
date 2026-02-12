@@ -6,6 +6,7 @@ import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from "@mantine/c
 import { AppShell } from "@/components/AppShell";
 import { LangProvider } from "@/components/LangContext";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: copy.en.meta.title,
@@ -32,6 +33,7 @@ export default function RootLayout({
           </LangProvider>
         </MantineProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
