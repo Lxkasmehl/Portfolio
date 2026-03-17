@@ -27,22 +27,11 @@ export function StatsContent() {
           {c.stats.gladwellHeadline}
         </h2>
         <p
-          className="text-base sm:text-lg max-w-2xl leading-relaxed mb-6"
+          className="text-base sm:text-lg max-w-2xl leading-relaxed m-0"
           style={{ color: "var(--color-text)", fontFamily: "var(--font-serif)" }}
         >
           {c.stats.gladwellIntro}
         </p>
-        <blockquote
-          className="border-l-2 pl-5 py-1 my-6"
-          style={{
-            borderColor: "var(--color-accent)",
-            color: "var(--color-text-muted)",
-            fontFamily: "var(--font-serif)",
-            fontStyle: "italic",
-          }}
-        >
-          {c.stats.gladwellQuote}
-        </blockquote>
       </Box>
 
       {/* Your journey: big progress + milestones */}

@@ -150,61 +150,34 @@ export function PortfolioContent() {
                 {c.education.park.note}
               </p>
             </div>
+            <div>
+              <p className="font-semibold" style={{ color: "var(--color-text)" }}>
+                {c.education.highSchool.degree}
+              </p>
+              <p style={{ color: "var(--color-text-muted)" }}>{c.education.highSchool.school}</p>
+              <p className="text-sm mt-0.5" style={{ color: "var(--color-text-muted)" }}>
+                {c.education.highSchool.period} · {c.education.highSchool.location}
+              </p>
+              {c.education.highSchool.note && (
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
+                  {c.education.highSchool.note}
+                </p>
+              )}
+            </div>
           </div>
         </Section>
 
         <Section title={c.projects.title}>
-          <div className="space-y-6">
-            <div>
-              <p className="font-semibold" style={{ color: "var(--color-text)" }}>
-                {c.projects.turtletracker.name}
-              </p>
-              <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
-                {c.projects.turtletracker.period}
-                {c.projects.turtletracker.org && ` · ${c.projects.turtletracker.org}`}
-              </p>
-              <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
-                {c.projects.turtletracker.description}
-              </p>
-              <List size="sm" mt="xs" spacing="xs" className="list-disc pl-5">
-                {c.projects.turtletracker.aspects.map((item, i) => (
-                  <List.Item key={i}>{item}</List.Item>
-                ))}
-              </List>
-            </div>
-            <div>
-              <p className="font-semibold" style={{ color: "var(--color-text)" }}>
-                {c.projects.runsync.name}
-              </p>
-              <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
-                {c.projects.runsync.period}
-              </p>
-              <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
-                {c.projects.runsync.description}
-              </p>
-            </div>
-            <div>
-              <p className="font-semibold" style={{ color: "var(--color-text)" }}>
-                {c.projects.heiligtumsfahrt.name}
-              </p>
-              <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
-                {c.projects.heiligtumsfahrt.period}
-              </p>
-              <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
-                {c.projects.heiligtumsfahrt.description}
-              </p>
-              <Anchor
-                href={c.projects.heiligtumsfahrt.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                size="sm"
-                mt="xs"
-                className="link-accent"
-              >
-                {c.projects.heiligtumsfahrt.linkLabel} →
-              </Anchor>
-            </div>
-          </div>
+          <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--color-text)" }}>
+            {c.projects.teaser}
+          </p>
+          <Anchor
+            href="/projects"
+            size="sm"
+            className="link-accent"
+          >
+            {c.projects.viewAll} →
+          </Anchor>
         </Section>
 
         <Section title={c.certifications.title}>

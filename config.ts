@@ -2,7 +2,7 @@
  * Edit these to match your data. Used for Stats page, links, tech stack, and socials.
  */
 export const GITHUB_USERNAME: string = "Lxkasmehl";
-export const CODING_HOURS_CURRENT = 1995; // Update as you track; goal is 10_000
+export const CODING_HOURS_CURRENT = 2034; // Update as you track; goal is 10_000
 export const CODING_HOURS_GOAL = 10_000;
 
 /** Social profile URLs. Simple Icons (cdn.simpleicons.org) used for logos – MIT license, fair use for attribution. */

@@ -19,7 +19,7 @@ export const copy = {
       title: "About",
       paragraphs: [
         "I completed the first half of my bachelor's studies in Cybersecurity and Information and Computer Science (Computer Science concentration) at Park University and am now continuing my degree at Washburn University, majoring in Computer and Information Science.",
-        "With a strong background in IT, programming, and software development, I currently work as a Working Student in Web Application Development at Pentos, gaining hands-on experience in building and optimizing web applications.",
+        "With a strong background in IT, programming, and software development, I work as an Undergraduate Research Assistant (K-INBRE, SCWTE) at Washburn University on TurtleTracker — a research web app for automated wildlife identification — and as a Working Student in Web Application Development at Pentos, gaining hands-on experience in building and optimizing web applications.",
         "I am passionate about cybersecurity and software engineering, with a focus on frontend development using React, TypeScript, JavaScript, and HTML/CSS. I also have experience with backend technologies such as Python, Java, and Kotlin, as well as automated testing with Playwright and Selenium. I enjoy developing secure, efficient, and user-friendly applications.",
         "Beyond my studies, I am a dedicated student-athlete with a proven ability to work in teams and execute projects effectively. I am fluent in both German and English and proficient in MS Office and Adobe software. As a competitive middle- and long-distance runner, I have achieved top-10 placements at the German Championships and earned multiple conference wins; I also previously held a school record before transferring. These experiences have helped me develop discipline, resilience, and a strong work ethic. I am also actively involved in community initiatives.",
         "I am always eager to apply my knowledge in practical settings, take on new challenges, and continuously expand my skill set in the IT and cybersecurity fields.",
@@ -76,9 +76,22 @@ export const copy = {
         location: "Parkville, Missouri, US",
         note: "Started B.Sc. in Cybersecurity & Information and Computer Science; transferred to Washburn University in Summer 2025. Activities: Track and Field & Cross Country.",
       },
+      highSchool: {
+        degree: "High School Diploma",
+        school: "Heilig-Geist-Gymnasium",
+        period: "2015 - 2023",
+        location: "Würselen, Deutschland",
+        note: "Student body president for the 2021/2022 school year",
+      },
     },
     projects: {
       title: "Projects",
+      teaser: "TurtleTracker, RunSync, Heiligtumsfahrtquiz and more—with descriptions, timelines, and links to code or live demos.",
+      viewAll: "View all projects",
+      linkLive: "Live / Demo",
+      linkGithub: "View on GitHub",
+      linkGithubWeb: "Web (GitHub)",
+      linkGithubAndroid: "Android (GitHub)",
       turtletracker: {
         name: "TurtleTracker – Automated Wildlife Monitoring Platform",
         period: "Oct 2025 – Present",
@@ -90,12 +103,14 @@ export const copy = {
           "Researcher-facing web interface for uploads, results, and data exploration",
           "Frontend architecture and UX (my focus); backend and server (Garrett King-Cody)",
         ],
+        github: "https://github.com/Lxkasmehl/TurtleTracker",
       },
       runsync: {
         name: "RunSync: Automated Fitness Data Synchronization Platform",
         period: "Sep 2024 – Oct 2025",
         description:
           "Python-based automation that synchronizes fitness data across Strava, Google Sheets, and Garmin Connect for my personal training diary. Automated sync, custom Google Sheets integration, smart title/description sync, cloud execution via GitHub Actions. Stack: Python, Strava API, Google Sheets API, Selenium, GitHub Actions, OAuth2. Impact: Reduced data management time from hours to minutes while ensuring consistency across all fitness platforms.",
+        github: "https://github.com/Lxkasmehl/RunSync",
       },
       heiligtumsfahrt: {
         name: "Heiligtumsfahrtquiz",
@@ -103,7 +118,9 @@ export const copy = {
         description:
           "Development and programming of a digital quiz for children for the Heiligtumsfahrt 2023 in Aachen, implemented as a website and app.",
         link: "https://quiz.heiligtumsfahrt-aachen.de/",
-        linkLabel: "Project link",
+        linkLabel: "Live / Demo",
+        githubWeb: "https://github.com/Wiwaltill/HeiFa-Quiz_Web-App",
+        githubAndroid: "https://github.com/Lxkasmehl/HeifaAachenAndroidQuizApp",
       },
     },
     certifications: {
@@ -207,9 +224,7 @@ export const copy = {
       githubPlaceholder: "Set GITHUB_USERNAME in config.ts to show your contribution chart.",
       gladwellHeadline: "The 10,000 Hour Rule",
       gladwellIntro:
-        "In Outliers, Malcolm Gladwell popularized the idea that it takes roughly 10,000 hours of deliberate practice to achieve world-class mastery in a field. The number comes from research by Anders Ericsson on expert performance: not a magic threshold, but a reminder that excellence is built in small, consistent steps.",
-      gladwellQuote:
-        "Practice isn't the thing you do once you're good. It's the thing you do that makes you good.",
+        "In Outliers, Malcolm Gladwell popularized the idea that it takes roughly 10,000 hours of deliberate practice to reach world-class mastery in a field—a notion rooted in Anders Ericsson's research on expert performance. I track my coding hours as a rough proxy for that kind of deliberate practice.",
       myJourney: "My coding journey",
       hoursToGo: "hours to go",
       milestoneLabel: "milestone",
@@ -235,7 +250,7 @@ export const copy = {
       title: "Über mich",
       paragraphs: [
         "Ich habe die erste Hälfte meines Bachelor-Studiums in Cybersecurity und Information and Computer Science (Schwerpunkt Computer Science) an der Park University abgeschlossen und setze das Studium an der Washburn University mit Hauptfach Computer and Information Science fort.",
-        "Mit Hintergrund in IT, Programmierung und Softwareentwicklung arbeite ich als Werkstudent in Web Application Development bei Pentos und sammle praktische Erfahrung im Aufbau und in der Optimierung von Webanwendungen.",
+        "Mit Hintergrund in IT, Programmierung und Softwareentwicklung arbeite ich als Undergraduate Research Assistant (K-INBRE, SCWTE) an der Washburn University an TurtleTracker — einer Forschungs-Webanwendung zur automatisierten Tiererkennung — und als Werkstudent in Web Application Development bei Pentos, mit praktischer Erfahrung im Aufbau und in der Optimierung von Webanwendungen.",
         "Meine Schwerpunkte sind Cybersecurity und Software Engineering, vor allem Frontend-Entwicklung mit React, TypeScript, JavaScript und HTML/CSS. Außerdem habe ich Erfahrung mit Backend-Technologien wie Python, Java und Kotlin sowie mit automatisierten Tests (Playwright, Selenium). Ich entwickle gerne sichere, effiziente und nutzerfreundliche Anwendungen.",
         "Neben dem Studium bin ich Student-Athlete mit Erfahrung in Teamarbeit und Projektumsetzung. Ich spreche Deutsch und Englisch fließend und bin mit MS Office und Adobe vertraut. Als Wettkampfläufer über Mittel- und Langstrecke habe ich Top-10-Platzierungen bei Deutschen Meisterschaften und mehrere Conference-Siege erzielt; vor meinem Wechsel hatte ich einen Schulrekord inne. Diese Erfahrungen haben mir Disziplin, Resilienz und eine starke Arbeitsethik vermittelt. Ich engagiere mich auch in gemeinnützigen Initiativen.",
         "Ich bin stets daran interessiert, mein Wissen praktisch einzusetzen, neue Herausforderungen anzunehmen und mich in IT und Cybersecurity weiterzuentwickeln.",
@@ -292,9 +307,22 @@ export const copy = {
         location: "Parkville, Missouri, USA",
         note: "Beginn des B.Sc. an der Park University; Wechsel an die Washburn University im Sommer 2025. Aktivitäten: Leichtathletik & Cross Country.",
       },
+      highSchool: {
+        degree: "Abitur / High School",
+        school: "Heilig-Geist-Gymnasium",
+        period: "2015 - 2023",
+        location: "Würselen, Deutschland",
+        note: "Schülersprecher im Schuljahr 21/22",
+      },
     },
     projects: {
       title: "Projekte",
+      teaser: "TurtleTracker, RunSync, Heiligtumsfahrtquiz und mehr—mit Beschreibung, Zeitraum und Links zu Code oder Live-Demo.",
+      viewAll: "Alle Projekte anzeigen",
+      linkLive: "Live / Demo",
+      linkGithub: "Auf GitHub ansehen",
+      linkGithubWeb: "Web (GitHub)",
+      linkGithubAndroid: "Android (GitHub)",
       turtletracker: {
         name: "TurtleTracker – Automated Wildlife Monitoring Platform",
         period: "Okt 2025 – heute",
@@ -306,12 +334,14 @@ export const copy = {
           "Web-Oberfläche für Uploads, Ergebnisse und Datenexploration",
           "Frontend und UX (mein Fokus); Backend und Server (Garrett King-Cody)",
         ],
+        github: "https://github.com/Lxkasmehl/TurtleTracker",
       },
       runsync: {
         name: "RunSync: Automatisierte Fitness-Datensynchronisation",
         period: "Sep 2024 – Okt 2025",
         description:
           "Python-Automatisierung zur Synchronisation von Fitnessdaten zwischen Strava, Google Sheets und Garmin Connect. Automatisierter Abgleich, Google-Sheets-Anbindung, GitHub Actions. Stack: Python, Strava API, Google Sheets API, Selenium, OAuth2. Impact: Reduzierung des Datenaufwands von Stunden auf Minuten.",
+        github: "https://github.com/Lxkasmehl/RunSync",
       },
       heiligtumsfahrt: {
         name: "Heiligtumsfahrtquiz",
@@ -319,7 +349,9 @@ export const copy = {
         description:
           "Entwicklung und Programmierung eines digitalen Quiz für Kinder zur Heiligtumsfahrt 2023 in Aachen, als Website und App.",
         link: "https://quiz.heiligtumsfahrt-aachen.de/",
-        linkLabel: "Projektlink",
+        linkLabel: "Live / Demo",
+        githubWeb: "https://github.com/Wiwaltill/HeiFa-Quiz_Web-App",
+        githubAndroid: "https://github.com/Lxkasmehl/HeifaAachenAndroidQuizApp",
       },
     },
     certifications: {
@@ -410,9 +442,7 @@ export const copy = {
       githubPlaceholder: "GITHUB_USERNAME in config.ts eintragen.",
       gladwellHeadline: "Die 10.000-Stunden-Regel",
       gladwellIntro:
-        "In Outliers hat Malcolm Gladwell die Idee bekannt gemacht: Etwa 10.000 Stunden gezielte Übung braucht es, um in einem Bereich Weltklasse zu erreichen. Die Zahl stammt aus der Expertise-Forschung von Anders Ericsson: kein magischer Schwellenwert, sondern die Erinnerung, dass Exzellenz in kleinen, konstanten Schritten entsteht.",
-      gladwellQuote:
-        "Übung ist nicht das, was du machst, wenn du gut bist. Es ist das, was dich gut macht.",
+        "In Outliers hat Malcolm Gladwell die Idee bekannt gemacht: Etwa 10.000 Stunden gezielte Übung braucht es, um in einem Bereich Weltklasse zu erreichen—eine Idee aus der Expertise-Forschung von Anders Ericsson. Meine Coding-Stunden tracke ich als groben Indikator für genau diese Art gezielter Übung.",
       myJourney: "Mein Coding-Weg",
       hoursToGo: "Stunden noch",
       milestoneLabel: "Meilenstein",
