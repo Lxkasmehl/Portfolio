@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import "@mantine/core/styles.css";
 import "./globals.css";
-import { copy } from "@/content/copy";
+import { getMessages } from "@/content/translations";
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from "@mantine/core";
 import { AppShell } from "@/components/AppShell";
 import { LangProvider } from "@/components/LangContext";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next"
 
+const defaultMeta = getMessages("en").meta;
 export const metadata: Metadata = {
-  title: copy.en.meta.title,
-  description: copy.en.meta.description,
+  title: defaultMeta.title,
+  description: defaultMeta.description,
 };
 
 export default function RootLayout({

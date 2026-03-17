@@ -1,6 +1,6 @@
 "use client";
 
-import type { Lang } from "@/content/copy";
+import type { Lang } from "@/lib/i18n";
 
 type Props = { lang: Lang; setLang: (l: Lang) => void };
 

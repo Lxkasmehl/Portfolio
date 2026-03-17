@@ -1,0 +1,277 @@
+/**
+ * German UI strings. Structure must match en.ts.
+ */
+import type { Messages } from "@/content/translations/types";
+
+export const de: Messages = {
+  meta: {
+    title: "Lukas Mehl",
+    description:
+      "CIS-Student Washburn · Forschungsassistent (K-INBRE, SCWTE) · Werkstudent Web-Entwicklung @ Pentos",
+  },
+  intro: {
+    name: "Lukas Mehl",
+    headline:
+      "CIS-Student @ Washburn University · Undergraduate Research Assistant (K-INBRE, SCWTE) · Werkstudent Web Application Development @ Pentos",
+    location: "Topeka, KS | Würselen, DE",
+  },
+  about: {
+    title: "Über mich",
+    paragraphs: [
+      "Ich habe die erste Hälfte meines Bachelor-Studiums in Cybersecurity und Information and Computer Science (Schwerpunkt Computer Science) an der Park University abgeschlossen und setze das Studium an der Washburn University mit Hauptfach Computer and Information Science fort.",
+      "Mit Hintergrund in IT, Programmierung und Softwareentwicklung arbeite ich als Undergraduate Research Assistant (K-INBRE, SCWTE) an der Washburn University an TurtleTracker — einer Forschungs-Webanwendung zur automatisierten Tiererkennung — und als Werkstudent in Web Application Development bei Pentos, mit praktischer Erfahrung im Aufbau und in der Optimierung von Webanwendungen.",
+      "Meine Schwerpunkte sind Cybersecurity und Software Engineering, vor allem Frontend-Entwicklung mit React, TypeScript, JavaScript und HTML/CSS. Außerdem habe ich Erfahrung mit Backend-Technologien wie Python, Java und Kotlin sowie mit automatisierten Tests (Playwright, Selenium). Ich entwickle gerne sichere, effiziente und nutzerfreundliche Anwendungen.",
+      "Neben dem Studium bin ich Student-Athlete mit Erfahrung in Teamarbeit und Projektumsetzung. Ich spreche Deutsch und Englisch fließend und bin mit MS Office und Adobe vertraut. Als Wettkampfläufer über Mittel- und Langstrecke habe ich Top-10-Platzierungen bei Deutschen Meisterschaften und mehrere Conference-Siege erzielt; vor meinem Wechsel hatte ich einen Schulrekord inne. Diese Erfahrungen haben mir Disziplin, Resilienz und eine starke Arbeitsethik vermittelt. Ich engagiere mich auch in gemeinnützigen Initiativen.",
+      "Ich bin stets daran interessiert, mein Wissen praktisch einzusetzen, neue Herausforderungen anzunehmen und mich in IT und Cybersecurity weiterzuentwickeln.",
+    ],
+  },
+  experience: {
+    title: "Berufserfahrung",
+    washburn: {
+      role: "Undergraduate Research Assistant (K-INBRE, SCWTE)",
+      company: "Washburn University",
+      period: "Jan 2026 – heute",
+      location: "Topeka, Kansas, USA · Hybrid",
+      description:
+        "Entwicklung von TurtleTracker, einer Forschungs-Webanwendung zur automatisierten Identifikation von Ornate Box Turtles anhand von Fotos des Plastrons. Ziele: zuverlässige Identifikation einzelner Tiere und Speicherung in einer Datenbank für Langzeit-Monitoring und biologische Forschung. Gemeinsame Entwicklung mit Garrett King-Cody (Backend und Server-Infrastruktur); mein Fokus: Frontend und Systemintegration.",
+      responsibilities: [
+        "Konzeption und Implementierung der Frontend-Architektur mit React und TypeScript",
+        "User Workflows für Bild-Upload, Validierung und Ergebnisvisualisierung",
+        "Researcher-Dashboards für identifizierte Individuen und Metadaten",
+        "Abstimmung mit Backend-Systemen für bildbasierte Identifikation und Datenbank-Anbindung",
+        "Mitwirkung bei Zuverlässigkeit, Tests und Deployment",
+      ],
+      note: "Erstes Projekt von leerem Repository bis zur deployten Anwendung auf selbst konfiguriertem Server. Unter der Betreuung von Dr. Benjamin Reed.",
+    },
+    pentos: {
+      role: "Werkstudent Web Application Development",
+      company: "Pentos",
+      period: "Dez 2024 – heute",
+      location: "Kissimmee, Florida, USA · Remote",
+      description:
+        "Eigenständige Konzeption und Entwicklung einer Webanwendung im SAP SuccessFactors-Umfeld mit JavaScript und React. Umsetzung einer Produktidee in eine nutzerfreundliche Oberfläche und Implementierung des kompletten Frontends. Enge Abstimmung mit der Projektleitung.",
+    },
+    soptim: {
+      role: "Software Development Intern",
+      company: "SOPTIM AG",
+      period: "Jun 2024 – Jul 2024",
+      location: "Aachen, Deutschland · Hybrid",
+      description:
+        "Entwicklung und Wartung von Software zur Verarbeitung von Zeitreihen im Agile-Team. SCRUM (Daily, Refinement, Retrospective). Tasks, Bugs, User Stories, Merge-Request-Reviews. Technologien: React, TypeScript, Java, CSS, Selenium, Kotlin.",
+    },
+  },
+  education: {
+    title: "Ausbildung",
+    washburn: {
+      degree: "Bachelor of Science – Computer Information Science (Fortsetzung)",
+      school: "Washburn University",
+      period: "Aug 2025 – Mai 2027",
+      location: "Topeka, Kansas, USA",
+      note: "Fortsetzung des B.Sc. nach Wechsel von der Park University. Aktivitäten: Leichtathletik & Cross Country.",
+    },
+    park: {
+      degree: "Bachelor of Science – Cybersecurity & Information and Computer Science (begonnen)",
+      school: "Park University",
+      period: "Aug 2023 – Mai 2025",
+      location: "Parkville, Missouri, USA",
+      note: "Beginn des B.Sc. an der Park University; Wechsel an die Washburn University im Sommer 2025. Aktivitäten: Leichtathletik & Cross Country.",
+    },
+    highSchool: {
+      degree: "Abitur / High School",
+      school: "Heilig-Geist-Gymnasium",
+      period: "2015 - 2023",
+      location: "Würselen, Deutschland",
+      note: "Schülersprecher im Schuljahr 21/22",
+    },
+  },
+  projects: {
+    title: "Projekte",
+    teaser:
+      "TurtleTracker, RunSync, Heiligtumsfahrtquiz und mehr—mit Beschreibung, Zeitraum und Links zu Code oder Live-Demo.",
+    viewAll: "Alle Projekte anzeigen",
+    linkLive: "Live / Demo",
+    linkGithub: "Auf GitHub ansehen",
+    linkGithubWeb: "Web (GitHub)",
+    linkGithubAndroid: "Android (GitHub)",
+    turtletracker: {
+      name: "TurtleTracker – Automated Wildlife Monitoring Platform",
+      period: "Okt 2025 – heute",
+      org: "Washburn University",
+      description:
+        "Forschungs-Webplattform zur automatisierten Identifikation von Ornate Box Turtles anhand von Plastron-Fotos. Ergebnisse werden in einer Datenbank für Längsschnittanalysen und ökologische Forschung gespeichert. Gemeinsame Entwicklung mit Garrett King-Cody (Backend und Server); ich verantworte Frontend und UX. Vollständiger Lebenszyklus von der Idee bis zum Live-Betrieb.",
+      aspects: [
+        "Automatisierter Workflow zur bildbasierten Identifikation",
+        "Web-Oberfläche für Uploads, Ergebnisse und Datenexploration",
+        "Frontend und UX (mein Fokus); Backend und Server (Garrett King-Cody)",
+      ],
+    },
+    runsync: {
+      name: "RunSync: Automatisierte Fitness-Datensynchronisation",
+      period: "Sep 2024 – Okt 2025",
+      description:
+        "Python-Automatisierung zur Synchronisation von Fitnessdaten zwischen Strava, Google Sheets und Garmin Connect. Automatisierter Abgleich, Google-Sheets-Anbindung, GitHub Actions. Stack: Python, Strava API, Google Sheets API, Selenium, OAuth2. Impact: Reduzierung des Datenaufwands von Stunden auf Minuten.",
+      aspects: [],
+    },
+    heiligtumsfahrt: {
+      name: "Heiligtumsfahrtquiz",
+      period: "Mär 2020 – Mär 2021",
+      description:
+        "Entwicklung und Programmierung eines digitalen Quiz für Kinder zur Heiligtumsfahrt 2023 in Aachen, als Website und App.",
+      linkLabel: "Live / Demo",
+      aspects: [],
+    },
+  },
+  certifications: {
+    title: "Zertifikate & Auszeichnungen",
+    items: [
+      "8. Platz bundesweit, Deutscher Gründerpreis für Schüler:innen, Mai 2022",
+      "Existenzia für Schüler – Wie erstelle ich einen Geschäftsplan? (GründerRegion Aachen), Mär 2021",
+      "Sportmedaille der Stadt Würselen (Jan 2024) - Verliehen für Langstreckenlauf bei der Würselener Sportmatinée.",
+    ],
+  },
+  skills: {
+    title: "Kenntnisse",
+    categoryFrontend: "Frontend",
+    categoryLanguages: "Sprachen",
+    categoryTesting: "Testing",
+    categoryTools: "Tools & Infra",
+    categoryPlatforms: "Plattformen",
+    list: "Agile, SCRUM, MS Office, Adobe.",
+  },
+  languages: {
+    title: "Sprachen",
+    list: "Deutsch (Muttersprache), Englisch (fließend), Latein (Grundkenntnisse).",
+  },
+  footer: {
+    findMe: "Finde mich",
+    linkedIn: "LinkedIn",
+    instagram: "Instagram",
+  },
+  nav: {
+    home: "Start",
+    cv: "Lebenslauf",
+    projects: "Projekte",
+    sports: "Sport",
+    stats: "Stats",
+  },
+  home: {
+    tagline: "CIS-Student, Forschungsassistent & Web-Entwickler. Student-Athlete.",
+    photoAlt: "Porträt",
+    rightNow: "Aktuell",
+    roleShort:
+      "Forschung @ Washburn (TurtleTracker) · Web-Entwicklung @ Pentos · B.Sc. CIS @ Washburn",
+    explore: "Entdecken",
+    cvTeaser: "Erfahrung, Ausbildung & Über mich",
+    projectsTeaser: "TurtleTracker, RunSync & mehr",
+    sportsTeaser: "Leichtathletik, Ergebnisse",
+    statsTeaser: "Coding-Stunden & GitHub",
+  },
+  sports: {
+    title: "Leistungssport",
+    storyLead:
+      "Fortschritt entsteht durch gezieltes Training. Hier ist der Platz des Laufens, und ein paar Zahlen, die mir etwas sagen.",
+    intro:
+      "Ich laufe Leichtathletik und Cross Country an der Washburn University (zuvor Park University). Schwerpunkt: Mittel- und Langstrecke von 3,000 m bis 10.000 m sowie Cross Country (6k, 8k, 10k). Training und Rennen reflektiere ich auf Instagram und Strava.",
+    linksHeading: "Ergebnisse & Training",
+    tfrrsLabel: "TFRRS - alle Zeiten & Verlauf",
+    ladvLabel: "LADV - deutsche Ergebnisse vor College",
+    stravaLabel: "Strava - Training & Aktivitäten",
+    personalBestsHeading: "Persönliche Bestzeiten",
+    personalBestsTrack: "Bahn",
+    personalBestsXC: "Cross",
+    progressionHeading: "Verlauf",
+    progressionSub: "Saisonbesten nach Jahr",
+    progression10kTitle: "10.000 m / 10 km",
+    progression10kSub: "Bahn & Straße",
+    recentResultsHeading: "Letzte Ergebnisse",
+    recentResultsSub: "Chronologisch, neueste zuerst",
+    championshipHeading: "Meisterschaftserfolge",
+    championshipSub:
+      "Platzierungen bei Conference-, Regional- und nationalen Meisterschaften, wo das Ergebnis der Platz ist, nicht nur die Zeit.",
+    teamsHeading: "Vereine & Unis",
+    teamsSub: "Vereine und Unis, für die ich bisher gelaufen bin.",
+    preCollegeHeading: "Vor dem College (Deutschland)",
+    preCollegeIntro:
+      "Ausgewählte Ergebnisse aus der LADV (DJK Armada Euchen-Würselen, Nordrhein) vor dem Studium in den USA.",
+    yearlyDistanceHeading: "Jahreskilometer",
+    yearlyDistanceSub: "Gelaufene Kilometer pro Jahr (Training + Wettkämpfe).",
+    lifetimeLabel: "Gesamt (alle Jahre)",
+    timeEstimateLabel: "Grobe Laufzeit bei ~4:30/km:",
+    hours: "Stunden",
+    days: "Tage",
+    recentHeading: "2025–2026 highlights",
+    recent: [
+      "Washburn Open indoor 5k 14:54 (Jan 2026); Washburn Rust Buster 3k 8:43.56 (Jan 2026).",
+      "NCAA DII Cross Country Nationals 2025 (10k); Central Region 41st, team qualified; MIAA XC 32nd.",
+      "First sub-25 8k XC at DBU Old Glory Gallop (24:49). Gans Creek 8k 25:03, course PR and 8k XC PR at season opener.",
+      "Heart of America Conference: 1st 10,000 m (2025, 2024), 1st 5000 m indoor (2025); Iowa State Holiday 3000 m 1st.",
+      "New Year's Eve Aachen: 3rd 4.5 km, 1st 9 km. 1st Kraremanns Lauf Simmerath 4 km.",
+    ],
+    highlights: "Auszeichnungen & Meisterschaften",
+    photoAlt: "Sport",
+    photosNote: "Fotos folgen.",
+    indoor: "H",
+    place: "Platz",
+    youth: "Jugend",
+    teams: {
+      "djk-armada": { name: "DJK Armada Euchen-Würselen", period: "Deutschland" },
+      park: { name: "Park University", period: "2023–2025" },
+      washburn: { name: "Washburn University", period: "2025–" },
+    },
+    meets: {
+      "DM Jugend U20/U18": "DM Jugend U20/U18",
+      "NRW Langstreckenmeisterschaften": "NRW Langstreckenmeisterschaften",
+      "Nordrhein Crossmeisterschaften": "Nordrhein Crossmeisterschaften",
+      "NRW 10-km-Straßenlaufmeisterschaften":
+        "NRW 10-km-Straßenlaufmeisterschaften",
+      "DM 10 km Straße": "DM 10 km Straße",
+      "MIAA Indoor Track & Field Championships":
+        "MIAA Hallen-Leichtathletik-Meisterschaften",
+      "2026 MIAA Indoor Track & Field Championships":
+        "MIAA Hallen-Leichtathletik-Meisterschaften",
+      "NCAA DII Cross Country Championships":
+        "NCAA DII Cross-Country-Meisterschaften",
+      "NCAA DII XC Championships": "NCAA DII Cross-Country-Meisterschaften",
+      "NCAA DII Central Region": "NCAA DII Region Mitte",
+      "MIAA Cross Country Championships": "MIAA Cross-Country-Meisterschaften",
+      "Heart of America Outdoor Championships":
+        "Heart of America Freiluft-Meisterschaften",
+      "Heart of America Indoor Championships":
+        "Heart of America Hallen-Meisterschaften",
+      "Heart of America XC Championships":
+        "Heart of America Cross-Country-Meisterschaften",
+      "NAIA Cross Country Championships": "NAIA Cross-Country-Meisterschaften",
+    },
+    events: {
+      "10 km Straße": "10 km Straße",
+      "9 km Straße": "9 km Straße",
+      "5 km Straße": "5 km Straße",
+      "4.5 km Straße": "4.5 km Straße",
+      "Cross Sprint": "Cross Sprint",
+      "Crosslauf kurz": "Crosslauf kurz",
+      "3×1,000 m Staffel": "3×1,000 m Staffel",
+      "10k (XC)": "10 km (Cross)",
+      "8k (XC)": "8 km (Cross)",
+      "6k (XC)": "6 km (Cross)",
+    },
+  },
+  stats: {
+    title: "Stats",
+    codingHours: "Erfasste Coding-Stunden",
+    codingGoal: "Ziel: 10.000 Stunden",
+    githubContributions: "GitHub-Contributions",
+    githubPlaceholder: "GITHUB_USERNAME in config.ts eintragen.",
+    gladwellHeadline: "Die 10.000-Stunden-Regel",
+    gladwellIntro:
+      "In Outliers hat Malcolm Gladwell die Idee bekannt gemacht: Etwa 10.000 Stunden gezielte Übung braucht es, um in einem Bereich Weltklasse zu erreichen—eine Idee aus der Expertise-Forschung von Anders Ericsson. Meine Coding-Stunden tracke ich als groben Indikator für genau diese Art gezielter Übung.",
+    myJourney: "Mein Coding-Weg",
+    hoursToGo: "Stunden noch",
+    milestoneLabel: "Meilenstein",
+    whatCounts: "Was ich zähle",
+    whatCountsText:
+      "Fokussiertes Coding: bauen, debuggen, aus Doku und Code lernen. Kein passives Konsumieren. Wie im Sport: deliberate practice, nicht nur Masse.",
+    githubAsTrace: "Eine sichtbare Spur",
+    githubAsTraceText:
+      "GitHub ist ein Abdruck davon. Hier der Contribution-Graph.",
+  },
+};

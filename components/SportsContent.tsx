@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import { Text, SimpleGrid, Box, Anchor, Stack } from '@mantine/core';
-import { copy } from '@/content/copy';
 import { useLang } from '@/components/LangContext';
 import {
   SPORTS_LINKS,
@@ -12,8 +11,6 @@ import {
   PERSONAL_BESTS,
   getMergedResults,
   getChampionshipHighlights,
-  MEET_TRANSLATIONS,
-  EVENT_TRANSLATIONS,
   YEARLY_RUNNING_KM,
   ROUGH_AVERAGE_PACE_MIN_PER_KM,
   PROGRESSION_3000,
@@ -24,7 +21,6 @@ import {
   type ChampionshipHighlight,
   type ResultEntry,
 } from '@/content/sportsData';
-import type { Lang } from '@/content/copy';
 import { SOCIAL_LINKS } from '@/config';
 
 function formatDate(dateStr: string, lang: 'en' | 'de'): string {
@@ -35,14 +31,6 @@ function formatDate(dateStr: string, lang: 'en' | 'de'): string {
   );
   if (d) return `${month} ${d}, ${y}`;
   return `${month} ${y}`;
-}
-
-function meetLabel(meet: string, lang: Lang): string {
-  return MEET_TRANSLATIONS[meet]?.[lang] ?? meet;
-}
-
-function eventLabel(event: string, lang: Lang): string {
-  return EVENT_TRANSLATIONS[event]?.[lang] ?? event;
 }
 
 /** Sort championship highlights: 1st first, then 2nd, 3rd, 4th… then "-". Within same place, newest first. */
@@ -233,8 +221,10 @@ function ProgressionLineChart({
 }
 
 export function SportsContent() {
-  const { lang } = useLang();
-  const c = copy[lang];
+  const { lang, t } = useLang();
+  const c = t.sports;
+  const meetLabel = (meet: string) => c.meets[meet] ?? meet;
+  const eventLabel = (event: string) => c.events[event] ?? event;
   const trackPBs = PERSONAL_BESTS.filter((p) => !p.xc);
   const xcPBs = PERSONAL_BESTS.filter((p) => p.xc);
 
@@ -260,20 +250,20 @@ export function SportsContent() {
           className='font-display text-2xl sm:text-3xl font-bold mb-4'
           style={{ color: 'var(--color-accent-3)' }}
         >
-          {c.sports.title}
+          {c.title}
         </h1>
         <p
           className='text-base sm:text-lg max-w-2xl leading-relaxed mb-6'
           style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}
         >
-          {c.sports.storyLead}
+          {c.storyLead}
         </p>
         <Text
           size='sm'
           className='mb-0 leading-relaxed'
           style={{ color: 'var(--color-text-muted)' }}
         >
-          {c.sports.intro}
+          {c.intro}
         </Text>
 
         {/* Teams / clubs & universities — wrapper ensures gap (padding not affected by margin collapse) */}
@@ -285,10 +275,10 @@ export function SportsContent() {
             className='mb-3'
             style={{ color: 'var(--color-text-muted)', letterSpacing: '0.06em' }}
           >
-            {c.sports.teamsHeading}
+            {c.teamsHeading}
           </Text>
           <Text size='xs' className='mb-6' style={{ color: 'var(--color-text-muted)' }}>
-            {c.sports.teamsSub}
+            {c.teamsSub}
           </Text>
           <SimpleGrid cols={{ base: 1, sm: 3 }} spacing='lg' className='mb-10'>
           {TEAMS.map((team) => (
@@ -314,10 +304,10 @@ export function SportsContent() {
                 </Box>
               )}
               <Text size='sm' fw={600} style={{ color: 'var(--color-text)' }}>
-                {lang === 'de' ? team.nameDe : team.nameEn}
+                {c.teams[team.id]?.name ?? team.id}
               </Text>
               <Text size='xs' style={{ color: 'var(--color-text-muted)' }}>
-                {lang === 'de' ? team.periodDe : team.periodEn}
+                {c.teams[team.id]?.period ?? ''}
               </Text>
             </Box>
           ))}
@@ -329,7 +319,7 @@ export function SportsContent() {
           className='font-display text-lg font-bold mb-3'
           style={{ color: 'var(--color-accent-3)' }}
         >
-          {c.sports.photoAlt}
+          {c.photoAlt}
         </h2>
         <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing='md' className='mb-10'>
           {SPORTS_GALLERY.map((src, i) => (
@@ -344,7 +334,7 @@ export function SportsContent() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={encodeURI(src)}
-                alt={`${c.sports.photoAlt} ${i + 1}`}
+                alt={`${c.photoAlt} ${i + 1}`}
                 className='w-full h-full object-cover'
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
@@ -370,7 +360,7 @@ export function SportsContent() {
           mb='xs'
           style={{ color: 'var(--color-text-muted)', letterSpacing: '0.06em' }}
         >
-          {c.sports.linksHeading}
+          {c.linksHeading}
         </Text>
         <Stack gap='xs' className='mb-10'>
           <Anchor
@@ -380,7 +370,7 @@ export function SportsContent() {
             size='sm'
             className='link-accent'
           >
-            {c.sports.tfrrsLabel} →
+            {c.tfrrsLabel} →
           </Anchor>
           <Anchor
             href={SPORTS_LINKS.ladv}
@@ -389,7 +379,7 @@ export function SportsContent() {
             size='sm'
             className='link-accent'
           >
-            {c.sports.ladvLabel} →
+            {c.ladvLabel} →
           </Anchor>
           <Anchor
             href={SOCIAL_LINKS.strava}
@@ -398,7 +388,7 @@ export function SportsContent() {
             size='sm'
             className='link-accent'
           >
-            {c.sports.stravaLabel} →
+            {c.stravaLabel} →
           </Anchor>
         </Stack>
 
@@ -407,10 +397,10 @@ export function SportsContent() {
           className='font-display text-lg font-bold mb-3'
           style={{ color: 'var(--color-accent-3)' }}
         >
-          {c.sports.personalBestsHeading}
+          {c.personalBestsHeading}
         </h2>
         <Text size='xs' style={{ color: 'var(--color-text-muted)' }} className='mb-2'>
-          {c.sports.personalBestsTrack}
+          {c.personalBestsTrack}
         </Text>
         <ul
           className='list-none space-y-1 text-sm mb-4'
@@ -425,7 +415,7 @@ export function SportsContent() {
                   style={{ color: 'var(--color-text-muted)' }}
                   title='Indoor'
                 >
-                  ({c.sports.indoor})
+                  ({c.indoor})
                 </span>
               )}{' '}
               <span className='tabular-nums'>{pb.time}</span>
@@ -441,7 +431,7 @@ export function SportsContent() {
           ))}
         </ul>
         <Text size='xs' style={{ color: 'var(--color-text-muted)' }} className='mb-2'>
-          {c.sports.personalBestsXC}
+          {c.personalBestsXC}
         </Text>
         <ul
           className='list-none space-y-1 text-sm mb-10'
@@ -468,10 +458,10 @@ export function SportsContent() {
           className='font-display text-lg font-bold mb-2'
           style={{ color: 'var(--color-accent-3)' }}
         >
-          {c.sports.progressionHeading}
+          {c.progressionHeading}
         </h2>
         <Text size='sm' className='mb-4' style={{ color: 'var(--color-text-muted)' }}>
-          {c.sports.progressionSub}
+          {c.progressionSub}
         </Text>
         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing='md' className='mb-10'>
           <ProgressionLineChart
@@ -488,8 +478,8 @@ export function SportsContent() {
           />
           <ProgressionLineChart
             data={PROGRESSION_10000}
-            title={c.sports.progression10kTitle}
-            sub={c.sports.progression10kSub}
+            title={c.progression10kTitle}
+            sub={c.progression10kSub}
             accentColor='var(--color-accent-4)'
           />
           <ProgressionLineChart
@@ -505,10 +495,10 @@ export function SportsContent() {
           className='font-display text-lg font-bold mb-2'
           style={{ color: 'var(--color-accent-3)' }}
         >
-          {c.sports.championshipHeading}
+          {c.championshipHeading}
         </h2>
         <Text size='sm' className='mb-4' style={{ color: 'var(--color-text-muted)' }}>
-          {c.sports.championshipSub}
+          {c.championshipSub}
         </Text>
         <ul className='list-none space-y-3 mb-10' style={{ color: 'var(--color-text)' }}>
           {sortChampionshipsByPlace(getChampionshipHighlights()).map((h, i) => (
@@ -537,16 +527,16 @@ export function SportsContent() {
                   className='text-xs shrink-0 font-medium'
                   style={{ color: 'var(--color-text-muted)' }}
                 >
-                  {h.level === 'youth' ? (lang === 'de' ? 'Jugend' : 'Youth') : ''}
+                  {h.level === 'youth' ? c.youth : ''}
                 </span>
               )}
-              <span className='font-medium'>{meetLabel(h.meet, lang)}</span>
+              <span className='font-medium'>{meetLabel(h.meet)}</span>
               {h.location && (
                 <span className='text-sm' style={{ color: 'var(--color-text-muted)' }}>
                   ({h.location})
                 </span>
               )}
-              <span>{eventLabel(h.event, lang)}</span>
+              <span>{eventLabel(h.event)}</span>
               {h.ageGroup && (
                 <span
                   className='text-xs px-1.5 py-0.5 rounded'
@@ -586,10 +576,10 @@ export function SportsContent() {
           className='font-display text-lg font-bold mb-2'
           style={{ color: 'var(--color-accent-3)' }}
         >
-          {c.sports.recentResultsHeading}
+          {c.recentResultsHeading}
         </h2>
         <Text size='sm' className='mb-4' style={{ color: 'var(--color-text-muted)' }}>
-          {c.sports.recentResultsSub}
+          {c.recentResultsSub}
         </Text>
         {(() => {
           const merged = getMergedResults();
@@ -641,20 +631,20 @@ export function SportsContent() {
                           >
                             {formatDate(r.date, lang)}
                           </span>
-                          <span className='font-medium'>{meetLabel(r.meet, lang)}</span>
+                          <span className='font-medium'>{meetLabel(r.meet)}</span>
                           {r.location && (
                             <span className='text-xs' style={{ color: 'var(--color-text-muted)' }}>
                               ({r.location})
                             </span>
                           )}
-                          <span>{eventLabel(r.event, lang)}</span>
+                          <span>{eventLabel(r.event)}</span>
                           <span className='tabular-nums'>{r.time}</span>
                           {r.place && (
                             <span
                               className='text-xs'
                               style={{ color: 'var(--color-text-muted)' }}
                             >
-                              ({c.sports.place} {r.place})
+                              ({c.place} {r.place})
                             </span>
                           )}
                           {r.ageGroup && (
@@ -691,10 +681,10 @@ export function SportsContent() {
           className='font-display text-lg font-bold mb-2'
           style={{ color: 'var(--color-accent-3)' }}
         >
-          {c.sports.yearlyDistanceHeading}
+          {c.yearlyDistanceHeading}
         </h2>
         <Text size='sm' className='mb-4' style={{ color: 'var(--color-text-muted)' }}>
-          {c.sports.yearlyDistanceSub}
+          {c.yearlyDistanceSub}
         </Text>
         {/* Lifetime total + rough time estimate */}
         {(() => {
@@ -718,7 +708,7 @@ export function SportsContent() {
                 className='mb-1'
                 style={{ color: 'var(--color-text-muted)', letterSpacing: '0.06em' }}
               >
-                {c.sports.lifetimeLabel}
+                {c.lifetimeLabel}
               </Text>
               <Text
                 size='xl'
@@ -740,13 +730,13 @@ export function SportsContent() {
                 mi
               </Text>
               <Text size='xs' style={{ color: 'var(--color-text-muted)' }}>
-                {c.sports.timeEstimateLabel}{' '}
+                {c.timeEstimateLabel}{' '}
                 <span
                   className='tabular-nums font-medium'
                   style={{ color: 'var(--color-text)' }}
                 >
-                  ~{totalHours.toLocaleString(locale)} {c.sports.hours} (~{totalDays}{' '}
-                  {c.sports.days})
+                  ~{totalHours.toLocaleString(locale)} {c.hours} (~{totalDays}{' '}
+                  {c.days})
                 </span>
               </Text>
             </Box>
@@ -797,13 +787,13 @@ export function SportsContent() {
           className='font-display text-lg font-bold mb-3'
           style={{ color: 'var(--color-accent-3)' }}
         >
-          {c.sports.highlights}
+          {c.highlights}
         </h2>
         <ul
           className='list-none space-y-1.5 text-sm mb-10'
           style={{ color: 'var(--color-text)' }}
         >
-          {c.certifications.items.slice(2, 3).map((item, i) => (
+          {t.certifications.items.slice(2, 3).map((item: string, i: number) => (
             <li key={i}>{item}</li>
           ))}
         </ul>

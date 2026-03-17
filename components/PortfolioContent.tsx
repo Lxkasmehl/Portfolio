@@ -1,6 +1,5 @@
 "use client";
 
-import { copy } from "@/content/copy";
 import { useLang } from "@/components/LangContext";
 import { Section } from "@/components/Section";
 import { PortraitImage } from "@/components/PortraitImage";
@@ -9,8 +8,7 @@ import { SocialLinks } from "@/components/SocialLinks";
 import { Text, List, Anchor } from "@mantine/core";
 
 export function PortfolioContent() {
-  const { lang } = useLang();
-  const c = copy[lang];
+  const { t } = useLang();
 
   return (
     <div>
@@ -24,61 +22,61 @@ export function PortfolioContent() {
               borderColor: "var(--color-border)",
             }}
           >
-            <PortraitImage alt={c.home.photoAlt} />
+            <PortraitImage alt={t.home.photoAlt} />
           </div>
           <div>
             <h1
               className="font-display text-2xl sm:text-3xl font-bold tracking-tight m-0"
               style={{ color: "var(--color-text)" }}
             >
-              {c.intro.name}
+              {t.intro.name}
             </h1>
             <p className="mt-2 text-sm max-w-xl" style={{ color: "var(--color-text-muted)" }}>
-              {c.intro.headline}
+              {t.intro.headline}
             </p>
             <p className="mt-1 text-sm" style={{ color: "var(--color-text-muted)" }}>
-              {c.intro.location}
+              {t.intro.location}
             </p>
           </div>
         </div>
       </header>
 
       <main>
-        <Section title={c.about.title}>
+        <Section title={t.about.title}>
           <div className="prose-custom text-sm" style={{ color: "var(--color-text)" }}>
-            {c.about.paragraphs.map((p, i) => (
+            {t.about.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
         </Section>
 
-        <Section title={c.experience.title}>
+        <Section title={t.experience.title}>
           <div className="space-y-10">
             {/* Washburn Research */}
             <div>
               <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
                 <span className="font-semibold" style={{ color: "var(--color-text)" }}>
-                  {c.experience.washburn.role}
+                  {t.experience.washburn.role}
                 </span>
                 <span style={{ color: "var(--color-text-muted)" }}>·</span>
                 <span style={{ color: "var(--color-text-muted)" }}>
-                  {c.experience.washburn.company}
+                  {t.experience.washburn.company}
                 </span>
               </div>
               <p className="text-sm mt-0.5" style={{ color: "var(--color-text-muted)" }}>
-                {c.experience.washburn.period}
-                {c.experience.washburn.location && ` · ${c.experience.washburn.location}`}
+                {t.experience.washburn.period}
+                {t.experience.washburn.location && ` · ${t.experience.washburn.location}`}
               </p>
               <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
-                {c.experience.washburn.description}
+                {t.experience.washburn.description}
               </p>
               <List size="sm" mt="xs" spacing="xs" className="list-disc pl-5">
-                {c.experience.washburn.responsibilities.map((item, i) => (
+                {t.experience.washburn.responsibilities.map((item, i) => (
                   <List.Item key={i}>{item}</List.Item>
                 ))}
               </List>
               <p className="mt-2 text-sm italic" style={{ color: "var(--color-text-muted)" }}>
-                {c.experience.washburn.note}
+                {t.experience.washburn.note}
               </p>
             </div>
 
@@ -86,19 +84,19 @@ export function PortfolioContent() {
             <div>
               <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
                 <span className="font-semibold" style={{ color: "var(--color-text)" }}>
-                  {c.experience.pentos.role}
+                  {t.experience.pentos.role}
                 </span>
                 <span style={{ color: "var(--color-text-muted)" }}>·</span>
                 <span style={{ color: "var(--color-text-muted)" }}>
-                  {c.experience.pentos.company}
+                  {t.experience.pentos.company}
                 </span>
               </div>
               <p className="text-sm mt-0.5" style={{ color: "var(--color-text-muted)" }}>
-                {c.experience.pentos.period}
-                {c.experience.pentos.location && ` · ${c.experience.pentos.location}`}
+                {t.experience.pentos.period}
+                {t.experience.pentos.location && ` · ${t.experience.pentos.location}`}
               </p>
               <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
-                {c.experience.pentos.description}
+                {t.experience.pentos.description}
               </p>
             </div>
 
@@ -106,83 +104,83 @@ export function PortfolioContent() {
             <div>
               <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
                 <span className="font-semibold" style={{ color: "var(--color-text)" }}>
-                  {c.experience.soptim.role}
+                  {t.experience.soptim.role}
                 </span>
                 <span style={{ color: "var(--color-text-muted)" }}>·</span>
                 <span style={{ color: "var(--color-text-muted)" }}>
-                  {c.experience.soptim.company}
+                  {t.experience.soptim.company}
                 </span>
               </div>
               <p className="text-sm mt-0.5" style={{ color: "var(--color-text-muted)" }}>
-                {c.experience.soptim.period}
-                {c.experience.soptim.location && ` · ${c.experience.soptim.location}`}
+                {t.experience.soptim.period}
+                {t.experience.soptim.location && ` · ${t.experience.soptim.location}`}
               </p>
               <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
-                {c.experience.soptim.description}
+                {t.experience.soptim.description}
               </p>
             </div>
           </div>
         </Section>
 
-        <Section title={c.education.title}>
+        <Section title={t.education.title}>
           <div className="space-y-8">
             <div>
               <p className="font-semibold" style={{ color: "var(--color-text)" }}>
-                {c.education.washburn.degree}
+                {t.education.washburn.degree}
               </p>
-              <p style={{ color: "var(--color-text-muted)" }}>{c.education.washburn.school}</p>
+              <p style={{ color: "var(--color-text-muted)" }}>{t.education.washburn.school}</p>
               <p className="text-sm mt-0.5" style={{ color: "var(--color-text-muted)" }}>
-                {c.education.washburn.period} · {c.education.washburn.location}
+                {t.education.washburn.period} · {t.education.washburn.location}
               </p>
               <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
-                {c.education.washburn.note}
+                {t.education.washburn.note}
               </p>
             </div>
             <div>
               <p className="font-semibold" style={{ color: "var(--color-text)" }}>
-                {c.education.park.degree}
+                {t.education.park.degree}
               </p>
-              <p style={{ color: "var(--color-text-muted)" }}>{c.education.park.school}</p>
+              <p style={{ color: "var(--color-text-muted)" }}>{t.education.park.school}</p>
               <p className="text-sm mt-0.5" style={{ color: "var(--color-text-muted)" }}>
-                {c.education.park.period} · {c.education.park.location}
+                {t.education.park.period} · {t.education.park.location}
               </p>
               <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
-                {c.education.park.note}
+                {t.education.park.note}
               </p>
             </div>
             <div>
               <p className="font-semibold" style={{ color: "var(--color-text)" }}>
-                {c.education.highSchool.degree}
+                {t.education.highSchool.degree}
               </p>
-              <p style={{ color: "var(--color-text-muted)" }}>{c.education.highSchool.school}</p>
+              <p style={{ color: "var(--color-text-muted)" }}>{t.education.highSchool.school}</p>
               <p className="text-sm mt-0.5" style={{ color: "var(--color-text-muted)" }}>
-                {c.education.highSchool.period} · {c.education.highSchool.location}
+                {t.education.highSchool.period} · {t.education.highSchool.location}
               </p>
-              {c.education.highSchool.note && (
+              {t.education.highSchool.note && (
                 <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
-                  {c.education.highSchool.note}
+                  {t.education.highSchool.note}
                 </p>
               )}
             </div>
           </div>
         </Section>
 
-        <Section title={c.projects.title}>
+        <Section title={t.projects.title}>
           <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--color-text)" }}>
-            {c.projects.teaser}
+            {t.projects.teaser}
           </p>
           <Anchor
             href="/projects"
             size="sm"
             className="link-accent"
           >
-            {c.projects.viewAll} →
+            {t.projects.viewAll} →
           </Anchor>
         </Section>
 
-        <Section title={c.certifications.title}>
+        <Section title={t.certifications.title}>
           <ul className="list-none space-y-1.5 text-sm">
-            {c.certifications.items.map((item, i) => (
+            {t.certifications.items.map((item, i) => (
               <li key={i} style={{ color: "var(--color-text)" }}>
                 {item}
               </li>
@@ -190,18 +188,18 @@ export function PortfolioContent() {
           </ul>
         </Section>
 
-        <Section title={c.skills.title}>
+        <Section title={t.skills.title}>
           <div className="space-y-4">
             <TechStack />
             <p className="text-sm leading-relaxed pt-2" style={{ color: "var(--color-text-muted)" }}>
-              {c.skills.list}
+              {t.skills.list}
             </p>
           </div>
         </Section>
 
-        <Section title={c.languages.title}>
+        <Section title={t.languages.title}>
           <p className="text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
-            {c.languages.list}
+            {t.languages.list}
           </p>
         </Section>
       </main>
@@ -211,7 +209,7 @@ export function PortfolioContent() {
         style={{ borderColor: "var(--color-border)" }}
       >
         <p className="text-sm font-display font-bold mb-3" style={{ color: "var(--color-text-muted)" }}>
-          {c.footer.findMe}
+          {t.footer.findMe}
         </p>
         <SocialLinks size="md" />
       </footer>

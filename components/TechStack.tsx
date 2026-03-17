@@ -1,8 +1,8 @@
 "use client";
 
 import { TECH_STACK_BY_CATEGORY } from "@/config";
-import { copy } from "@/content/copy";
 import { useLang } from "@/components/LangContext";
+import type { Messages } from "@/content/translations";
 
 const ICONS_CDN = "https://cdn.jsdelivr.net/npm/simple-icons@11/icons";
 
@@ -29,7 +29,7 @@ const TECH_LABELS: Record<string, string> = {
   c: "C",
 };
 
-const CATEGORY_COPY_KEYS: Record<keyof typeof TECH_STACK_BY_CATEGORY, keyof typeof copy.en.skills> = {
+const CATEGORY_COPY_KEYS: Record<keyof typeof TECH_STACK_BY_CATEGORY, keyof Messages["skills"]> = {
   frontend: "categoryFrontend",
   languages: "categoryLanguages",
   testing: "categoryTesting",
@@ -66,8 +66,8 @@ function TechCard({ slug }: { slug: string }) {
 }
 
 export function TechStack() {
-  const { lang } = useLang();
-  const c = copy[lang].skills;
+  const { t } = useLang();
+  const c = t.skills;
 
   return (
     <div className="space-y-8">

@@ -15,42 +15,17 @@ export const SPORTS_LINKS = {
   strava: 'https://www.strava.com/athletes/68981361',
 } as const;
 
-/** Club or university team; logo is optional (path under /sports/logos/). */
+/** Club or university team; name/period come from content/translations (sports.teams[id]). */
 export interface Team {
   id: string;
-  nameEn: string;
-  nameDe: string;
-  periodEn: string;
-  periodDe: string;
   logoPath: string | null;
 }
 
 /** Teams I've run for, chronological: Germany → Park → Washburn. */
 export const TEAMS: Team[] = [
-  {
-    id: 'djk-armada',
-    nameEn: 'DJK Armada Euchen-Würselen',
-    nameDe: 'DJK Armada Euchen-Würselen',
-    periodEn: 'Germany',
-    periodDe: 'Deutschland',
-    logoPath: '/sports/logos/Logo-Armada-2025.jpg',
-  },
-  {
-    id: 'park',
-    nameEn: 'Park University',
-    nameDe: 'Park University',
-    periodEn: '2023–2025',
-    periodDe: '2023–2025',
-    logoPath: '/sports/logos/park-pirates-logo-color.avif',
-  },
-  {
-    id: 'washburn',
-    nameEn: 'Washburn University',
-    nameDe: 'Washburn University',
-    periodEn: '2025–',
-    periodDe: '2025–',
-    logoPath: '/sports/logos/Washburn_Ichabods_logo.svg',
-  },
+  { id: 'djk-armada', logoPath: '/sports/logos/Logo-Armada-2025.jpg' },
+  { id: 'park', logoPath: '/sports/logos/park-pirates-logo-color.avif' },
+  { id: 'washburn', logoPath: '/sports/logos/Washburn_Ichabods_logo.svg' },
 ];
 
 /** Hero image (big banner on Sports page). File in public/sports/. */
@@ -139,79 +114,7 @@ export interface ChampionshipHighlight {
   level?: 'conference' | 'regional' | 'national' | 'state' | 'youth';
 }
 
-/** Translations for meet names: canonical key (as in data) -> { en, de }. Used for DE/EN site. */
-export const MEET_TRANSLATIONS: Record<string, { en: string; de: string }> = {
-  // German meets → English for EN locale
-  'DM Jugend U20/U18': { en: 'German Youth Champs (U20/U18)', de: 'DM Jugend U20/U18' },
-  'NRW Langstreckenmeisterschaften': {
-    en: 'North Rhine-Westphalia Long-Distance Champs',
-    de: 'NRW Langstreckenmeisterschaften',
-  },
-  'Nordrhein Crossmeisterschaften': {
-    en: 'North Rhine Cross Country Champs',
-    de: 'Nordrhein Crossmeisterschaften',
-  },
-  'NRW 10-km-Straßenlaufmeisterschaften': {
-    en: 'NRW 10k Road Racing Champs',
-    de: 'NRW 10-km-Straßenlaufmeisterschaften',
-  },
-  'DM 10 km Straße': { en: 'German National 10k Road', de: 'DM 10 km Straße' },
-  // US/college meets → German for DE locale (short descriptive labels)
-  'MIAA Indoor Track & Field Championships': {
-    en: 'MIAA Indoor Track & Field Championships',
-    de: 'MIAA Hallen-Leichtathletik-Meisterschaften',
-  },
-  '2026 MIAA Indoor Track & Field Championships': {
-    en: 'MIAA Indoor Track & Field Championships',
-    de: 'MIAA Hallen-Leichtathletik-Meisterschaften',
-  },
-  'NCAA DII Cross Country Championships': {
-    en: 'NCAA DII Cross Country Championships',
-    de: 'NCAA DII Cross-Country-Meisterschaften',
-  },
-  'NCAA DII XC Championships': {
-    en: 'NCAA DII Cross Country Championships',
-    de: 'NCAA DII Cross-Country-Meisterschaften',
-  },
-  'NCAA DII Central Region': {
-    en: 'NCAA DII Central Region',
-    de: 'NCAA DII Region Mitte',
-  },
-  'MIAA Cross Country Championships': {
-    en: 'MIAA Cross Country Championships',
-    de: 'MIAA Cross-Country-Meisterschaften',
-  },
-  'Heart of America Outdoor Championships': {
-    en: 'Heart of America Outdoor Championships',
-    de: 'Heart of America Freiluft-Meisterschaften',
-  },
-  'Heart of America Indoor Championships': {
-    en: 'Heart of America Indoor Championships',
-    de: 'Heart of America Hallen-Meisterschaften',
-  },
-  'Heart of America XC Championships': {
-    en: 'Heart of America XC Championships',
-    de: 'Heart of America Cross-Country-Meisterschaften',
-  },
-  'NAIA Cross Country Championships': {
-    en: 'NAIA Cross Country Championships',
-    de: 'NAIA Cross-Country-Meisterschaften',
-  },
-};
-
-/** Translations for event names: canonical key -> { en, de }. */
-export const EVENT_TRANSLATIONS: Record<string, { en: string; de: string }> = {
-  '10 km Straße': { en: '10k Road', de: '10 km Straße' },
-  '9 km Straße': { en: '9k Road', de: '9 km Straße' },
-  '5 km Straße': { en: '5k Road', de: '5 km Straße' },
-  '4.5 km Straße': { en: '4.5k Road', de: '4.5 km Straße' },
-  'Cross Sprint': { en: 'Cross Sprint', de: 'Cross Sprint' },
-  'Crosslauf kurz': { en: 'Short cross country', de: 'Crosslauf kurz' },
-  '3×1,000 m Staffel': { en: '3×1,000 m Relay', de: '3×1,000 m Staffel' },
-  '10k (XC)': { en: '10k (XC)', de: '10 km (Cross)' },
-  '8k (XC)': { en: '8k (XC)', de: '8 km (Cross)' },
-  '6k (XC)': { en: '6k (XC)', de: '6 km (Cross)' },
-};
+// Meet/event labels: use getMessages(lang).sports.meets[meet] / .sports.events[event] (content/translations).
 
 // -- Personal Bests (all-time, college + post-college) --
 export const PERSONAL_BESTS: PersonalBest[] = [

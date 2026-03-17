@@ -1,6 +1,5 @@
 "use client";
 
-import { copy } from "@/content/copy";
 import { useLang } from "@/components/LangContext";
 import { SOCIAL_LINKS } from "@/config";
 
@@ -20,15 +19,20 @@ const SOCIALS: {
 ];
 
 export function SocialLinks({ size = "md" }: { size?: "sm" | "md" }) {
-  const { lang } = useLang();
-  const c = copy[lang];
+  const { lang, t } = useLang();
   const iconSize = size === "sm" ? 24 : 32;
+  const labelByKey: Record<keyof typeof SOCIAL_LINKS, string> = {
+    linkedin: t.footer.linkedIn,
+    instagram: t.footer.instagram,
+    strava: lang === "de" ? "Strava" : "Strava",
+    github: lang === "de" ? "GitHub" : "GitHub",
+  };
 
   return (
     <div className="flex flex-wrap items-center gap-4">
       {SOCIALS.map(({ key, icon, labelEn, labelDe }) => {
         const href = SOCIAL_LINKS[key];
-        const label = lang === "de" ? labelDe : labelEn;
+        const label = labelByKey[key] ?? (lang === "de" ? labelDe : labelEn);
         if (!href || href.includes("your-id")) return null;
         return (
           <a

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { copy } from "@/content/copy";
 import { useLang } from "@/components/LangContext";
 import { PortraitImage } from "@/components/PortraitImage";
 import { SocialLinks } from "@/components/SocialLinks";
@@ -22,8 +21,7 @@ const CARDS: {
 ];
 
 export function HomeContent() {
-  const { lang } = useLang();
-  const c = copy[lang];
+  const { t } = useLang();
 
   return (
     <div className="space-y-16 sm:space-y-20">
@@ -44,23 +42,23 @@ export function HomeContent() {
               boxShadow: "0 12px 40px -8px rgba(0,0,0,0.15)",
             }}
           >
-            <PortraitImage alt={c.home.photoAlt} />
+            <PortraitImage alt={t.home.photoAlt} />
           </div>
           <div className="animate-in animate-in-delay-1">
             <h1
               className="font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight m-0"
               style={{ color: "var(--color-text)" }}
             >
-              {c.intro.name}
+              {t.intro.name}
             </h1>
             <p
               className="mt-3 text-lg sm:text-xl max-w-xl"
               style={{ color: "var(--color-text-muted)" }}
             >
-              {c.home.tagline}
+              {t.home.tagline}
             </p>
             <p className="mt-1 text-sm" style={{ color: "var(--color-text-muted)" }}>
-              {c.intro.location}
+              {t.intro.location}
             </p>
             <div
               className="mt-6 inline-block px-4 py-2 rounded-2xl text-sm font-semibold"
@@ -70,7 +68,7 @@ export function HomeContent() {
                 border: "2px dashed var(--color-accent)",
               }}
             >
-              {c.home.rightNow}: {c.home.roleShort}
+              {t.home.rightNow}: {t.home.roleShort}
             </div>
           </div>
         </div>
@@ -82,7 +80,7 @@ export function HomeContent() {
           className="font-display text-2xl sm:text-3xl font-bold mb-8"
           style={{ color: "var(--color-text)" }}
         >
-          {c.home.explore} →
+          {t.home.explore} →
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {CARDS.map(({ href, key, teaserKey, accent, emoji }, i) => (
@@ -98,10 +96,10 @@ export function HomeContent() {
                 className="font-display text-xl sm:text-2xl font-bold"
                 style={{ color: "var(--color-text)" }}
               >
-                {c.nav[key]}
+                {t.nav[key]}
               </span>
               <p className="mt-2 text-sm sm:text-base" style={{ color: "var(--color-text-muted)" }}>
-                {c.home[teaserKey]}
+                {t.home[teaserKey]}
               </p>
             </Link>
           ))}
@@ -114,7 +112,7 @@ export function HomeContent() {
           className="font-display text-xl font-bold mb-4"
           style={{ color: "var(--color-text-muted)" }}
         >
-          {c.footer.findMe}
+          {t.footer.findMe}
         </h2>
         <SocialLinks size="sm" />
       </section>

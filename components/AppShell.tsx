@@ -3,11 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { copy } from "@/content/copy";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { useLang } from "@/components/LangContext";
+import type { Messages } from "@/content/translations";
 
-const NAV_LINKS: { href: string; key: keyof typeof copy.en.nav }[] = [
+const NAV_LINKS: { href: string; key: keyof Messages["nav"] }[] = [
   { href: "/", key: "home" },
   { href: "/cv", key: "cv" },
   { href: "/projects", key: "projects" },
@@ -17,8 +17,7 @@ const NAV_LINKS: { href: string; key: keyof typeof copy.en.nav }[] = [
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const { lang, setLang } = useLang();
-  const c = copy[lang];
+  const { lang, setLang, t } = useLang();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -55,7 +54,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     border: active ? undefined : "2px solid var(--color-border)",
                   }}
                 >
-                  {c.nav[key]}
+                  {t.nav[key]}
                 </Link>
               );
             })}
@@ -109,7 +108,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     border: active ? undefined : "2px solid var(--color-border)",
                   }}
                 >
-                  {c.nav[key]}
+                  {t.nav[key]}
                 </Link>
               );
             })}
