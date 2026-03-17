@@ -10,9 +10,10 @@ import {
   SPORTS_HERO_IMAGE,
   SPORTS_GALLERY,
   PERSONAL_BESTS,
-  RECENT_RESULTS,
-  PRE_COLLEGE_HIGHLIGHTS,
-  CHAMPIONSHIP_HIGHLIGHTS,
+  getMergedResults,
+  getChampionshipHighlights,
+  MEET_TRANSLATIONS,
+  EVENT_TRANSLATIONS,
   YEARLY_RUNNING_KM,
   ROUGH_AVERAGE_PACE_MIN_PER_KM,
   PROGRESSION_3000,
@@ -21,7 +22,9 @@ import {
   PROGRESSION_8K_XC,
   type ProgressionPoint,
   type ChampionshipHighlight,
+  type ResultEntry,
 } from '@/content/sportsData';
+import type { Lang } from '@/content/copy';
 import { SOCIAL_LINKS } from '@/config';
 
 function formatDate(dateStr: string, lang: 'en' | 'de'): string {
@@ -32,6 +35,14 @@ function formatDate(dateStr: string, lang: 'en' | 'de'): string {
   );
   if (d) return `${month} ${d}, ${y}`;
   return `${month} ${y}`;
+}
+
+function meetLabel(meet: string, lang: Lang): string {
+  return MEET_TRANSLATIONS[meet]?.[lang] ?? meet;
+}
+
+function eventLabel(event: string, lang: Lang): string {
+  return EVENT_TRANSLATIONS[event]?.[lang] ?? event;
 }
 
 /** Sort championship highlights: 1st first, then 2nd, 3rd, 4th… then "-". Within same place, newest first. */
@@ -500,7 +511,7 @@ export function SportsContent() {
           {c.sports.championshipSub}
         </Text>
         <ul className='list-none space-y-3 mb-10' style={{ color: 'var(--color-text)' }}>
-          {sortChampionshipsByPlace(CHAMPIONSHIP_HIGHLIGHTS).map((h, i) => (
+          {sortChampionshipsByPlace(getChampionshipHighlights()).map((h, i) => (
             <li key={i} className='flex flex-wrap items-baseline gap-x-2 gap-y-1'>
               {h.place !== '-' && h.place !== '–' ? (
                 <span
@@ -529,8 +540,21 @@ export function SportsContent() {
                   {h.level === 'youth' ? (lang === 'de' ? 'Jugend' : 'Youth') : ''}
                 </span>
               )}
-              <span className='font-medium'>{h.meet}</span>
-              <span>{h.event}</span>
+              <span className='font-medium'>{meetLabel(h.meet, lang)}</span>
+              {h.location && (
+                <span className='text-sm' style={{ color: 'var(--color-text-muted)' }}>
+                  ({h.location})
+                </span>
+              )}
+              <span>{eventLabel(h.event, lang)}</span>
+              {h.ageGroup && (
+                <span
+                  className='text-xs px-1.5 py-0.5 rounded'
+                  style={{ backgroundColor: 'var(--color-surface-elevated)', color: 'var(--color-text-muted)' }}
+                >
+                  {h.ageGroup}
+                </span>
+              )}
               {h.time && (
                 <span
                   className='tabular-nums text-sm'
@@ -557,7 +581,7 @@ export function SportsContent() {
           ))}
         </ul>
 
-        {/* Recent results timeline */}
+        {/* All results timeline (college + pre-college), grouped by year */}
         <h2
           className='font-display text-lg font-bold mb-2'
           style={{ color: 'var(--color-accent-3)' }}
@@ -567,64 +591,100 @@ export function SportsContent() {
         <Text size='sm' className='mb-4' style={{ color: 'var(--color-text-muted)' }}>
           {c.sports.recentResultsSub}
         </Text>
-        <ul
-          className='list-none space-y-2 text-sm mb-10'
-          style={{ color: 'var(--color-text)' }}
-        >
-          {RECENT_RESULTS.map((r, i) => (
-            <li key={i} className='flex flex-wrap items-baseline gap-x-2 gap-y-0'>
-              <span
-                className='text-xs tabular-nums shrink-0'
-                style={{ color: 'var(--color-text-muted)' }}
-              >
-                {formatDate(r.date, lang)}
-              </span>
-              <span className='font-medium'>{r.meet}</span>
-              <span>{r.event}</span>
-              <span className='tabular-nums'>{r.time}</span>
-              {r.place && (
-                <span className='text-xs' style={{ color: 'var(--color-text-muted)' }}>
-                  ({c.sports.place} {r.place})
-                </span>
-              )}
-              {r.note && (
-                <span
-                  className='text-xs italic'
-                  style={{ color: 'var(--color-text-muted)' }}
-                >
-                  - {r.note}
-                </span>
-              )}
-            </li>
-          ))}
-        </ul>
-
-        {/* Pre-college (LADV) */}
-        <h2
-          className='font-display text-lg font-bold mb-2'
-          style={{ color: 'var(--color-accent-3)' }}
-        >
-          {c.sports.preCollegeHeading}
-        </h2>
-        <Text size='sm' className='mb-4' style={{ color: 'var(--color-text-muted)' }}>
-          {c.sports.preCollegeIntro}
-        </Text>
-        <ul
-          className='list-none space-y-1.5 text-sm mb-10'
-          style={{ color: 'var(--color-text)' }}
-        >
-          {PRE_COLLEGE_HIGHLIGHTS.map((r, i) => (
-            <li key={i}>
-              <span className='font-medium'>{r.event}</span>{' '}
-              <span className='tabular-nums'>{r.time}</span>
-              <span className='text-xs ml-1' style={{ color: 'var(--color-text-muted)' }}>
-                - {r.location}, {formatDate(r.date, lang)}
-                {r.ageGroup ? ` (${r.ageGroup})` : ''}
-                {r.note ? ` · ${r.note}` : ''}
-              </span>
-            </li>
-          ))}
-        </ul>
+        {(() => {
+          const merged = getMergedResults();
+          const byYear: Record<string, ResultEntry[]> = {};
+          for (const r of merged) {
+            const y = r.date.slice(0, 4);
+            if (!byYear[y]) byYear[y] = [];
+            byYear[y].push(r);
+          }
+          const years = Object.keys(byYear).sort((a, b) => Number(b) - Number(a));
+          return (
+            <div className='space-y-6 mb-10'>
+              {years.map((year) => (
+                <div key={year}>
+                  <h3
+                    className='font-display text-sm font-semibold mb-2 sticky top-0 z-10 py-1'
+                    style={{
+                      color: 'var(--color-accent-3)',
+                      backgroundColor: 'var(--color-bg)',
+                    }}
+                  >
+                    {year}
+                  </h3>
+                  <ul
+                    className='list-none space-y-2 text-sm'
+                    style={{ color: 'var(--color-text)' }}
+                  >
+                    {byYear[year].map((r, i) => {
+                      const team = r.teamId ? TEAMS.find((t) => t.id === r.teamId) : null;
+                      return (
+                        <li
+                          key={`${year}-${i}`}
+                          className='flex flex-wrap items-center gap-x-2 gap-y-0.5'
+                        >
+                          {team?.logoPath ? (
+                            <span className='shrink-0 w-6 h-6 relative rounded overflow-hidden flex items-center justify-center bg-[var(--color-surface-elevated)]'>
+                              <Image
+                                src={team.logoPath}
+                                alt=''
+                                width={24}
+                                height={24}
+                                className='object-contain'
+                              />
+                            </span>
+                          ) : null}
+                          <span
+                            className='text-xs tabular-nums shrink-0'
+                            style={{ color: 'var(--color-text-muted)' }}
+                          >
+                            {formatDate(r.date, lang)}
+                          </span>
+                          <span className='font-medium'>{meetLabel(r.meet, lang)}</span>
+                          {r.location && (
+                            <span className='text-xs' style={{ color: 'var(--color-text-muted)' }}>
+                              ({r.location})
+                            </span>
+                          )}
+                          <span>{eventLabel(r.event, lang)}</span>
+                          <span className='tabular-nums'>{r.time}</span>
+                          {r.place && (
+                            <span
+                              className='text-xs'
+                              style={{ color: 'var(--color-text-muted)' }}
+                            >
+                              ({c.sports.place} {r.place})
+                            </span>
+                          )}
+                          {r.ageGroup && (
+                            <span
+                              className='text-xs px-1 rounded'
+                              style={{
+                                backgroundColor: 'var(--color-surface-elevated)',
+                                color: 'var(--color-text-muted)',
+                              }}
+                            >
+                              {r.ageGroup}
+                            </span>
+                          )}
+                          {r.note && (
+                            <span
+                              className='text-xs italic w-full sm:w-auto'
+                              style={{ color: 'var(--color-text-muted)' }}
+                            >
+                              - {r.note}
+                            </span>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          );
+        })()}
 
         {/* Yearly running distance (km / mi) */}
         <h2
