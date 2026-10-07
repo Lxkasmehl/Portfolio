@@ -117,7 +117,7 @@ function PaperCard({ pub }: { pub: Publication }) {
 
           <div className="flex flex-wrap gap-3 mt-5">
             <ActionLink href={pub.pdf} primary download>
-              ⬇ {c.downloadPdf}
+              {c.downloadPdf}
             </ActionLink>
             <ActionLink href={`https://doi.org/${pub.doi}`}>{c.doi}</ActionLink>
             {pub.code && <ActionLink href={pub.code}>{c.code}</ActionLink>}
