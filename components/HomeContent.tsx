@@ -9,11 +9,14 @@ const DELAY_CLASSES = ["animate-in-delay-1", "animate-in-delay-2", "animate-in-d
 
 const CARDS: {
   href: string;
-  key: "cv" | "projects" | "sports" | "stats";
-  teaserKey: "cvTeaser" | "projectsTeaser" | "sportsTeaser" | "statsTeaser";
+  key: "cv" | "projects" | "publications" | "sports" | "stats";
+  teaserKey: "cvTeaser" | "projectsTeaser" | "publicationsTeaser" | "sportsTeaser" | "statsTeaser";
   accent: 1 | 2 | 3 | 4;
   emoji: string;
+  /** Full-width card */
+  wide?: boolean;
 }[] = [
+  { href: "/publications", key: "publications", teaserKey: "publicationsTeaser", accent: 2, emoji: "📑", wide: true },
   { href: "/cv", key: "cv", teaserKey: "cvTeaser", accent: 1, emoji: "📄" },
   { href: "/projects", key: "projects", teaserKey: "projectsTeaser", accent: 2, emoji: "🛠️" },
   { href: "/sports", key: "sports", teaserKey: "sportsTeaser", accent: 3, emoji: "🏃" },
@@ -83,11 +86,11 @@ export function HomeContent() {
           {t.home.explore} →
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {CARDS.map(({ href, key, teaserKey, accent, emoji }, i) => (
+          {CARDS.map(({ href, key, teaserKey, accent, emoji, wide }, i) => (
             <Link
               key={href}
               href={href}
-              className={`card-playful card-accent-${accent} block p-6 sm:p-8 no-underline text-left animate-in ${DELAY_CLASSES[i]}`}
+              className={`card-playful card-accent-${accent} block p-6 sm:p-8 no-underline text-left animate-in ${DELAY_CLASSES[Math.min(i, DELAY_CLASSES.length - 1)]} ${wide ? "sm:col-span-2" : ""}`}
             >
               <span className="text-3xl sm:text-4xl block mb-3" aria-hidden>
                 {emoji}

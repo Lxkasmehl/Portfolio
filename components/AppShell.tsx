@@ -11,6 +11,7 @@ const NAV_LINKS: { href: string; key: keyof Messages["nav"] }[] = [
   { href: "/", key: "home" },
   { href: "/cv", key: "cv" },
   { href: "/projects", key: "projects" },
+  { href: "/publications", key: "publications" },
   { href: "/sports", key: "sports" },
   { href: "/stats", key: "stats" },
 ];
@@ -86,7 +87,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         {/* Mobile dropdown menu */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-200 ease-out ${
-            menuOpen ? "max-h-[320px] opacity-100" : "max-h-0 opacity-0"
+            menuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
           }`}
           style={{ borderColor: "var(--color-border)" }}
         >

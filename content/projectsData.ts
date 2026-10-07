@@ -5,12 +5,11 @@
 export const PROJECTS = [
   {
     id: "pqcscanner",
-    github: "https://github.com/Lxkasmehl/pqc-scanner",
-    paper: "https://doi.org/10.4230/LIPIcs.ESEM.2026.53",
-  },
+    github: "https://github.com/Lxkasmehl/pqc-scanner",  },
   {
     id: "pictur",
     github: "https://github.com/Lxkasmehl/PicTur",
+    link: "https://turtles.washburn.edu/",
   },
   {
     id: "runsync",

@@ -97,6 +97,31 @@ export interface Messages {
     title: string;
     items: { date: string; text: string; url?: string; linkLabel?: string }[];
   };
+  publicationsPage: {
+    title: string;
+    lead: string;
+    paperBadge: string;
+    peerReviewed: string;
+    soleAuthor: string;
+    publishedOn: string;
+    downloadPdf: string;
+    doi: string;
+    code: string;
+    artifact: string;
+    facts: { value: string; label: string }[];
+    abstract: string;
+    abstractNote: string;
+    keywords: string;
+    presentation: string;
+    cite: string;
+    copyBibtex: string;
+    copied: string;
+    license: string;
+    previewAlt: string;
+    otherTitle: string;
+    otherItems: { date: string; title: string; text: string }[];
+    cvLink: string;
+  };
   certifications: { title: string; items: string[] };
   skills: {
     title: string;
@@ -113,6 +138,7 @@ export interface Messages {
     home: string;
     cv: string;
     projects: string;
+    publications: string;
     sports: string;
     stats: string;
   };
@@ -124,6 +150,7 @@ export interface Messages {
     explore: string;
     cvTeaser: string;
     projectsTeaser: string;
+    publicationsTeaser: string;
     sportsTeaser: string;
     statsTeaser: string;
   };

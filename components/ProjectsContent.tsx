@@ -131,11 +131,7 @@ export function ProjectsContent() {
               </List>
               <ProjectLinks
                 githubUrl={pqcscannerData.github || undefined}
-                githubLinks={
-                  "paper" in pqcscannerData && pqcscannerData.paper
-                    ? [{ label: p.linkPaper, url: pqcscannerData.paper }]
-                    : []
-                }
+                githubLinks={[{ label: p.linkPaper, url: "/publications" }]}
                 linkLiveLabel={p.linkLive}
                 linkGithubLabel={p.linkGithub}
               />
@@ -181,6 +177,7 @@ export function ProjectsContent() {
                 ))}
               </List>
               <ProjectLinks
+                liveUrl={"link" in picturData ? picturData.link : undefined}
                 githubUrl={picturData.github || undefined}
                 linkLiveLabel={p.linkLive}
                 linkGithubLabel={p.linkGithub}

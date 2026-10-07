@@ -194,6 +194,9 @@ export function PortfolioContent() {
               </li>
             ))}
           </ul>
+          <Anchor href="/publications" size="sm" className="link-accent mt-3 inline-block">
+            {t.publicationsPage.title}: Abstract, PDF & BibTeX →
+          </Anchor>
         </Section>
 
         <Section title={t.projects.title}>
