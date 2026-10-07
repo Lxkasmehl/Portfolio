@@ -20,7 +20,7 @@ export const de: Messages = {
     paragraphs: [
       "Die erste Hälfte meines Bachelorstudiums in Cybersecurity und Information and Computer Science (Schwerpunkt Computer Science) habe ich an der Park University absolviert. Seitdem studiere ich an der Washburn University weiter, mit Hauptfach Computer Information Science.",
       "Bei Pentos arbeite ich als Werkstudent in der Webentwicklung und entwickle dort Webanwendungen weiter. Von Januar bis Mai 2026 war ich Undergraduate Research Assistant (K-INBRE, SCWTE) an der Washburn University. Dort habe ich das Frontend von PicTur gebaut, einer Forschungs-Webanwendung zur automatischen Erkennung einzelner Tiere, die ich bis heute weiterentwickle.",
-      "In meiner eigenen Forschung geht es um Post-Quanten-Kryptografie. Mit PQCScanner, einem Tool zur statischen Analyse kryptografischer Programmierschnittstellen in Python, Java und Go, untersuche ich, wie gut Open-Source-Software auf den Umstieg auf quantensichere Verfahren vorbereitet ist. Mein Paper dazu, das ich allein verfasst habe, wurde für die ESEM 2026 (International Symposium on Empirical Software Engineering and Measurement) angenommen. Als Poster habe ich das Projekt außerdem bei der CCSC Central Plains 2026 vorgestellt.",
+      "In meiner eigenen Forschung geht es um Post-Quanten-Kryptografie. Mit PQCScanner, einem Tool zur statischen Analyse kryptografischer Programmierschnittstellen in Python, Java und Go, untersuche ich, wie gut Open-Source-Software auf den Umstieg auf quantensichere Verfahren vorbereitet ist. Mein Paper dazu, „PQC-Readiness of Open-Source Software: An Empirical Study“, habe ich allein verfasst. Es ist im Tagungsband der ESEM 2026 (International Symposium on Empirical Software Engineering and Measurement, LIPIcs) erschienen. Als Poster habe ich das Projekt außerdem bei der CCSC Central Plains 2026 vorgestellt.",
       "Mich interessieren vor allem Cybersecurity, quantensichere Kryptografie und Software Engineering. Am meisten Erfahrung habe ich im Frontend mit React, TypeScript, JavaScript und HTML/CSS. Dazu kommen Python, Java und Kotlin sowie automatisierte Tests mit Playwright und Selenium. Mein Ziel sind Anwendungen, die sicher, schnell und angenehm zu benutzen sind.",
       "Neben dem Studium laufe ich im College-Team Mittel- und Langstrecke. Dabei habe ich Top-10-Platzierungen bei Deutschen Meisterschaften und mehrere Conference-Siege erreicht und vor meinem Wechsel einen Schulrekord gehalten. Der Sport hat mir Disziplin, Durchhaltevermögen und Teamgeist beigebracht. Außerdem engagiere ich mich ehrenamtlich. Ich spreche fließend Deutsch und Englisch und arbeite sicher mit MS Office und Adobe.",
       "Am liebsten setze ich Gelerntes direkt in der Praxis um und suche dafür immer wieder neue Herausforderungen in IT und Cybersecurity.",
@@ -98,11 +98,12 @@ export const de: Messages = {
     linkGithub: "Auf GitHub ansehen",
     linkGithubWeb: "Web (GitHub)",
     linkGithubAndroid: "Android (GitHub)",
+    linkPaper: "Zum Paper",
     pqcscanner: {
       name: "PQCScanner: Wie bereit ist Open-Source-Software für Post-Quanten-Kryptografie?",
       period: "Mär 2026 – heute",
       description:
-        "Forschungsprototyp für eine empirische Studie dazu, wie verbreitet Post-Quanten-Kryptografie (PQC) in Open-Source-Software ist. Der Scanner durchsucht Quellcode nach kryptografischen Verfahren und ordnet jeden Fund ein: durch Quantencomputer angreifbar (z. B. RSA, ECDSA, ECDH), quantensicher oder bereits PQC-fähig (z. B. Kyber, Dilithium). Das Paper dazu (alleiniger Autor) wurde für die ESEM 2026 angenommen, dazu kam ein Poster bei der CCSC Central Plains 2026.",
+        "Forschungsprototyp für eine empirische Studie dazu, wie verbreitet Post-Quanten-Kryptografie (PQC) in Open-Source-Software ist. Der Scanner durchsucht Quellcode nach kryptografischen Verfahren und ordnet jeden Fund ein: durch Quantencomputer angreifbar (z. B. RSA, ECDSA, ECDH), quantensicher oder bereits PQC-fähig (z. B. Kyber, Dilithium). Das Paper dazu (alleiniger Autor) ist im Tagungsband der ESEM 2026 erschienen, dazu kam ein Poster bei der CCSC Central Plains 2026.",
       aspects: [
         "Erkennung über den Syntaxbaum (AST) für Python (ast) sowie Java und Go (tree-sitter)",
         "Abgestufte Trefferqualität, vom direkten API-Aufruf bis zum reinen Textfund",
@@ -143,7 +144,9 @@ export const de: Messages = {
     items: [
       {
         date: "Okt 2026",
-        text: "Paper zu PQCScanner (alleiniger Autor), einer statischen Analyse kryptografischer Programmierschnittstellen in Python, Java und Go, die zeigt, wie bereit Software für Post-Quanten-Kryptografie ist. Angenommen bei der ESEM 2026 (International Symposium on Empirical Software Engineering and Measurement) im Track Emerging Results, Vision, and Reflection Papers. Begutachtet (peer-reviewed), wird veröffentlicht und auf der Konferenz vorgestellt.",
+        text: "L. Mehl, „PQC-Readiness of Open-Source Software: An Empirical Study“. ESEM 2026 (International Symposium on Empirical Software Engineering and Measurement), Track Emerging Results, Vision, and Reflection Papers; LIPIcs, Bd. 394, Beitrag 53. Alleiniger Autor, begutachtet (peer-reviewed). Stellt PQCScanner vor, ein Werkzeug zur statischen Analyse kryptografischer Programmierschnittstellen in Python, Java und Go, das misst, wie bereit Software für Post-Quanten-Kryptografie ist. Vortrag auf der Konferenz am 9. Okt 2026.",
+        url: "https://doi.org/10.4230/LIPIcs.ESEM.2026.53",
+        linkLabel: "doi:10.4230/LIPIcs.ESEM.2026.53",
       },
       {
         date: "2026",

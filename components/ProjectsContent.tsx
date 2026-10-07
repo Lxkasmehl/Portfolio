@@ -131,6 +131,11 @@ export function ProjectsContent() {
               </List>
               <ProjectLinks
                 githubUrl={pqcscannerData.github || undefined}
+                githubLinks={
+                  "paper" in pqcscannerData && pqcscannerData.paper
+                    ? [{ label: p.linkPaper, url: pqcscannerData.paper }]
+                    : []
+                }
                 linkLiveLabel={p.linkLive}
                 linkGithubLabel={p.linkGithub}
               />

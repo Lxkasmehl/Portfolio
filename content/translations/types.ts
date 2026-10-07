@@ -65,6 +65,7 @@ export interface Messages {
     linkGithub: string;
     linkGithubWeb: string;
     linkGithubAndroid: string;
+    linkPaper: string;
     pictur: {
       name: string;
       period: string;
@@ -92,7 +93,10 @@ export interface Messages {
       aspects: string[];
     };
   };
-  publications: { title: string; items: { date: string; text: string }[] };
+  publications: {
+    title: string;
+    items: { date: string; text: string; url?: string; linkLabel?: string }[];
+  };
   certifications: { title: string; items: string[] };
   skills: {
     title: string;

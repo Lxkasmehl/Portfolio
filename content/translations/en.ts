@@ -21,7 +21,7 @@ export const en: Messages = {
     paragraphs: [
       "I completed the first half of my bachelor's studies in Cybersecurity and Information and Computer Science (Computer Science concentration) at Park University and am now continuing my degree at Washburn University, majoring in Computer and Information Science.",
       "I work as a Working Student in Web Application Development at Pentos, building and optimizing web applications. From January to May 2026 I was an Undergraduate Research Assistant (K-INBRE, SCWTE) at Washburn University, where I built the frontend of PicTur, a research web app for automated wildlife identification that I continue to develop.",
-      "My own research focuses on post-quantum cryptography: PQCScanner, a static analysis tool for cryptographic API usage in Python, Java, and Go, measures how ready open-source software is for the migration to post-quantum cryptography. My sole-authored paper on it was accepted at ESEM 2026 (International Symposium on Empirical Software Engineering and Measurement); I also presented it as a poster at CCSC Central Plains 2026.",
+      "My own research focuses on post-quantum cryptography: PQCScanner, a static analysis tool for cryptographic API usage in Python, Java, and Go, measures how ready open-source software is for the migration to post-quantum cryptography. My sole-authored paper on it, \"PQC-Readiness of Open-Source Software: An Empirical Study\", is published in the ESEM 2026 proceedings (International Symposium on Empirical Software Engineering and Measurement, LIPIcs). I also presented the project as a poster at CCSC Central Plains 2026.",
       "I am passionate about cybersecurity, quantum-safe cryptography, and software engineering, with a focus on frontend development using React, TypeScript, JavaScript, and HTML/CSS. I also have experience with backend technologies such as Python, Java, and Kotlin, as well as automated testing with Playwright and Selenium. I enjoy developing secure, efficient, and user-friendly applications.",
       "Beyond my studies, I am a dedicated student-athlete with a proven ability to work in teams and execute projects effectively. I am fluent in both German and English and proficient in MS Office and Adobe software. As a competitive middle- and long-distance runner, I have achieved top-10 placements at the German Championships and earned multiple conference wins; I also previously held a school record before transferring. These experiences have helped me develop discipline, resilience, and a strong work ethic. I am also actively involved in community initiatives.",
       "I am always eager to apply my knowledge in practical settings, take on new challenges, and continuously expand my skill set in the IT and cybersecurity fields.",
@@ -99,11 +99,12 @@ export const en: Messages = {
     linkGithub: "View on GitHub",
     linkGithubWeb: "Web (GitHub)",
     linkGithubAndroid: "Android (GitHub)",
+    linkPaper: "Read the paper",
     pqcscanner: {
       name: "PQCScanner: Post-Quantum Migration Readiness of Open-Source Software",
       period: "Mar 2026 – Present",
       description:
-        "Research prototype for an empirical study on post-quantum cryptography (PQC) adoption in open-source software. The scanner analyzes source code repositories, detects usage of cryptographic primitives, and classifies each finding as post-quantum-vulnerable (e.g. RSA, ECDSA, ECDH), quantum-safe, or PQC-ready (e.g. Kyber, Dilithium). Sole-authored paper accepted at ESEM 2026; poster at CCSC Central Plains 2026.",
+        "Research prototype for an empirical study on post-quantum cryptography (PQC) adoption in open-source software. The scanner analyzes source code repositories, detects usage of cryptographic primitives, and classifies each finding as post-quantum-vulnerable (e.g. RSA, ECDSA, ECDH), quantum-safe, or PQC-ready (e.g. Kyber, Dilithium). Sole-authored paper published at ESEM 2026 (LIPIcs); poster at CCSC Central Plains 2026.",
       aspects: [
         "Multi-language, AST-based detection: Python via ast, Java and Go via tree-sitter",
         "Confidence levels from direct API calls down to string matches",
@@ -144,7 +145,9 @@ export const en: Messages = {
     items: [
       {
         date: "Oct 2026",
-        text: "Sole-authored paper on PQCScanner, a static analysis of cryptographic API usage in Python, Java, and Go that measures post-quantum migration readiness. Accepted at ESEM 2026 (International Symposium on Empirical Software Engineering and Measurement), Emerging Results, Vision, and Reflection Papers track. Peer-reviewed; to be published and presented at the conference.",
+        text: "L. Mehl, \"PQC-Readiness of Open-Source Software: An Empirical Study\". ESEM 2026 (International Symposium on Empirical Software Engineering and Measurement), Emerging Results, Vision, and Reflection Papers track; LIPIcs, Vol. 394, Paper 53. Sole author, peer-reviewed. Introduces PQCScanner, a static analysis tool for cryptographic API usage in Python, Java, and Go that measures post-quantum migration readiness. Presented at the conference on Oct 9, 2026.",
+        url: "https://doi.org/10.4230/LIPIcs.ESEM.2026.53",
+        linkLabel: "doi:10.4230/LIPIcs.ESEM.2026.53",
       },
       {
         date: "2026",

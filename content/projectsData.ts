@@ -6,6 +6,7 @@ export const PROJECTS = [
   {
     id: "pqcscanner",
     github: "https://github.com/Lxkasmehl/pqc-scanner",
+    paper: "https://doi.org/10.4230/LIPIcs.ESEM.2026.53",
   },
   {
     id: "pictur",

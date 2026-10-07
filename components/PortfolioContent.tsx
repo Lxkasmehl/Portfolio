@@ -177,6 +177,20 @@ export function PortfolioContent() {
                 <span className="font-semibold">{item.date}</span>
                 <span style={{ color: "var(--color-text-muted)" }}> · </span>
                 {item.text}
+                {item.url && (
+                  <>
+                    {" "}
+                    <Anchor
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      size="sm"
+                      className="link-accent"
+                    >
+                      {item.linkLabel ?? item.url}
+                    </Anchor>
+                  </>
+                )}
               </li>
             ))}
           </ul>
