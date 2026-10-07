@@ -179,7 +179,7 @@ function PaperCard({ pub }: { pub: Publication }) {
         className="mt-6 text-sm rounded-2xl px-4 py-3"
         style={{ border: "2px dashed var(--color-accent-3)", color: "var(--color-text)" }}
       >
-        🎤 {c.presentation}
+        {c.presentation}
       </p>
 
       <div className="mt-8">
