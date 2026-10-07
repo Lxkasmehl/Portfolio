@@ -20,7 +20,7 @@ export const en: Messages = {
     title: "About",
     paragraphs: [
       "I completed the first half of my bachelor's studies in Cybersecurity and Information and Computer Science (Computer Science concentration) at Park University and am now continuing my degree at Washburn University, majoring in Computer and Information Science.",
-      "I work as a Working Student in Web Application Development at Pentos, building and optimizing web applications. From January to May 2026 I was an Undergraduate Research Assistant (K-INBRE, SCWTE) at Washburn University, where I built the frontend of PicTur, a research web app for automated wildlife identification that I continue to develop.",
+      "As a Working Student in Web Application Development at Pentos, I independently build software products for the SAP SuccessFactors ecosystem, more and more of them with AI-powered features. From January to May 2026 I was an Undergraduate Research Assistant (K-INBRE, SCWTE) at Washburn University, where I built the frontend of PicTur, a research web app for automated wildlife identification that I continue to develop.",
       "My own research focuses on post-quantum cryptography: PQCScanner, a static analysis tool for cryptographic API usage in Python, Java, and Go, measures how ready open-source software is for the migration to post-quantum cryptography. My sole-authored paper on it, \"PQC-Readiness of Open-Source Software: An Empirical Study\", is published in the ESEM 2026 proceedings (International Symposium on Empirical Software Engineering and Measurement, LIPIcs). I also presented the project as a poster at CCSC Central Plains 2026.",
       "I am passionate about cybersecurity, quantum-safe cryptography, and software engineering, with a focus on frontend development using React, TypeScript, JavaScript, and HTML/CSS. I also have experience with backend technologies such as Python, Java, and Kotlin, as well as automated testing with Playwright and Selenium. I enjoy developing secure, efficient, and user-friendly applications.",
       "Beyond my studies, I am a dedicated student-athlete with a proven ability to work in teams and execute projects effectively. I am fluent in both German and English and proficient in MS Office and Adobe software. As a competitive middle- and long-distance runner, I have achieved top-10 placements at the German Championships and earned multiple conference wins; I also previously held a school record before transferring. These experiences have helped me develop discipline, resilience, and a strong work ethic. I am also actively involved in community initiatives.",
@@ -51,7 +51,12 @@ export const en: Messages = {
       period: "Dec 2024 – Present",
       location: "Kissimmee, Florida, US · Remote",
       description:
-        "Independently designing and developing a web application in the SAP SuccessFactors environment using JavaScript and React. Transforming a high-level product idea into a user-friendly, intuitive interface and implementing the complete frontend. Close collaboration with project leadership: regular check-ins, presenting updates, and continuous refinement of the application.",
+        "I independently build software products for the SAP SuccessFactors ecosystem, from the first idea to a working application. The ideas come from my two supervisors and from other teams, usually based on what customers need. I build a first version, demo it in our weekly meeting, and together we decide what stays, what changes, and what comes next. Promising prototypes grow into larger products.",
+      responsibilities: [
+        "Mostly frontend with React, TypeScript, JavaScript, and Mustache, increasingly full-stack",
+        "Weekly demos and feedback rounds that drive each product forward",
+        "Integrating LLM APIs such as Anthropic's Claude API to build AI-powered features directly into the products",
+      ],
     },
     soptim: {
       role: "Software Development Intern",

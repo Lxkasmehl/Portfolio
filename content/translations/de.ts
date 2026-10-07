@@ -19,7 +19,7 @@ export const de: Messages = {
     title: "Über mich",
     paragraphs: [
       "Die erste Hälfte meines Bachelorstudiums in Cybersecurity und Information and Computer Science (Schwerpunkt Computer Science) habe ich an der Park University absolviert. Seitdem studiere ich an der Washburn University weiter, mit Hauptfach Computer Information Science.",
-      "Bei Pentos arbeite ich als Werkstudent in der Webentwicklung und entwickle dort Webanwendungen weiter. Von Januar bis Mai 2026 war ich Undergraduate Research Assistant (K-INBRE, SCWTE) an der Washburn University. Dort habe ich das Frontend von PicTur gebaut, einer Forschungs-Webanwendung zur automatischen Erkennung einzelner Tiere, die ich bis heute weiterentwickle.",
+      "Bei Pentos arbeite ich als Werkstudent in der Webentwicklung und baue dort eigenständig Softwareprodukte rund um SAP SuccessFactors, immer öfter mit KI-gestützten Funktionen. Von Januar bis Mai 2026 war ich Undergraduate Research Assistant (K-INBRE, SCWTE) an der Washburn University. Dort habe ich das Frontend von PicTur gebaut, einer Forschungs-Webanwendung zur automatischen Erkennung einzelner Tiere, die ich bis heute weiterentwickle.",
       "In meiner eigenen Forschung geht es um Post-Quanten-Kryptografie. Mit PQCScanner, einem Tool zur statischen Analyse kryptografischer Programmierschnittstellen in Python, Java und Go, untersuche ich, wie gut Open-Source-Software auf den Umstieg auf quantensichere Verfahren vorbereitet ist. Mein Paper dazu, „PQC-Readiness of Open-Source Software: An Empirical Study“, habe ich allein verfasst. Es ist im Tagungsband der ESEM 2026 (International Symposium on Empirical Software Engineering and Measurement, LIPIcs) erschienen. Als Poster habe ich das Projekt außerdem bei der CCSC Central Plains 2026 vorgestellt.",
       "Mich interessieren vor allem Cybersecurity, quantensichere Kryptografie und Software Engineering. Am meisten Erfahrung habe ich im Frontend mit React, TypeScript, JavaScript und HTML/CSS. Dazu kommen Python, Java und Kotlin sowie automatisierte Tests mit Playwright und Selenium. Mein Ziel sind Anwendungen, die sicher, schnell und angenehm zu benutzen sind.",
       "Neben dem Studium laufe ich im College-Team Mittel- und Langstrecke. Dabei habe ich Top-10-Platzierungen bei Deutschen Meisterschaften und mehrere Conference-Siege erreicht und vor meinem Wechsel einen Schulrekord gehalten. Der Sport hat mir Disziplin, Durchhaltevermögen und Teamgeist beigebracht. Außerdem engagiere ich mich ehrenamtlich. Ich spreche fließend Deutsch und Englisch und arbeite sicher mit MS Office und Adobe.",
@@ -50,7 +50,12 @@ export const de: Messages = {
       period: "Dez 2024 – heute",
       location: "Kissimmee, Florida, USA · Remote",
       description:
-        "Eigenständige Konzeption und Entwicklung einer Webanwendung für SAP SuccessFactors mit JavaScript und React. Aus einer Produktidee entsteht eine leicht bedienbare Oberfläche, deren Frontend ich komplett umsetze. Dabei stimme ich mich regelmäßig mit der Projektleitung ab.",
+        "Ich entwickle eigenständig Softwareprodukte rund um SAP SuccessFactors, von der ersten Idee bis zur lauffähigen Anwendung. Die Ideen kommen von meinen beiden Vorgesetzten und aus anderen Teams, meist aus konkretem Kundenbedarf. Ich baue eine erste Version, zeige sie im wöchentlichen Termin, und gemeinsam entscheiden wir, was bleibt, was sich ändert und was dazukommt. Vielversprechende Prototypen wachsen so zu größeren Produkten.",
+      responsibilities: [
+        "Überwiegend Frontend mit React, TypeScript, JavaScript und Mustache, zunehmend auch Full-Stack",
+        "Wöchentliche Demos und Feedbackrunden, die jedes Produkt Schritt für Schritt weiterbringen",
+        "Einbindung von KI-Schnittstellen wie der Claude API von Anthropic, um KI-gestützte Funktionen direkt in die Produkte zu bringen",
+      ],
     },
     soptim: {
       role: "Praktikum Softwareentwicklung",

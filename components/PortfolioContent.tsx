@@ -70,6 +70,11 @@ export function PortfolioContent() {
               <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
                 {t.experience.pentos.description}
               </p>
+              <List size="sm" mt="xs" spacing="xs" className="list-disc pl-5">
+                {t.experience.pentos.responsibilities.map((item, i) => (
+                  <List.Item key={i}>{item}</List.Item>
+                ))}
+              </List>
             </div>
 
             {/* Washburn Research */}

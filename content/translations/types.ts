@@ -23,6 +23,7 @@ export interface Messages {
       period: string;
       location: string;
       description: string;
+      responsibilities: string[];
     };
     soptim: {
       role: string;
