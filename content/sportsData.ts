@@ -134,9 +134,9 @@ export const PERSONAL_BESTS: PersonalBest[] = [
   },
   {
     event: '1,500 m',
-    time: '4:13.92',
-    date: '2024-04',
-    meet: 'Kip Janvrin Open',
+    time: '4:08.98',
+    date: '2026-04',
+    meet: 'UCM Mule Relays',
     indoor: false,
   },
   {
@@ -162,9 +162,9 @@ export const PERSONAL_BESTS: PersonalBest[] = [
   },
   {
     event: '10,000 m',
-    time: '31:14.41',
-    date: '2025-04',
-    meet: 'Bryan Clay Invitational',
+    time: '30:37.62',
+    date: '2026-05',
+    meet: 'MIAA Outdoor Track & Field Championships',
     indoor: false,
   },
   {
@@ -258,6 +258,12 @@ export const PROGRESSION_10000: ProgressionPoint[] = [
   },
   { year: 2024, time: '32:16.18', timeSeconds: 1936.18, meet: 'Kansas Relays' },
   { year: 2025, time: '31:14.41', timeSeconds: 1874.41, meet: 'Bryan Clay Invitational' },
+  {
+    year: 2026,
+    time: '30:37.62',
+    timeSeconds: 1837.62,
+    meet: 'MIAA Outdoor Championships',
+  },
 ];
 
 export const PROGRESSION_8K_XC: ProgressionPoint[] = [
@@ -278,6 +284,33 @@ export const PROGRESSION_8K_XC: ProgressionPoint[] = [
 
 // -- Recent results timeline (chronological: newest first). Source: TFRRS. --
 export const RECENT_RESULTS: ResultEntry[] = [
+  {
+    date: '2026-05-01',
+    teamId: 'washburn',
+    meet: 'MIAA Outdoor Track & Field Championships',
+    event: '10,000 m',
+    time: '30:37.62',
+    place: '5th',
+    note: '10,000 m PR',
+    championshipLevel: 'conference',
+  },
+  {
+    date: '2026-04-09',
+    teamId: 'washburn',
+    meet: 'UCM Mule Relays',
+    event: '1,500 m',
+    time: '4:08.98',
+    place: '25th',
+    note: '1,500 m PR',
+  },
+  {
+    date: '2026-03-26',
+    teamId: 'washburn',
+    meet: 'WashU Distance Carnival',
+    event: '5,000 m',
+    time: '15:03.90',
+    place: '93rd',
+  },
   {
     date: '2026-02-27',
     teamId: 'washburn',

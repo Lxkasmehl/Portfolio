@@ -233,6 +233,7 @@ export const en: Messages = {
     days: "days",
     recentHeading: "2025–2026 highlights",
     recent: [
+      "MIAA Outdoor Championships 2026: 5th in the 10,000 m in a PR of 30:37.62; 1,500 m PR 4:08.98 at UCM Mule Relays (Apr 2026).",
       "Washburn Open indoor 5k 14:54 (Jan 2026); Washburn Rust Buster 3k 8:43.56 (Jan 2026).",
       "NCAA DII Cross Country Nationals 2025 (10k); Central Region 41st, team qualified; MIAA XC 32nd.",
       "First sub-25 8k XC at DBU Old Glory Gallop (24:49). Gans Creek 8k 25:03, course PR and 8k XC PR at season opener.",
@@ -261,6 +262,8 @@ export const en: Messages = {
         "MIAA Indoor Track & Field Championships",
       "2026 MIAA Indoor Track & Field Championships":
         "MIAA Indoor Track & Field Championships",
+      "MIAA Outdoor Track & Field Championships":
+        "MIAA Outdoor Track & Field Championships",
       "NCAA DII Cross Country Championships":
         "NCAA DII Cross Country Championships",
       "NCAA DII XC Championships": "NCAA DII Cross Country Championships",

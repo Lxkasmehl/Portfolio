@@ -230,13 +230,14 @@ export const de: Messages = {
     timeEstimateLabel: "Grobe Laufzeit bei ~4:30/km:",
     hours: "Stunden",
     days: "Tage",
-    recentHeading: "2025–2026 highlights",
+    recentHeading: "Highlights 2025–2026",
     recent: [
-      "Washburn Open indoor 5k 14:54 (Jan 2026); Washburn Rust Buster 3k 8:43.56 (Jan 2026).",
-      "NCAA DII Cross Country Nationals 2025 (10k); Central Region 41st, team qualified; MIAA XC 32nd.",
-      "First sub-25 8k XC at DBU Old Glory Gallop (24:49). Gans Creek 8k 25:03, course PR and 8k XC PR at season opener.",
-      "Heart of America Conference: 1st 10,000 m (2025, 2024), 1st 5000 m indoor (2025); Iowa State Holiday 3000 m 1st.",
-      "New Year's Eve Aachen: 3rd 4.5 km, 1st 9 km. 1st Kraremanns Lauf Simmerath 4 km.",
+      "MIAA-Freiluftmeisterschaften 2026: 5. Platz über 10.000 m in Bestzeit (30:37.62); 1.500 m Bestzeit 4:08.98 bei den UCM Mule Relays (Apr 2026).",
+      "Washburn Open Halle 5.000 m 14:54 (Jan 2026); Washburn Rust Buster 3.000 m 8:43.56 (Jan 2026).",
+      "NCAA-DII-Cross-Country-Meisterschaften 2025 (10 km); Central Region Platz 41, Team qualifiziert; MIAA Cross Platz 32.",
+      "Erstmals unter 25 Minuten über 8 km Cross beim DBU Old Glory Gallop (24:49). Gans Creek 8 km in 25:03, Streckenbestzeit und 8-km-Cross-Bestzeit zum Saisonauftakt.",
+      "Heart of America Conference: Sieg über 10.000 m (2025, 2024), Sieg über 5.000 m Halle (2025); Iowa State Holiday 3.000 m Sieg.",
+      "Silvesterlauf Aachen: 3. über 4,5 km, Sieg über 9 km. Sieg beim Kraremanns Lauf Simmerath über 4 km.",
     ],
     highlights: "Auszeichnungen & Meisterschaften",
     photoAlt: "Sport",
@@ -260,6 +261,8 @@ export const de: Messages = {
         "MIAA Hallen-Leichtathletik-Meisterschaften",
       "2026 MIAA Indoor Track & Field Championships":
         "MIAA Hallen-Leichtathletik-Meisterschaften",
+      "MIAA Outdoor Track & Field Championships":
+        "MIAA Freiluft-Leichtathletik-Meisterschaften",
       "NCAA DII Cross Country Championships":
         "NCAA DII Cross-Country-Meisterschaften",
       "NCAA DII XC Championships": "NCAA DII Cross-Country-Meisterschaften",
