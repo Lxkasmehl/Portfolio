@@ -52,6 +52,26 @@ export function PortfolioContent() {
 
         <Section title={t.experience.title}>
           <div className="space-y-10">
+            {/* Pentos */}
+            <div>
+              <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                <span className="font-semibold" style={{ color: "var(--color-text)" }}>
+                  {t.experience.pentos.role}
+                </span>
+                <span style={{ color: "var(--color-text-muted)" }}>·</span>
+                <span style={{ color: "var(--color-text-muted)" }}>
+                  {t.experience.pentos.company}
+                </span>
+              </div>
+              <p className="text-sm mt-0.5" style={{ color: "var(--color-text-muted)" }}>
+                {t.experience.pentos.period}
+                {t.experience.pentos.location && ` · ${t.experience.pentos.location}`}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
+                {t.experience.pentos.description}
+              </p>
+            </div>
+
             {/* Washburn Research */}
             <div>
               <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
@@ -77,26 +97,6 @@ export function PortfolioContent() {
               </List>
               <p className="mt-2 text-sm italic" style={{ color: "var(--color-text-muted)" }}>
                 {t.experience.washburn.note}
-              </p>
-            </div>
-
-            {/* Pentos */}
-            <div>
-              <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                <span className="font-semibold" style={{ color: "var(--color-text)" }}>
-                  {t.experience.pentos.role}
-                </span>
-                <span style={{ color: "var(--color-text-muted)" }}>·</span>
-                <span style={{ color: "var(--color-text-muted)" }}>
-                  {t.experience.pentos.company}
-                </span>
-              </div>
-              <p className="text-sm mt-0.5" style={{ color: "var(--color-text-muted)" }}>
-                {t.experience.pentos.period}
-                {t.experience.pentos.location && ` · ${t.experience.pentos.location}`}
-              </p>
-              <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
-                {t.experience.pentos.description}
               </p>
             </div>
 
@@ -135,6 +135,11 @@ export function PortfolioContent() {
               <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
                 {t.education.washburn.note}
               </p>
+              <List size="sm" mt="xs" spacing="xs" className="list-disc pl-5">
+                {t.education.washburn.highlights.map((item, i) => (
+                  <List.Item key={i}>{item}</List.Item>
+                ))}
+              </List>
             </div>
             <div>
               <p className="font-semibold" style={{ color: "var(--color-text)" }}>
@@ -163,6 +168,18 @@ export function PortfolioContent() {
               )}
             </div>
           </div>
+        </Section>
+
+        <Section title={t.publications.title}>
+          <ul className="list-none space-y-3 text-sm">
+            {t.publications.items.map((item, i) => (
+              <li key={i} className="leading-relaxed" style={{ color: "var(--color-text)" }}>
+                <span className="font-semibold">{item.date}</span>
+                <span style={{ color: "var(--color-text-muted)" }}> · </span>
+                {item.text}
+              </li>
+            ))}
+          </ul>
         </Section>
 
         <Section title={t.projects.title}>

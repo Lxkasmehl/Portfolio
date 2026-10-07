@@ -4,8 +4,12 @@
 
 export const PROJECTS = [
   {
-    id: "turtletracker",
-    github: "https://github.com/Lxkasmehl/TurtleTracker",
+    id: "pqcscanner",
+    github: "https://github.com/Lxkasmehl/pqc-scanner",
+  },
+  {
+    id: "pictur",
+    github: "https://github.com/Lxkasmehl/PicTur",
   },
   {
     id: "runsync",

@@ -8,20 +8,21 @@ export const en: Messages = {
   meta: {
     title: "Lukas Mehl",
     description:
-      "CIS Student @ Washburn · Research Assistant (K-INBRE, SCWTE) · Working Student Web Dev @ Pentos",
+      "CIS Student @ Washburn · Working Student Web Dev @ Pentos · ESEM 2026 paper on post-quantum migration readiness (PQCScanner)",
   },
   intro: {
     name: "Lukas Mehl",
     headline:
-      "CIS Student @ Washburn University · Undergraduate Research Assistant (K-INBRE, SCWTE) · Working Student – Web Application Development @ Pentos",
+      "CIS Student @ Washburn University · Working Student – Web Application Development @ Pentos · ESEM 2026 author (PQCScanner, post-quantum cryptography)",
     location: "Topeka, KS | Würselen, DE",
   },
   about: {
     title: "About",
     paragraphs: [
       "I completed the first half of my bachelor's studies in Cybersecurity and Information and Computer Science (Computer Science concentration) at Park University and am now continuing my degree at Washburn University, majoring in Computer and Information Science.",
-      "With a strong background in IT, programming, and software development, I work as an Undergraduate Research Assistant (K-INBRE, SCWTE) at Washburn University on TurtleTracker — a research web app for automated wildlife identification — and as a Working Student in Web Application Development at Pentos, gaining hands-on experience in building and optimizing web applications.",
-      "I am passionate about cybersecurity and software engineering, with a focus on frontend development using React, TypeScript, JavaScript, and HTML/CSS. I also have experience with backend technologies such as Python, Java, and Kotlin, as well as automated testing with Playwright and Selenium. I enjoy developing secure, efficient, and user-friendly applications.",
+      "I work as a Working Student in Web Application Development at Pentos, building and optimizing web applications. From January to May 2026 I was an Undergraduate Research Assistant (K-INBRE, SCWTE) at Washburn University, where I built the frontend of PicTur — a research web app for automated wildlife identification — which I continue to develop.",
+      "My own research focuses on post-quantum cryptography: PQCScanner, a static analysis tool for cryptographic API usage in Python, Java, and Go, measures how ready open-source software is for the migration to post-quantum cryptography. My sole-authored paper on it was accepted at ESEM 2026 (International Symposium on Empirical Software Engineering and Measurement); I also presented it as a poster at CCSC Central Plains 2026.",
+      "I am passionate about cybersecurity, quantum-safe cryptography, and software engineering, with a focus on frontend development using React, TypeScript, JavaScript, and HTML/CSS. I also have experience with backend technologies such as Python, Java, and Kotlin, as well as automated testing with Playwright and Selenium. I enjoy developing secure, efficient, and user-friendly applications.",
       "Beyond my studies, I am a dedicated student-athlete with a proven ability to work in teams and execute projects effectively. I am fluent in both German and English and proficient in MS Office and Adobe software. As a competitive middle- and long-distance runner, I have achieved top-10 placements at the German Championships and earned multiple conference wins; I also previously held a school record before transferring. These experiences have helped me develop discipline, resilience, and a strong work ethic. I am also actively involved in community initiatives.",
       "I am always eager to apply my knowledge in practical settings, take on new challenges, and continuously expand my skill set in the IT and cybersecurity fields.",
     ],
@@ -31,10 +32,10 @@ export const en: Messages = {
     washburn: {
       role: "Undergraduate Research Assistant (K-INBRE, SCWTE)",
       company: "Washburn University",
-      period: "Jan 2026 – Present",
+      period: "Jan 2026 – May 2026",
       location: "Topeka, Kansas, US · Hybrid",
       description:
-        "Working on TurtleTracker, a research web application for the fully automated identification of Ornate Box Turtles based on photos of their plastron. The goal is to reliably identify individual turtles from images and store them in a database for long-term population monitoring and biological research. Developed collaboratively with Garrett King-Cody (backend and server infrastructure); I focus on frontend development and overall system integration.",
+        "Worked on PicTur, a research web application for the fully automated identification of Ornate Box Turtles based on photos of their plastron. The goal is to reliably identify individual turtles from images and store them in a database for long-term population monitoring and biological research. Developed collaboratively with Garrett King-Cody (backend and server infrastructure); I focus on frontend development and overall system integration.",
       responsibilities: [
         "Designing and implementing the frontend architecture using React and TypeScript",
         "Building user workflows for image upload, validation, and result visualization",
@@ -42,7 +43,7 @@ export const en: Messages = {
         "Collaborating closely with backend systems for image-based identification and database ingestion",
         "Contributing to end-to-end reliability, testing, and deployment",
       ],
-      note: "First project followed from an empty repository to a fully deployed application on a self-configured server. Conducted under the mentorship of Dr. Benjamin Reed.",
+      note: "First project followed from an empty repository to a fully deployed application on a self-configured server. Conducted under the mentorship of Dr. Benjamin Reed. Development of PicTur continues beyond the appointment.",
     },
     pentos: {
       role: "Working Student in Web Application Development",
@@ -69,6 +70,10 @@ export const en: Messages = {
       period: "Aug 2025 – May 2027",
       location: "Topeka, Kansas, US",
       note: "Continuing B.Sc. after transferring from Park University. Activities: Track and Field & Cross Country.",
+      highlights: [
+        "Minor in Mathematics; undergraduate certificates in Cybersecurity and in Artificial Intelligence",
+        "Dean's Scholarship Award (Dixie Donnelly Wantoch Scholarship) for the 2026–2027 academic year, Washburn CIS Department (Apr 2026)",
+      ],
     },
     park: {
       degree: "Bachelor of Science – Cybersecurity & Information and Computer Science (started)",
@@ -88,14 +93,26 @@ export const en: Messages = {
   projects: {
     title: "Projects",
     teaser:
-      "TurtleTracker, RunSync, Heiligtumsfahrtquiz and more—with descriptions, timelines, and links to code or live demos.",
+      "PQCScanner, PicTur, RunSync, Heiligtumsfahrtquiz and more—with descriptions, timelines, and links to code or live demos.",
     viewAll: "View all projects",
     linkLive: "Live / Demo",
     linkGithub: "View on GitHub",
     linkGithubWeb: "Web (GitHub)",
     linkGithubAndroid: "Android (GitHub)",
-    turtletracker: {
-      name: "TurtleTracker – Automated Wildlife Monitoring Platform",
+    pqcscanner: {
+      name: "PQCScanner – Post-Quantum Migration Readiness of Open-Source Software",
+      period: "Mar 2026 – Present",
+      description:
+        "Research prototype for an empirical study on post-quantum cryptography (PQC) adoption in open-source software. The scanner analyzes source code repositories, detects usage of cryptographic primitives, and classifies each finding as post-quantum-vulnerable (e.g. RSA, ECDSA, ECDH), quantum-safe, or PQC-ready (e.g. Kyber, Dilithium). Sole-authored paper accepted at ESEM 2026; poster at CCSC Central Plains 2026.",
+      aspects: [
+        "Multi-language, AST-based detection: Python via ast, Java and Go via tree-sitter",
+        "Confidence levels from direct API calls down to string matches",
+        "Large-scale GitHub mining: search API, shallow clones, rate limiting, resumable state in SQLite",
+        "Output as per-repository JSON, aggregated CSV, and CLI report",
+      ],
+    },
+    pictur: {
+      name: "PicTur – Automated Wildlife Monitoring Platform",
       period: "Oct 2025 – Present",
       org: "Washburn University",
       description:
@@ -122,9 +139,23 @@ export const en: Messages = {
       aspects: [],
     },
   },
+  publications: {
+    title: "Conference, publications & competitions",
+    items: [
+      {
+        date: "Oct 2026",
+        text: "Sole-authored paper on PQCScanner – static analysis of cryptographic API usage in Python, Java, and Go for post-quantum migration readiness – accepted at ESEM 2026 (International Symposium on Empirical Software Engineering and Measurement), Emerging Results, Vision, and Reflection Papers track. Peer-reviewed; to be published and presented at the conference.",
+      },
+      {
+        date: "2026",
+        text: "CCSC Central Plains (Consortium for Computing Sciences in Colleges): research poster on PQCScanner; programming contest, 2nd place overall (with Sapnish Sharma and Ujjwal Sitaula).",
+      },
+    ],
+  },
   certifications: {
     title: "Certifications & Awards",
     items: [
+      "Dean's Scholarship Award (Dixie Donnelly Wantoch Scholarship), Washburn CIS Department, Apr 2026",
       "8th place nationwide, German Startup Award for Students (Deutscher Gründerpreis für Schüler:innen), May 2022",
       "Existenzia für Schüler – Wie erstelle ich einen Geschäftsplan? (GründerRegion Aachen), Mar 2021",
       "Sports Medal of the City of Würselen (Jan 2024) - Awarded for achievements in long-distance running at the Würselen Sports Matinee.",
@@ -156,14 +187,14 @@ export const en: Messages = {
     stats: "Stats",
   },
   home: {
-    tagline: "CIS student, research assistant & web developer. Student-athlete.",
+    tagline: "CIS student, web developer & post-quantum crypto researcher. Student-athlete.",
     photoAlt: "Portrait",
     rightNow: "Right now",
     roleShort:
-      "Research @ Washburn (TurtleTracker) · Web dev @ Pentos · B.Sc. CIS @ Washburn",
+      "Web dev @ Pentos · ESEM 2026 paper (PQCScanner) · B.Sc. CIS @ Washburn",
     explore: "Explore",
     cvTeaser: "Experience, education & about",
-    projectsTeaser: "TurtleTracker, RunSync & more",
+    projectsTeaser: "PQCScanner, PicTur, RunSync & more",
     sportsTeaser: "Track & Field, results",
     statsTeaser: "Coding hours & GitHub",
   },

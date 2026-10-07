@@ -78,7 +78,8 @@ export function ProjectsContent() {
   const { t } = useLang();
   const p = t.projects;
 
-  const turtletrackerData = PROJECTS.find((x) => x.id === "turtletracker");
+  const pqcscannerData = PROJECTS.find((x) => x.id === "pqcscanner");
+  const picturData = PROJECTS.find((x) => x.id === "pictur");
   const runsyncData = PROJECTS.find((x) => x.id === "runsync");
   const heiligtumsfahrtData = PROJECTS.find((x) => x.id === "heiligtumsfahrt");
 
@@ -92,45 +93,90 @@ export function ProjectsContent() {
       </h1>
 
       <div className="space-y-8">
-        {/* TurtleTracker */}
-        {turtletrackerData && "github" in turtletrackerData && (
+        {/* PQCScanner */}
+        {pqcscannerData && "github" in pqcscannerData && (
           <Section title="">
             <Box
               className="rounded-3xl p-6 border-2 card-playful"
               style={{ borderColor: "var(--color-accent-2)", backgroundColor: "var(--color-surface-elevated)" }}
             >
-              {turtletrackerData.github && githubOgImageUrl(turtletrackerData.github) && (
+              {pqcscannerData.github && githubOgImageUrl(pqcscannerData.github) && (
                 <a
-                  href={turtletrackerData.github}
+                  href={pqcscannerData.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full max-w-[280px] rounded-xl overflow-hidden border mb-4"
                   style={{ borderColor: "var(--color-border)" }}
                 >
                   <img
-                    src={githubOgImageUrl(turtletrackerData.github)!}
+                    src={githubOgImageUrl(pqcscannerData.github)!}
                     alt=""
                     className="w-full h-auto object-cover"
                   />
                 </a>
               )}
               <Text fw={600} size="md" style={{ color: "var(--color-text)" }}>
-                {p.turtletracker.name}
+                {p.pqcscanner.name}
               </Text>
               <Text size="sm" mt={4} style={{ color: "var(--color-text-muted)" }}>
-                {p.turtletracker.period}
-                {p.turtletracker.org && ` · ${p.turtletracker.org}`}
+                {p.pqcscanner.period}
               </Text>
               <Text size="sm" mt="sm" className="leading-relaxed" style={{ color: "var(--color-text)" }}>
-                {p.turtletracker.description}
+                {p.pqcscanner.description}
               </Text>
               <List size="sm" mt="xs" spacing="xs" className="list-disc pl-5">
-                {p.turtletracker.aspects.map((item, i) => (
+                {p.pqcscanner.aspects.map((item, i) => (
                   <List.Item key={i}>{item}</List.Item>
                 ))}
               </List>
               <ProjectLinks
-                githubUrl={turtletrackerData.github || undefined}
+                githubUrl={pqcscannerData.github || undefined}
+                linkLiveLabel={p.linkLive}
+                linkGithubLabel={p.linkGithub}
+              />
+            </Box>
+          </Section>
+        )}
+
+        {/* PicTur */}
+        {picturData && "github" in picturData && (
+          <Section title="">
+            <Box
+              className="rounded-3xl p-6 border-2 card-playful"
+              style={{ borderColor: "var(--color-accent-2)", backgroundColor: "var(--color-surface-elevated)" }}
+            >
+              {picturData.github && githubOgImageUrl(picturData.github) && (
+                <a
+                  href={picturData.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full max-w-[280px] rounded-xl overflow-hidden border mb-4"
+                  style={{ borderColor: "var(--color-border)" }}
+                >
+                  <img
+                    src={githubOgImageUrl(picturData.github)!}
+                    alt=""
+                    className="w-full h-auto object-cover"
+                  />
+                </a>
+              )}
+              <Text fw={600} size="md" style={{ color: "var(--color-text)" }}>
+                {p.pictur.name}
+              </Text>
+              <Text size="sm" mt={4} style={{ color: "var(--color-text-muted)" }}>
+                {p.pictur.period}
+                {p.pictur.org && ` · ${p.pictur.org}`}
+              </Text>
+              <Text size="sm" mt="sm" className="leading-relaxed" style={{ color: "var(--color-text)" }}>
+                {p.pictur.description}
+              </Text>
+              <List size="sm" mt="xs" spacing="xs" className="list-disc pl-5">
+                {p.pictur.aspects.map((item, i) => (
+                  <List.Item key={i}>{item}</List.Item>
+                ))}
+              </List>
+              <ProjectLinks
+                githubUrl={picturData.github || undefined}
                 linkLiveLabel={p.linkLive}
                 linkGithubLabel={p.linkGithub}
               />

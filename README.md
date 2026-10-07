@@ -34,9 +34,9 @@ Edit `config.ts`:
 ## Page structure
 
 - **Home** - Short intro, portrait, links to subpages.
-- **CV** - Full CV (About, Experience, Education, Projects, Certifications, Skills, Languages). Portrait in header. Footer: LinkedIn, Instagram.
-- **Projects** - RunSync, Heiligtumsfahrtquiz.
+- **CV** - Full CV (About, Experience, Education, Conference & publications, Projects, Certifications, Skills, Languages). Portrait in header. Footer: LinkedIn, Instagram.
+- **Projects** - PQCScanner, PicTur, RunSync, Heiligtumsfahrtquiz.
 - **Sports** - Competitive sports intro (Track & Field, Cross Country), selected results, optional sports images.
 - **Stats** - Coding hours progress (10k goal), GitHub contribution chart.
 
-Content source: LinkedIn. No backend, no CMS.
+Content source: the LaTeX CV in the sibling repo `application-documents` (see `../CLAUDE.md`). No backend, no CMS.

@@ -40,6 +40,7 @@ export interface Messages {
       period: string;
       location: string;
       note: string;
+      highlights: string[];
     };
     park: {
       degree: string;
@@ -64,10 +65,16 @@ export interface Messages {
     linkGithub: string;
     linkGithubWeb: string;
     linkGithubAndroid: string;
-    turtletracker: {
+    pictur: {
       name: string;
       period: string;
       org: string;
+      description: string;
+      aspects: string[];
+    };
+    pqcscanner: {
+      name: string;
+      period: string;
       description: string;
       aspects: string[];
     };
@@ -85,6 +92,7 @@ export interface Messages {
       aspects: string[];
     };
   };
+  publications: { title: string; items: { date: string; text: string }[] };
   certifications: { title: string; items: string[] };
   skills: {
     title: string;
