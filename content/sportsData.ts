@@ -176,9 +176,9 @@ export const PERSONAL_BESTS: PersonalBest[] = [
   },
   {
     event: '8k (XC)',
-    time: '24:49.1',
-    date: '2025-10',
-    meet: 'DBU Old Glory Gallop',
+    time: '24:42.4',
+    date: '2026-09',
+    meet: 'Augustana Invitational',
     xc: true,
   },
   {
@@ -280,10 +280,20 @@ export const PROGRESSION_8K_XC: ProgressionPoint[] = [
     meet: 'Heart of America XC Championships',
   },
   { year: 2025, time: '24:49.1', timeSeconds: 1489.1, meet: 'DBU Old Glory Gallop' },
+  { year: 2026, time: '24:42.4', timeSeconds: 1482.4, meet: 'Augustana Invitational' },
 ];
 
 // -- Recent results timeline (chronological: newest first). Source: TFRRS. --
 export const RECENT_RESULTS: ResultEntry[] = [
+  {
+    date: '2026-09-25',
+    teamId: 'washburn',
+    meet: 'Augustana Invitational',
+    event: '8k',
+    time: '24:42.4',
+    place: '10th',
+    note: '8k XC PR · team won the meet',
+  },
   {
     date: '2026-05-01',
     teamId: 'washburn',

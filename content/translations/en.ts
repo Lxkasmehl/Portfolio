@@ -233,6 +233,7 @@ export const en: Messages = {
     days: "days",
     recentHeading: "2025–2026 highlights",
     recent: [
+      "Augustana Invitational (Sep 2026): 10th in an 8k XC PR of 24:42.4; Washburn won the team title (1st of 19 teams).",
       "MIAA Outdoor Championships 2026: 5th in the 10,000 m in a PR of 30:37.62; 1,500 m PR 4:08.98 at UCM Mule Relays (Apr 2026).",
       "Washburn Open indoor 5k 14:54 (Jan 2026); Washburn Rust Buster 3k 8:43.56 (Jan 2026).",
       "NCAA DII Cross Country Nationals 2025 (10k); Central Region 41st, team qualified; MIAA XC 32nd.",

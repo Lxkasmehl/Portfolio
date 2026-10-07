@@ -232,6 +232,7 @@ export const de: Messages = {
     days: "Tage",
     recentHeading: "Highlights 2025–2026",
     recent: [
+      "Augustana Invitational (Sep 2026): Platz 10 in 8-km-Cross-Bestzeit (24:42.4); Washburn gewinnt die Teamwertung (1. von 19 Teams).",
       "MIAA-Freiluftmeisterschaften 2026: 5. Platz über 10.000 m in Bestzeit (30:37.62); 1.500 m Bestzeit 4:08.98 bei den UCM Mule Relays (Apr 2026).",
       "Washburn Open Halle 5.000 m 14:54 (Jan 2026); Washburn Rust Buster 3.000 m 8:43.56 (Jan 2026).",
       "NCAA-DII-Cross-Country-Meisterschaften 2025 (10 km); Central Region Platz 41, Team qualifiziert; MIAA Cross Platz 32.",
