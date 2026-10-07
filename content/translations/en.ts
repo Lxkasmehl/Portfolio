@@ -13,14 +13,14 @@ export const en: Messages = {
   intro: {
     name: "Lukas Mehl",
     headline:
-      "CIS Student @ Washburn University · Working Student – Web Application Development @ Pentos · ESEM 2026 author (PQCScanner, post-quantum cryptography)",
+      "CIS Student @ Washburn University · Working Student in Web Application Development @ Pentos · ESEM 2026 author (PQCScanner, post-quantum cryptography)",
     location: "Topeka, KS | Würselen, DE",
   },
   about: {
     title: "About",
     paragraphs: [
       "I completed the first half of my bachelor's studies in Cybersecurity and Information and Computer Science (Computer Science concentration) at Park University and am now continuing my degree at Washburn University, majoring in Computer and Information Science.",
-      "I work as a Working Student in Web Application Development at Pentos, building and optimizing web applications. From January to May 2026 I was an Undergraduate Research Assistant (K-INBRE, SCWTE) at Washburn University, where I built the frontend of PicTur — a research web app for automated wildlife identification — which I continue to develop.",
+      "I work as a Working Student in Web Application Development at Pentos, building and optimizing web applications. From January to May 2026 I was an Undergraduate Research Assistant (K-INBRE, SCWTE) at Washburn University, where I built the frontend of PicTur, a research web app for automated wildlife identification that I continue to develop.",
       "My own research focuses on post-quantum cryptography: PQCScanner, a static analysis tool for cryptographic API usage in Python, Java, and Go, measures how ready open-source software is for the migration to post-quantum cryptography. My sole-authored paper on it was accepted at ESEM 2026 (International Symposium on Empirical Software Engineering and Measurement); I also presented it as a poster at CCSC Central Plains 2026.",
       "I am passionate about cybersecurity, quantum-safe cryptography, and software engineering, with a focus on frontend development using React, TypeScript, JavaScript, and HTML/CSS. I also have experience with backend technologies such as Python, Java, and Kotlin, as well as automated testing with Playwright and Selenium. I enjoy developing secure, efficient, and user-friendly applications.",
       "Beyond my studies, I am a dedicated student-athlete with a proven ability to work in teams and execute projects effectively. I am fluent in both German and English and proficient in MS Office and Adobe software. As a competitive middle- and long-distance runner, I have achieved top-10 placements at the German Championships and earned multiple conference wins; I also previously held a school record before transferring. These experiences have helped me develop discipline, resilience, and a strong work ethic. I am also actively involved in community initiatives.",
@@ -65,7 +65,7 @@ export const en: Messages = {
   education: {
     title: "Education",
     washburn: {
-      degree: "Bachelor of Science – Computer Information Science (continued)",
+      degree: "Bachelor of Science in Computer Information Science (continued)",
       school: "Washburn University",
       period: "Aug 2025 – May 2027",
       location: "Topeka, Kansas, US",
@@ -76,7 +76,7 @@ export const en: Messages = {
       ],
     },
     park: {
-      degree: "Bachelor of Science – Cybersecurity & Information and Computer Science (started)",
+      degree: "Bachelor of Science in Cybersecurity & Information and Computer Science (started)",
       school: "Park University",
       period: "Aug 2023 – May 2025",
       location: "Parkville, Missouri, US",
@@ -85,7 +85,7 @@ export const en: Messages = {
     highSchool: {
       degree: "High School Diploma",
       school: "Heilig-Geist-Gymnasium",
-      period: "2015 - 2023",
+      period: "Aug 2015 – Jun 2023",
       location: "Würselen, Deutschland",
       note: "Student body president for the 2021/2022 school year",
     },
@@ -93,14 +93,14 @@ export const en: Messages = {
   projects: {
     title: "Projects",
     teaser:
-      "PQCScanner, PicTur, RunSync, Heiligtumsfahrtquiz and more—with descriptions, timelines, and links to code or live demos.",
+      "PQCScanner, PicTur, RunSync, Heiligtumsfahrtquiz and more, each with a description, timeline, and links to code or live demos.",
     viewAll: "View all projects",
     linkLive: "Live / Demo",
     linkGithub: "View on GitHub",
     linkGithubWeb: "Web (GitHub)",
     linkGithubAndroid: "Android (GitHub)",
     pqcscanner: {
-      name: "PQCScanner – Post-Quantum Migration Readiness of Open-Source Software",
+      name: "PQCScanner: Post-Quantum Migration Readiness of Open-Source Software",
       period: "Mar 2026 – Present",
       description:
         "Research prototype for an empirical study on post-quantum cryptography (PQC) adoption in open-source software. The scanner analyzes source code repositories, detects usage of cryptographic primitives, and classifies each finding as post-quantum-vulnerable (e.g. RSA, ECDSA, ECDH), quantum-safe, or PQC-ready (e.g. Kyber, Dilithium). Sole-authored paper accepted at ESEM 2026; poster at CCSC Central Plains 2026.",
@@ -112,7 +112,7 @@ export const en: Messages = {
       ],
     },
     pictur: {
-      name: "PicTur – Automated Wildlife Monitoring Platform",
+      name: "PicTur: Automated Wildlife Monitoring Platform",
       period: "Oct 2025 – Present",
       org: "Washburn University",
       description:
@@ -144,7 +144,7 @@ export const en: Messages = {
     items: [
       {
         date: "Oct 2026",
-        text: "Sole-authored paper on PQCScanner – static analysis of cryptographic API usage in Python, Java, and Go for post-quantum migration readiness – accepted at ESEM 2026 (International Symposium on Empirical Software Engineering and Measurement), Emerging Results, Vision, and Reflection Papers track. Peer-reviewed; to be published and presented at the conference.",
+        text: "Sole-authored paper on PQCScanner, a static analysis of cryptographic API usage in Python, Java, and Go that measures post-quantum migration readiness. Accepted at ESEM 2026 (International Symposium on Empirical Software Engineering and Measurement), Emerging Results, Vision, and Reflection Papers track. Peer-reviewed; to be published and presented at the conference.",
       },
       {
         date: "2026",
@@ -157,8 +157,8 @@ export const en: Messages = {
     items: [
       "Dean's Scholarship Award (Dixie Donnelly Wantoch Scholarship), Washburn CIS Department, Apr 2026",
       "8th place nationwide, German Startup Award for Students (Deutscher Gründerpreis für Schüler:innen), May 2022",
-      "Existenzia für Schüler – Wie erstelle ich einen Geschäftsplan? (GründerRegion Aachen), Mar 2021",
-      "Sports Medal of the City of Würselen (Jan 2024) - Awarded for achievements in long-distance running at the Würselen Sports Matinee.",
+      "Existenzia für Schüler: Wie erstelle ich einen Geschäftsplan? (GründerRegion Aachen), Mar 2021",
+      "Sports Medal of the City of Würselen (Jan 2024), awarded for achievements in long-distance running at the Würselen Sports Matinee.",
     ],
   },
   skills: {
@@ -205,9 +205,9 @@ export const en: Messages = {
     intro:
       "I run Track and Field and Cross Country at Washburn University (previously Park University). Focus: middle- and long-distance, 3,000 m up to 10,000 m and cross country (6k, 8k, 10k). I share training and race reflections on Instagram and Strava.",
     linksHeading: "Results & training",
-    tfrrsLabel: "TFRRS - full results & progression",
-    ladvLabel: "LADV - German pre-college results",
-    stravaLabel: "Strava - training & activities",
+    tfrrsLabel: "TFRRS: full results and progression",
+    ladvLabel: "LADV: German pre-college results",
+    stravaLabel: "Strava: training and activities",
     personalBestsHeading: "Personal bests",
     personalBestsTrack: "Track",
     personalBestsXC: "Cross country",
@@ -243,7 +243,7 @@ export const en: Messages = {
     ],
     highlights: "Awards & championships",
     awards: [
-      "Sports Medal of the City of Würselen (Jan 2024) - Awarded for achievements in long-distance running at the Würselen Sports Matinee.",
+      "Sports Medal of the City of Würselen (Jan 2024), awarded for achievements in long-distance running at the Würselen Sports Matinee.",
     ],
     photoAlt: "Sports",
     photosNote: "Photos to come.",
@@ -303,7 +303,7 @@ export const en: Messages = {
       "Set GITHUB_USERNAME in config.ts to show your contribution chart.",
     gladwellHeadline: "The 10,000 Hour Rule",
     gladwellIntro:
-      "In Outliers, Malcolm Gladwell popularized the idea that it takes roughly 10,000 hours of deliberate practice to reach world-class mastery in a field—a notion rooted in Anders Ericsson's research on expert performance. I track my coding hours as a rough proxy for that kind of deliberate practice.",
+      "In Outliers, Malcolm Gladwell popularized the idea that it takes roughly 10,000 hours of deliberate practice to reach world-class mastery in a field, a notion rooted in Anders Ericsson's research on expert performance. I track my coding hours as a rough proxy for that kind of deliberate practice.",
     myJourney: "My coding journey",
     hoursToGo: "hours to go",
     milestoneLabel: "milestone",

@@ -207,7 +207,7 @@ function ProgressionLineChart({
                 {[
                   p.time,
                   p.indoor ? ' (i)' : '',
-                  ' - ',
+                  ' · ',
                   p.meet ?? p.year,
                   p.note ? ` (${p.note})` : '',
                 ].join('')}
@@ -424,7 +424,7 @@ export function SportsContent() {
                   className='text-xs ml-1'
                   style={{ color: 'var(--color-text-muted)' }}
                 >
-                  - {pb.meet}
+                  · {pb.meet}
                 </span>
               )}
             </li>
@@ -446,7 +446,7 @@ export function SportsContent() {
                   className='text-xs ml-1'
                   style={{ color: 'var(--color-text-muted)' }}
                 >
-                  - {pb.meet}
+                  · {pb.meet}
                 </span>
               )}
             </li>
@@ -564,7 +564,7 @@ export function SportsContent() {
                   className='text-xs italic w-full sm:w-auto'
                   style={{ color: 'var(--color-text-muted)' }}
                 >
-                  - {h.note}
+                  · {h.note}
                 </span>
               )}
             </li>
@@ -663,7 +663,7 @@ export function SportsContent() {
                               className='text-xs italic w-full sm:w-auto'
                               style={{ color: 'var(--color-text-muted)' }}
                             >
-                              - {r.note}
+                              · {r.note}
                             </span>
                           )}
                         </li>
