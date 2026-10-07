@@ -241,6 +241,9 @@ export const de: Messages = {
       "Silvesterlauf Aachen: 3. über 4,5 km, Sieg über 9 km. Sieg beim Kraremanns Lauf Simmerath über 4 km.",
     ],
     highlights: "Auszeichnungen & Meisterschaften",
+    awards: [
+      "Sportmedaille der Stadt Würselen (Jan 2024) - Verliehen für Langstreckenlauf bei der Würselener Sportmatinée.",
+    ],
     photoAlt: "Sport",
     photosNote: "Fotos folgen.",
     indoor: "H",

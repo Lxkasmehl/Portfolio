@@ -793,7 +793,7 @@ export function SportsContent() {
           className='list-none space-y-1.5 text-sm mb-10'
           style={{ color: 'var(--color-text)' }}
         >
-          {t.certifications.items.slice(2, 3).map((item: string, i: number) => (
+          {c.awards.map((item: string, i: number) => (
             <li key={i}>{item}</li>
           ))}
         </ul>

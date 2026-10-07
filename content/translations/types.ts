@@ -155,6 +155,7 @@ export interface Messages {
     recentHeading: string;
     recent: string[];
     highlights: string;
+    awards: string[];
     photoAlt: string;
     photosNote: string;
     indoor: string;

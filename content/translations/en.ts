@@ -242,6 +242,9 @@ export const en: Messages = {
       "New Year's Eve Aachen: 3rd 4.5 km, 1st 9 km. 1st Kraremanns Lauf Simmerath 4 km.",
     ],
     highlights: "Awards & championships",
+    awards: [
+      "Sports Medal of the City of Würselen (Jan 2024) - Awarded for achievements in long-distance running at the Würselen Sports Matinee.",
+    ],
     photoAlt: "Sports",
     photosNote: "Photos to come.",
     indoor: "i",
