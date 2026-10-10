@@ -73,8 +73,9 @@ export const de: Messages = {
       school: "Washburn University",
       period: "Aug 2025 – Mai 2027",
       location: "Topeka, Kansas, USA",
-      note: "Fortsetzung des Bachelorstudiums nach dem Wechsel von der Park University. Im Leichtathletik- und Cross-Country-Team.",
+      note: "Fortsetzung des Bachelorstudiums nach dem Wechsel von der Park University. Im Leichtathletik- und Cross-Country-Team (NCAA Division II).",
       highlights: [
+        "Notendurchschnitt: GPA 3,97 von 4,00",
         "Minor Mathematik; Undergraduate Certificates in Cybersecurity und Artificial Intelligence",
         "Dean's Scholarship Award (Dixie Donnelly Wantoch Scholarship) für das akademische Jahr 2026–2027, Washburn CIS Department (Apr 2026)",
       ],
@@ -84,7 +85,7 @@ export const de: Messages = {
       school: "Park University",
       period: "Aug 2023 – Mai 2025",
       location: "Parkville, Missouri, USA",
-      note: "Beginn des Bachelorstudiums, im Sommer 2025 Wechsel an die Washburn University. Im Leichtathletik- und Cross-Country-Team.",
+      note: "Beginn des Bachelorstudiums, im Sommer 2025 Wechsel an die Washburn University. Im Leichtathletik- und Cross-Country-Team (NAIA).",
     },
     highSchool: {
       degree: "Abitur",

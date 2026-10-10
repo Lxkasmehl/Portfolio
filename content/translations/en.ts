@@ -74,8 +74,9 @@ export const en: Messages = {
       school: "Washburn University",
       period: "Aug 2025 – May 2027",
       location: "Topeka, Kansas, US",
-      note: "Continuing B.Sc. after transferring from Park University. Activities: Track and Field & Cross Country.",
+      note: "Continuing B.Sc. after transferring from Park University. Activities: Track and Field & Cross Country (NCAA Division II).",
       highlights: [
+        "Cumulative GPA: 3.97/4.00",
         "Minor in Mathematics; undergraduate certificates in Cybersecurity and in Artificial Intelligence",
         "Dean's Scholarship Award (Dixie Donnelly Wantoch Scholarship) for the 2026–2027 academic year, Washburn CIS Department (Apr 2026)",
       ],
@@ -85,7 +86,7 @@ export const en: Messages = {
       school: "Park University",
       period: "Aug 2023 – May 2025",
       location: "Parkville, Missouri, US",
-      note: "Started B.Sc. in Cybersecurity & Information and Computer Science; transferred to Washburn University in Summer 2025. Activities: Track and Field & Cross Country.",
+      note: "Started B.Sc. in Cybersecurity & Information and Computer Science; transferred to Washburn University in Summer 2025. Activities: Track and Field & Cross Country (NAIA).",
     },
     highSchool: {
       degree: "High School Diploma",
