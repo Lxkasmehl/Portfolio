@@ -48,7 +48,7 @@ export const en: Messages = {
     pentos: {
       role: "Working Student in Web Application Development",
       company: "Pentos",
-      period: "Dec 2024 – Present",
+      period: "Jan 2025 – Present",
       location: "Kissimmee, Florida, US · Remote",
       description:
         "I independently build software products for the SAP SuccessFactors ecosystem, from the first idea to a working application. The ideas come from my two supervisors and from other teams, usually based on what customers need. I build a first version, demo it in our weekly meeting, and together we decide what stays, what changes, and what comes next. Promising prototypes grow into larger products.",

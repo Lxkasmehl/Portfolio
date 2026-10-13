@@ -47,7 +47,7 @@ export const de: Messages = {
     pentos: {
       role: "Werkstudent in der Webentwicklung",
       company: "Pentos",
-      period: "Dez 2024 – heute",
+      period: "Jan 2025 – heute",
       location: "Kissimmee, Florida, USA · Remote",
       description:
         "Ich entwickle eigenständig Softwareprodukte rund um SAP SuccessFactors, von der ersten Idee bis zur lauffähigen Anwendung. Die Ideen kommen von meinen beiden Vorgesetzten und aus anderen Teams, meist aus konkretem Kundenbedarf. Ich baue eine erste Version, zeige sie im wöchentlichen Termin, und gemeinsam entscheiden wir, was bleibt, was sich ändert und was dazukommt. Vielversprechende Prototypen wachsen so zu größeren Produkten.",
