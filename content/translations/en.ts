@@ -78,7 +78,6 @@ export const en: Messages = {
       highlights: [
         "Cumulative GPA: 3.97/4.00",
         "Minor in Mathematics; undergraduate certificates in Cybersecurity and in Artificial Intelligence",
-        "Final semester (spring 2027): Modern Physics I (introduction to quantum and wave mechanics, relativity) and capstone project",
         "Dean's Scholarship Award (Dixie Donnelly Wantoch Scholarship) for the 2026–2027 academic year, Washburn CIS Department (Apr 2026)",
       ],
     },

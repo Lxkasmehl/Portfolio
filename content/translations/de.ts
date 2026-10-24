@@ -77,7 +77,6 @@ export const de: Messages = {
       highlights: [
         "Notendurchschnitt: GPA 3,97 von 4,00",
         "Minor Mathematik; Undergraduate Certificates in Cybersecurity und Artificial Intelligence",
-        "Letztes Semester (Frühjahr 2027): Modern Physics I (Einführung in Quanten- und Wellenmechanik, Relativitätstheorie) und Abschlussprojekt (Capstone)",
         "Dean's Scholarship Award (Dixie Donnelly Wantoch Scholarship) für das akademische Jahr 2026–2027, Washburn CIS Department (Apr 2026)",
       ],
     },
