@@ -77,6 +77,7 @@ export const de: Messages = {
       highlights: [
         "Notendurchschnitt: GPA 3,97 von 4,00",
         "Minor Mathematik; Undergraduate Certificates in Cybersecurity und Artificial Intelligence",
+        "Letztes Semester (Frühjahr 2027): Modern Physics I (Einführung in Quanten- und Wellenmechanik, Relativitätstheorie) und Abschlussprojekt (Capstone)",
         "Dean's Scholarship Award (Dixie Donnelly Wantoch Scholarship) für das akademische Jahr 2026–2027, Washburn CIS Department (Apr 2026)",
       ],
     },
@@ -122,7 +123,7 @@ export const de: Messages = {
       period: "Okt 2025 – heute",
       org: "Washburn University",
       description:
-        "Forschungs-Webplattform, die Schmuck-Dosenschildkröten anhand von Fotos ihres Bauchpanzers automatisch wiedererkennt. Die Ergebnisse landen in einer Datenbank für Langzeitstudien in Ökologie und Artenschutz. Garrett King-Cody verantwortet Backend und Server, ich Frontend und UX. Das Projekt lief von der ersten Idee bis zum Live-Betrieb.",
+        "Forschungs-Webplattform, die Schmuck-Dosenschildkröten anhand von Fotos ihres Bauchpanzers automatisch wiedererkennt. Die Ergebnisse landen in einer Datenbank für Langzeitstudien in Ökologie und Artenschutz. Garrett King-Cody verantwortet Backend und Server, ich Frontend und UX. Das Projekt lief von der ersten Idee bis zum Live-Betrieb. Im Oktober 2026 habe ich auf dem Box Turtle Conservation Workshop an der Washburn University einen praktischen Workshop zu PicTur geleitet.",
       aspects: [
         "Automatische Erkennung einzelner Tiere anhand von Fotos",
         "Web-Oberfläche für Uploads, Ergebnisse und Datenauswertung",
@@ -148,6 +149,10 @@ export const de: Messages = {
   publications: {
     title: "Konferenz, Publikationen & Wettbewerbe",
     items: [
+      {
+        date: "Okt 2026",
+        text: "2026 Box Turtle Conservation Workshop (North American Box Turtle Conservation Committee), Washburn University: Leitung eines praktischen Workshops, in dem ich Forschenden und Artenschützern PicTur vorgestellt habe, die von mir mitentwickelte Plattform zur Wiedererkennung von Schildkröten.",
+      },
       {
         date: "Okt 2026",
         text: "L. Mehl, „PQC-Readiness of Open-Source Software: An Empirical Study“. ESEM 2026 (International Symposium on Empirical Software Engineering and Measurement), Track Emerging Results, Vision, and Reflection Papers; LIPIcs, Bd. 394, Beitrag 53. Alleiniger Autor, begutachtet (peer-reviewed). Stellt PQCScanner vor, ein Werkzeug zur statischen Analyse kryptografischer Programmierschnittstellen in Python, Java und Go, das misst, wie bereit Software für Post-Quanten-Kryptografie ist. Vortrag auf der Konferenz am 9. Okt 2026.",

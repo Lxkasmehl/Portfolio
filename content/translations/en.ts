@@ -78,6 +78,7 @@ export const en: Messages = {
       highlights: [
         "Cumulative GPA: 3.97/4.00",
         "Minor in Mathematics; undergraduate certificates in Cybersecurity and in Artificial Intelligence",
+        "Final semester (spring 2027): Modern Physics I (introduction to quantum and wave mechanics, relativity) and capstone project",
         "Dean's Scholarship Award (Dixie Donnelly Wantoch Scholarship) for the 2026–2027 academic year, Washburn CIS Department (Apr 2026)",
       ],
     },
@@ -123,7 +124,7 @@ export const en: Messages = {
       period: "Oct 2025 – Present",
       org: "Washburn University",
       description:
-        "Research-focused web platform for the automated identification of Ornate Box Turtles using photos of their plastron. Identification results are stored in a database for longitudinal tracking and ecological and conservation research. Developed jointly with Garrett King-Cody (backend infrastructure and server setup); I lead frontend development and UX design. Full lifecycle from initial concept to live deployment.",
+        "Research-focused web platform for the automated identification of Ornate Box Turtles using photos of their plastron. Identification results are stored in a database for longitudinal tracking and ecological and conservation research. Developed jointly with Garrett King-Cody (backend infrastructure and server setup); I lead frontend development and UX design. Full lifecycle from initial concept to live deployment. In October 2026 I led a hands-on workshop on PicTur at the Box Turtle Conservation Workshop at Washburn University.",
       aspects: [
         "Automated image-based individual identification workflow",
         "Researcher-facing web interface for uploads, results, and data exploration",
@@ -149,6 +150,10 @@ export const en: Messages = {
   publications: {
     title: "Conference, publications & competitions",
     items: [
+      {
+        date: "Oct 2026",
+        text: "2026 Box Turtle Conservation Workshop (North American Box Turtle Conservation Committee), Washburn University: led a hands-on workshop introducing researchers and conservationists to PicTur, the turtle identification platform I co-developed.",
+      },
       {
         date: "Oct 2026",
         text: "L. Mehl, \"PQC-Readiness of Open-Source Software: An Empirical Study\". ESEM 2026 (International Symposium on Empirical Software Engineering and Measurement), Emerging Results, Vision, and Reflection Papers track; LIPIcs, Vol. 394, Paper 53. Sole author, peer-reviewed. Introduces PQCScanner, a static analysis tool for cryptographic API usage in Python, Java, and Go that measures post-quantum migration readiness. Presented at the conference on Oct 9, 2026.",
