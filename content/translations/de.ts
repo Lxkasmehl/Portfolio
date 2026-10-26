@@ -247,7 +247,7 @@ export const de: Messages = {
     projectsTeaser: "PQCScanner, PicTur, RunSync & mehr",
     publicationsTeaser: "ESEM-2026-Paper zu Post-Quanten-Kryptografie, mit PDF und BibTeX",
     sportsTeaser: "Leichtathletik und Ergebnisse",
-    statsTeaser: "Coding-Stunden & GitHub",
+    statsTeaser: "Stunden Softwareentwicklung & GitHub",
   },
   sports: {
     title: "Leistungssport",
@@ -359,19 +359,19 @@ export const de: Messages = {
   },
   stats: {
     title: "Stats",
-    codingHours: "Erfasste Programmierstunden",
+    codingHours: "Erfasste Stunden Softwareentwicklung",
     codingGoal: "Ziel: 10.000 Stunden",
     githubContributions: "GitHub-Contributions",
     githubPlaceholder: "GITHUB_USERNAME in config.ts eintragen.",
     gladwellHeadline: "Die 10.000-Stunden-Regel",
     gladwellIntro:
-      "In seinem Buch Outliers hat Malcolm Gladwell die Idee bekannt gemacht, dass man rund 10.000 Stunden gezielte Übung braucht, um in einem Bereich Weltklasse zu erreichen. Sie geht auf die Expertiseforschung von Anders Ericsson zurück. Meine Programmierstunden zähle ich als groben Maßstab für genau diese Art von Übung.",
-    myJourney: "Mein Weg beim Programmieren",
+      "In seinem Buch Outliers hat Malcolm Gladwell die Idee bekannt gemacht, dass man rund 10.000 Stunden gezielte Übung braucht, um in einem Bereich Weltklasse zu erreichen. Sie geht auf die Expertiseforschung von Anders Ericsson zurück. Meine Stunden in der Softwareentwicklung zähle ich als groben Maßstab für genau diese Art von Übung.",
+    myJourney: "Mein Weg in der Softwareentwicklung",
     hoursToGo: "Stunden fehlen noch",
     milestoneLabel: "Meilenstein",
     whatCounts: "Was ich zähle",
     whatCountsText:
-      "Konzentriertes Programmieren: bauen, debuggen, aus Dokumentation und Code lernen. Kein bloßes Zuschauen. Wie im Sport zählt gezieltes Üben, nicht die reine Menge.",
+      "Konzentrierte Softwareentwicklung: bauen, debuggen, mit KI-Werkzeugen wie Claude Code entwickeln, aus Dokumentation und Code lernen. Kein bloßes Zuschauen. Die Stunden erfasst meine eigene Zeiterfassung automatisch aus der aktiven Zeit in Editor, Terminal, KI-Werkzeugen und Entwicklerseiten, bei der Arbeit und privat. Wie im Sport zählt gezieltes Üben, nicht die reine Menge.",
     githubAsTrace: "Eine sichtbare Spur",
     githubAsTraceText:
       "GitHub zeigt einen Teil davon. Hier ist mein Contribution-Graph.",
