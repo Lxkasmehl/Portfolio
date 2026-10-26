@@ -2,7 +2,10 @@
  * Edit these to match your data. Used for Stats page, links, tech stack, and socials.
  */
 export const GITHUB_USERNAME: string = "Lxkasmehl";
-export const CODING_HOURS_CURRENT = 2034; // Update as you track; goal is 10_000
+// Software-development hours are tracked automatically by my time tracker (zeit.lukasmehl.com) and loaded live.
+// CODING_HOURS_CURRENT is only the fallback if that request fails.
+export const CODING_HOURS_CURRENT = 2647;
+export const CODING_HOURS_URL = "https://zeit.lukasmehl.com/public/dev-hours";
 export const CODING_HOURS_GOAL = 10_000;
 
 /** Social profile URLs. Simple Icons (cdn.simpleicons.org) used for logos – MIT license, fair use for attribution. */

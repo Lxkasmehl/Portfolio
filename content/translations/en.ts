@@ -248,7 +248,7 @@ export const en: Messages = {
     projectsTeaser: "PQCScanner, PicTur, RunSync & more",
     publicationsTeaser: "ESEM 2026 paper on post-quantum readiness, PDF and BibTeX",
     sportsTeaser: "Track & Field, results",
-    statsTeaser: "Coding hours & GitHub",
+    statsTeaser: "Software development hours & GitHub",
   },
   sports: {
     title: "Competitive sports",
@@ -348,20 +348,20 @@ export const en: Messages = {
   },
   stats: {
     title: "Stats",
-    codingHours: "Coding hours tracked",
+    codingHours: "Software development hours tracked",
     codingGoal: "Goal: 10,000 hours",
     githubContributions: "GitHub contributions",
     githubPlaceholder:
       "Set GITHUB_USERNAME in config.ts to show your contribution chart.",
     gladwellHeadline: "The 10,000 Hour Rule",
     gladwellIntro:
-      "In Outliers, Malcolm Gladwell popularized the idea that it takes roughly 10,000 hours of deliberate practice to reach world-class mastery in a field, a notion rooted in Anders Ericsson's research on expert performance. I track my coding hours as a rough proxy for that kind of deliberate practice.",
-    myJourney: "My coding journey",
+      "In Outliers, Malcolm Gladwell popularized the idea that it takes roughly 10,000 hours of deliberate practice to reach world-class mastery in a field, a notion rooted in Anders Ericsson's research on expert performance. I track my software development hours as a rough proxy for that kind of deliberate practice.",
+    myJourney: "My software development journey",
     hoursToGo: "hours to go",
     milestoneLabel: "milestone",
     whatCounts: "What I count",
     whatCountsText:
-      "Focused coding: building, debugging, learning from docs and code. Not passive consumption. Same idea as in sports: deliberate practice, not just volume.",
+      "Focused software development: building, debugging, developing with AI tools like Claude Code, learning from docs and code. Not passive consumption. The hours are tracked automatically by my own time tracker from active time in editor, terminal, AI tools and developer sites, at work and on my own projects. Same idea as in sports: deliberate practice, not just volume.",
     githubAsTrace: "One visible trace",
     githubAsTraceText:
       "GitHub is one footprint of that practice. Here's the contribution graph.",

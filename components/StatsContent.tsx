@@ -1,8 +1,9 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Title, Text, Progress, Stack, Box } from "@mantine/core";
 import { useLang } from "@/components/LangContext";
-import { GITHUB_USERNAME, CODING_HOURS_CURRENT, CODING_HOURS_GOAL } from "@/config";
+import { GITHUB_USERNAME, CODING_HOURS_CURRENT, CODING_HOURS_GOAL, CODING_HOURS_URL } from "@/config";
 
 const GITHUB_PLACEHOLDER = "YOUR_GITHUB_USERNAME";
 const GITHUB_CHART_URL = `https://ghchart.rshah.org/${GITHUB_USERNAME}`;
@@ -12,8 +13,18 @@ const MILESTONES = [2_500, 5_000, 7_500, 10_000] as const;
 export function StatsContent() {
   const { t } = useLang();
   const c = t.stats;
-  const progress = Math.min(100, (CODING_HOURS_CURRENT / CODING_HOURS_GOAL) * 100);
-  const hoursToGo = Math.max(0, CODING_HOURS_GOAL - CODING_HOURS_CURRENT);
+  // Live value from the time tracker; falls back to the number in config.ts
+  const [hours, setHours] = useState(CODING_HOURS_CURRENT);
+  useEffect(() => {
+    fetch(CODING_HOURS_URL)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (typeof data?.hours === "number") setHours(data.hours);
+      })
+      .catch(() => {});
+  }, []);
+  const progress = Math.min(100, (hours / CODING_HOURS_GOAL) * 100);
+  const hoursToGo = Math.max(0, CODING_HOURS_GOAL - hours);
 
   return (
     <div className="max-w-content mx-auto">
@@ -49,7 +60,7 @@ export function StatsContent() {
             className="text-3xl sm:text-4xl font-bold tabular-nums"
             style={{ color: "var(--color-accent)" }}
           >
-            {CODING_HOURS_CURRENT.toLocaleString()}
+            {hours.toLocaleString()}
           </span>
           <span style={{ color: "var(--color-text-muted)" }}>/ {CODING_HOURS_GOAL.toLocaleString()} h</span>
         </Box>
@@ -73,7 +84,7 @@ export function StatsContent() {
           />
           <Box className="flex justify-between relative -mt-8">
             {MILESTONES.map((m) => {
-              const reached = CODING_HOURS_CURRENT >= m;
+              const reached = hours >= m;
               const pct = (m / CODING_HOURS_GOAL) * 100;
               return (
                 <Box
