@@ -108,7 +108,7 @@ export const en: Messages = {
     linkPaper: "Read the paper",
     pqcscanner: {
       name: "PQCScanner: Post-Quantum Migration Readiness of Open-Source Software",
-      period: "Mar 2026 – Present",
+      period: "Mar 2026 – Oct 2026",
       description:
         "Research prototype for an empirical study on post-quantum cryptography (PQC) adoption in open-source software. The scanner analyzes source code repositories, detects usage of cryptographic primitives, and classifies each finding as post-quantum-vulnerable (e.g. RSA, ECDSA, ECDH), quantum-safe, or PQC-ready (e.g. Kyber, Dilithium). Sole-authored paper published at ESEM 2026 (LIPIcs); poster at CCSC Central Plains 2026.",
       aspects: [

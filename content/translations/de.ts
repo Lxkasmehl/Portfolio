@@ -107,7 +107,7 @@ export const de: Messages = {
     linkPaper: "Zum Paper",
     pqcscanner: {
       name: "PQCScanner: Wie bereit ist Open-Source-Software für Post-Quanten-Kryptografie?",
-      period: "Mär 2026 – heute",
+      period: "Mär 2026 – Okt 2026",
       description:
         "Forschungsprototyp für eine empirische Studie dazu, wie verbreitet Post-Quanten-Kryptografie (PQC) in Open-Source-Software ist. Der Scanner durchsucht Quellcode nach kryptografischen Verfahren und ordnet jeden Fund ein: durch Quantencomputer angreifbar (z. B. RSA, ECDSA, ECDH), quantensicher oder bereits PQC-fähig (z. B. Kyber, Dilithium). Das Paper dazu (alleiniger Autor) ist im Tagungsband der ESEM 2026 erschienen, dazu kam ein Poster bei der CCSC Central Plains 2026.",
       aspects: [
