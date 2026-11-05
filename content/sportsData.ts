@@ -286,6 +286,14 @@ export const PROGRESSION_8K_XC: ProgressionPoint[] = [
 // -- Recent results timeline (chronological: newest first). Source: TFRRS. --
 export const RECENT_RESULTS: ResultEntry[] = [
   {
+    date: '2026-10-11',
+    teamId: 'washburn',
+    meet: 'NCAA DII Pre-Nationals (Rimrock)',
+    event: '8k',
+    time: '24:52.7',
+    place: '18th',
+  },
+  {
     date: '2026-09-25',
     teamId: 'washburn',
     meet: 'Augustana Invitational',
