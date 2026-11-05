@@ -77,7 +77,8 @@ export const de: Messages = {
       highlights: [
         "Notendurchschnitt: GPA 3,97 von 4,00",
         "Minor Mathematik; Undergraduate Certificates in Cybersecurity und Artificial Intelligence",
-        "Dean's Scholarship Award (Dixie Donnelly Wantoch Scholarship) für das akademische Jahr 2026–2027, Washburn CIS Department (Apr 2026)",
+        "Dean's Scholarship Award (Dixie Donnelly Wantoch Scholarship) für das akademische Jahr 2026–2027, Washburn CIS Department (Apr 2026); International Transfer Merit Scholarship (seit Aug 2025)",
+        "Studienleistungen im Sport ausgezeichnet: USTFCCCA All-Academic Athlete im Cross Country (2025); MIAA Academic Excellence und MIAA Scholar-Athlete (2025/26)",
       ],
     },
     park: {
@@ -85,7 +86,7 @@ export const de: Messages = {
       school: "Park University",
       period: "Aug 2023 – Mai 2025",
       location: "Parkville, Missouri, USA",
-      note: "Beginn des Bachelorstudiums, im Sommer 2025 Wechsel an die Washburn University. Im Leichtathletik- und Cross-Country-Team (NAIA).",
+      note: "Beginn des Bachelorstudiums, im Sommer 2025 Wechsel an die Washburn University. Dean's List (Frühjahr und Herbst 2024). Im Leichtathletik- und Cross-Country-Team (NAIA).",
     },
     highSchool: {
       degree: "Abitur",
@@ -205,6 +206,8 @@ export const de: Messages = {
     title: "Zertifikate & Auszeichnungen",
     items: [
       "Dean's Scholarship Award (Dixie Donnelly Wantoch Scholarship), Washburn CIS Department, Apr 2026",
+      "USTFCCCA All-Academic Athlete im Cross Country (US-Trainerverband für Leichtathletik und Cross Country), 2025",
+      "MIAA Academic Excellence und MIAA Scholar-Athlete (Mid-America Intercollegiate Athletics Association), 2025/26",
       "8. Platz bundesweit, Deutscher Gründerpreis für Schüler:innen, Mai 2022",
       "Existenzia für Schüler: Wie erstelle ich einen Geschäftsplan? (GründerRegion Aachen), Mär 2021",
       "Sportmedaille der Stadt Würselen (Jan 2024) für Erfolge im Langstreckenlauf, verliehen bei der Würselener Sportmatinee.",
@@ -294,6 +297,10 @@ export const de: Messages = {
     ],
     highlights: "Auszeichnungen & Meisterschaften",
     awards: [
+      "MIAA Academic Excellence und MIAA Scholar-Athlete (2025/26).",
+      "USTFCCCA All-Academic Athlete im Cross Country (2025); das Washburn-Team wurde zusätzlich als All-Academic Team ausgezeichnet.",
+      "Heart of America Conference: First Team All-Conference im Cross Country (2023, 2024) und Läufer der Woche (Sep 2023).",
+      "Freshman of the Year der Park University (Athletics Awards, 2023/24).",
       "Sportmedaille der Stadt Würselen (Jan 2024) für Erfolge im Langstreckenlauf, verliehen bei der Würselener Sportmatinee.",
     ],
     photoAlt: "Sport",

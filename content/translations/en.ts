@@ -78,7 +78,8 @@ export const en: Messages = {
       highlights: [
         "Cumulative GPA: 3.97/4.00",
         "Minor in Mathematics; undergraduate certificates in Cybersecurity and in Artificial Intelligence",
-        "Dean's Scholarship Award (Dixie Donnelly Wantoch Scholarship) for the 2026–2027 academic year, Washburn CIS Department (Apr 2026)",
+        "Dean's Scholarship Award (Dixie Donnelly Wantoch Scholarship) for the 2026–2027 academic year, Washburn CIS Department (Apr 2026); International Transfer Merit Scholarship (since Aug 2025)",
+        "Academic honors in athletics: USTFCCCA All-Academic Athlete in cross country (2025); MIAA Academic Excellence and MIAA Scholar-Athlete (2025–26)",
       ],
     },
     park: {
@@ -86,7 +87,7 @@ export const en: Messages = {
       school: "Park University",
       period: "Aug 2023 – May 2025",
       location: "Parkville, Missouri, US",
-      note: "Started B.Sc. in Cybersecurity & Information and Computer Science; transferred to Washburn University in Summer 2025. Activities: Track and Field & Cross Country (NAIA).",
+      note: "Started B.Sc. in Cybersecurity & Information and Computer Science; transferred to Washburn University in Summer 2025. Dean's List (Spring and Fall 2024). Activities: Track and Field & Cross Country (NAIA).",
     },
     highSchool: {
       degree: "High School Diploma",
@@ -206,6 +207,8 @@ export const en: Messages = {
     title: "Certifications & Awards",
     items: [
       "Dean's Scholarship Award (Dixie Donnelly Wantoch Scholarship), Washburn CIS Department, Apr 2026",
+      "USTFCCCA All-Academic Athlete, men's cross country (U.S. Track & Field and Cross Country Coaches Association), 2025",
+      "MIAA Academic Excellence and MIAA Scholar-Athlete (Mid-America Intercollegiate Athletics Association), 2025–26",
       "8th place nationwide, German Startup Award for Students (Deutscher Gründerpreis für Schüler:innen), May 2022",
       "Existenzia für Schüler: Wie erstelle ich einen Geschäftsplan? (GründerRegion Aachen), Mar 2021",
       "Sports Medal of the City of Würselen (Jan 2024), awarded for achievements in long-distance running at the Würselen Sports Matinee.",
@@ -295,6 +298,10 @@ export const en: Messages = {
     ],
     highlights: "Awards & championships",
     awards: [
+      "MIAA Academic Excellence and MIAA Scholar-Athlete (2025–26).",
+      "USTFCCCA All-Academic Athlete in cross country (2025); Washburn was also named a USTFCCCA All-Academic Team.",
+      "Heart of America Conference: First Team All-Conference in cross country (2023, 2024) and Men's Runner of the Week (Sep 2023).",
+      "Park University Freshman of the Year (athletics awards, 2023–24).",
       "Sports Medal of the City of Würselen (Jan 2024), awarded for achievements in long-distance running at the Würselen Sports Matinee.",
     ],
     photoAlt: "Sports",
