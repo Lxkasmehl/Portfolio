@@ -168,7 +168,7 @@ export const en: Messages = {
         linkLabel: "doi:10.4230/LIPIcs.ESEM.2026.53",
       },
       {
-        date: "2026",
+        date: "Apr 2026",
         text: "CCSC Central Plains (Consortium for Computing Sciences in Colleges): research poster on PQCScanner; programming contest, 2nd place overall (with Sapnish Sharma and Ujjwal Sitaula).",
       },
     ],
@@ -203,7 +203,7 @@ export const en: Messages = {
     otherTitle: "Posters & competitions",
     otherItems: [
       {
-        date: "2026",
+        date: "Apr 2026",
         title: "CCSC Central Plains",
         text: "Research poster on PQCScanner at the Consortium for Computing Sciences in Colleges, Central Plains region. Programming contest: 2nd place overall with Sapnish Sharma and Ujjwal Sitaula.",
       },
