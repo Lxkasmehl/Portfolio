@@ -93,13 +93,13 @@ export const de: Messages = {
       school: "Heilig-Geist-Gymnasium",
       period: "Aug 2015 – Jun 2023",
       location: "Würselen, Deutschland",
-      note: "Schülersprecher im Schuljahr 2021/22",
+      note: "Note 1,0; Leistungskurse Mathematik und Physik",
     },
   },
   projects: {
     title: "Projekte",
     teaser:
-      "PQCScanner, PicTur, RunSync, Heiligtumsfahrtquiz und mehr, jeweils mit Beschreibung, Zeitraum und Links zu Code oder Live-Demo.",
+      "PQCScanner, PicTur, Laktatanalyse, RunSync und mehr, jeweils mit Beschreibung, Zeitraum und Links zu Code oder Live-Demo.",
     viewAll: "Alle Projekte anzeigen",
     linkLive: "Live / Demo",
     linkGithub: "Auf GitHub ansehen",
@@ -131,10 +131,17 @@ export const de: Messages = {
       ],
     },
     runsync: {
-      name: "RunSync: Automatisierte Fitness-Datensynchronisation",
-      period: "Sep 2024 – Okt 2025",
+      name: "RunSync: Trainingstagebuch im Abgleich",
+      period: "Sep 2024 – heute",
       description:
-        "Python-Automatisierung, die meine Trainingsdaten zwischen Strava, Google Sheets und Garmin Connect abgleicht und automatisch über GitHub Actions läuft. Technik: Python, Strava API, Google Sheets API, Selenium, OAuth2. Ergebnis: Die Pflege meines Trainingstagebuchs dauert Minuten statt Stunden.",
+        "Python-Dienst auf meinem eigenen Server (Docker, n8n), der Strava, Garmin Connect und mein Trainingstagebuch in Google Sheets abgleicht. Ein Telegram-Bot macht aus Text- oder Sprachnachrichten zu einem Lauf strukturierte Einträge, inklusive Intervallzeiten und Laktatmessungen.",
+      aspects: [],
+    },
+    lactate: {
+      name: "Laktatanalyse: Wirkt mein Training?",
+      period: "Okt 2026 – heute",
+      description:
+        "Statistisches Modell, das aus laktatgesteuertem Training die Laufform schätzt. Es trennt die Formentwicklung von den Bedingungen der einzelnen Einheiten wie Laufband, Hitze, Pausen und Intervalllänge, nutzt dabei Vorwissen aus der Literatur und erstellt einen Bericht mit Zieltempos für jede Trainingsform.",
       aspects: [],
     },
     heiligtumsfahrt: {

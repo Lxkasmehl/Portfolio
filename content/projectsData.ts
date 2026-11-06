@@ -12,6 +12,10 @@ export const PROJECTS = [
     link: "https://turtles.washburn.edu/",
   },
   {
+    id: "lactate",
+    github: "https://github.com/Lxkasmehl/lactate-analysis",
+  },
+  {
     id: "runsync",
     github: "https://github.com/Lxkasmehl/RunSync",
   },

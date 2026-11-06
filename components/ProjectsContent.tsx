@@ -80,6 +80,7 @@ export function ProjectsContent() {
 
   const pqcscannerData = PROJECTS.find((x) => x.id === "pqcscanner");
   const picturData = PROJECTS.find((x) => x.id === "pictur");
+  const lactateData = PROJECTS.find((x) => x.id === "lactate");
   const runsyncData = PROJECTS.find((x) => x.id === "runsync");
   const heiligtumsfahrtData = PROJECTS.find((x) => x.id === "heiligtumsfahrt");
 
@@ -179,6 +180,46 @@ export function ProjectsContent() {
               <ProjectLinks
                 liveUrl={"link" in picturData ? picturData.link : undefined}
                 githubUrl={picturData.github || undefined}
+                linkLiveLabel={p.linkLive}
+                linkGithubLabel={p.linkGithub}
+              />
+            </Box>
+          </Section>
+        )}
+
+        {/* Lactate Analysis */}
+        {lactateData && "github" in lactateData && (
+          <Section title="">
+            <Box
+              className="rounded-3xl p-6 border-2 card-playful"
+              style={{ borderColor: "var(--color-accent-2)", backgroundColor: "var(--color-surface-elevated)" }}
+            >
+              {lactateData.github && githubOgImageUrl(lactateData.github) && (
+                <a
+                  href={lactateData.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full max-w-[280px] rounded-xl overflow-hidden border mb-4"
+                  style={{ borderColor: "var(--color-border)" }}
+                >
+                  <img
+                    src={githubOgImageUrl(lactateData.github)!}
+                    alt=""
+                    className="w-full h-auto object-cover"
+                  />
+                </a>
+              )}
+              <Text fw={600} size="md" style={{ color: "var(--color-text)" }}>
+                {p.lactate.name}
+              </Text>
+              <Text size="sm" mt={4} style={{ color: "var(--color-text-muted)" }}>
+                {p.lactate.period}
+              </Text>
+              <Text size="sm" mt="sm" className="leading-relaxed" style={{ color: "var(--color-text)" }}>
+                {p.lactate.description}
+              </Text>
+              <ProjectLinks
+                githubUrl={lactateData.github || undefined}
                 linkLiveLabel={p.linkLive}
                 linkGithubLabel={p.linkGithub}
               />

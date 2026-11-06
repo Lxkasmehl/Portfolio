@@ -90,17 +90,17 @@ export const en: Messages = {
       note: "Started B.Sc. in Cybersecurity & Information and Computer Science; transferred to Washburn University in Summer 2025. Dean's List (Spring and Fall 2024). Activities: Track and Field & Cross Country (NAIA).",
     },
     highSchool: {
-      degree: "High School Diploma",
+      degree: "Abitur (German university entrance qualification)",
       school: "Heilig-Geist-Gymnasium",
       period: "Aug 2015 – Jun 2023",
       location: "Würselen, Deutschland",
-      note: "Student body president for the 2021/2022 school year",
+      note: "Final grade 1.0; advanced courses in Mathematics and Physics",
     },
   },
   projects: {
     title: "Projects",
     teaser:
-      "PQCScanner, PicTur, RunSync, Heiligtumsfahrtquiz and more, each with a description, timeline, and links to code or live demos.",
+      "PQCScanner, PicTur, Lactate Analysis, RunSync and more, each with a description, timeline, and links to code or live demos.",
     viewAll: "View all projects",
     linkLive: "Live / Demo",
     linkGithub: "View on GitHub",
@@ -132,10 +132,17 @@ export const en: Messages = {
       ],
     },
     runsync: {
-      name: "RunSync: Automated Fitness Data Synchronization Platform",
-      period: "Sep 2024 – Oct 2025",
+      name: "RunSync: Training Diary Sync",
+      period: "Sep 2024 – Present",
       description:
-        "Python-based automation that synchronizes fitness data across Strava, Google Sheets, and Garmin Connect for my personal training diary. Automated sync, custom Google Sheets integration, smart title/description sync, cloud execution via GitHub Actions. Stack: Python, Strava API, Google Sheets API, Selenium, GitHub Actions, OAuth2. Impact: Reduced data management time from hours to minutes while ensuring consistency across all fitness platforms.",
+        "Python service on my self-hosted server (Docker, n8n) that keeps Strava, Garmin Connect, and my training diary in Google Sheets in sync. A Telegram bot turns text or voice notes about a run into structured entries, including interval splits and lactate tests.",
+      aspects: [],
+    },
+    lactate: {
+      name: "Lactate Analysis: Is My Training Working?",
+      period: "Oct 2026 – Present",
+      description:
+        "Statistical model that estimates running fitness from lactate-guided training data. It separates the fitness trend from session conditions such as treadmill, heat, rest, and rep length, using literature-based priors, and produces a report with target paces for each workout type.",
       aspects: [],
     },
     heiligtumsfahrt: {

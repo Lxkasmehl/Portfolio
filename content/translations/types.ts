@@ -86,6 +86,12 @@ export interface Messages {
       description: string;
       aspects: string[];
     };
+    lactate: {
+      name: string;
+      period: string;
+      description: string;
+      aspects: string[];
+    };
     heiligtumsfahrt: {
       name: string;
       period: string;
