@@ -294,9 +294,9 @@ export const de: Messages = {
     days: "Tage",
     recentHeading: "Highlights 2025–2026",
     recent: [
+      "MIAA-Cross-Meisterschaften 2026: Washburn gewinnt den Conference-Titel in der Teamwertung; Platz 16 in 25:06.2 (8 km) als vierter Wertungsläufer.",
       "Augustana Invitational (Sep 2026): Platz 10 in 8-km-Cross-Bestzeit (24:42.4); Washburn gewinnt die Teamwertung (1. von 19 Teams).",
       "MIAA-Freiluftmeisterschaften 2026: 5. Platz über 10.000 m in Bestzeit (30:37.62); 1.500 m Bestzeit 4:08.98 bei den UCM Mule Relays (Apr 2026).",
-      "Washburn Open Halle 5.000 m 14:54 (Jan 2026); Washburn Rust Buster 3.000 m 8:43.56 (Jan 2026).",
       "NCAA-DII-Cross-Country-Meisterschaften 2025 (10 km); Central Region Platz 41, Team qualifiziert; MIAA Cross Platz 32.",
       "Erstmals unter 25 Minuten über 8 km Cross beim DBU Old Glory Gallop (24:49). Gans Creek 8 km in 25:03, Streckenbestzeit und 8-km-Cross-Bestzeit zum Saisonauftakt.",
       "Heart of America Conference: Sieg über 10.000 m (2025, 2024), Sieg über 5.000 m Halle (2025); Iowa State Holiday 3.000 m Sieg.",
@@ -304,6 +304,7 @@ export const de: Messages = {
     ],
     highlights: "Auszeichnungen & Meisterschaften",
     awards: [
+      "MIAA-Meister im Cross Country mit dem Team der Washburn University (2026).",
       "MIAA Academic Excellence und MIAA Scholar-Athlete (2025/26).",
       "USTFCCCA All-Academic Athlete im Cross Country (2025); das Washburn-Team wurde zusätzlich als All-Academic Team ausgezeichnet.",
       "Heart of America Conference: First Team All-Conference im Cross Country (2023, 2024) und Läufer der Woche (Sep 2023).",

@@ -286,6 +286,17 @@ export const PROGRESSION_8K_XC: ProgressionPoint[] = [
 // -- Recent results timeline (chronological: newest first). Source: TFRRS. --
 export const RECENT_RESULTS: ResultEntry[] = [
   {
+    date: '2026-11-07',
+    teamId: 'washburn',
+    meet: 'MIAA XC Championships',
+    event: '8k',
+    time: '25:06.2',
+    place: '16th',
+    note: 'Washburn won the team title',
+    championshipLevel: 'conference',
+    championshipNote: 'Washburn won the MIAA team title',
+  },
+  {
     date: '2026-10-11',
     teamId: 'washburn',
     meet: 'NCAA DII Pre-Nationals (Rimrock)',
