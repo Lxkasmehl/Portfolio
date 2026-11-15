@@ -295,7 +295,7 @@ export const en: Messages = {
     days: "days",
     recentHeading: "2025–2026 highlights",
     recent: [
-      "MIAA Cross Country Championships 2026: Washburn won the conference team title; 16th in 25:06.2 (8k) as the team's fourth scorer.",
+      "MIAA Cross Country Championships 2026: Washburn won the first conference title in program history; 16th in 25:06.2 (8k) as the team's fourth scorer, Honorable Mention All-MIAA.",
       "Augustana Invitational (Sep 2026): 10th in an 8k XC PR of 24:42.4; Washburn won the team title (1st of 19 teams).",
       "MIAA Outdoor Championships 2026: 5th in the 10,000 m in a PR of 30:37.62; 1,500 m PR 4:08.98 at UCM Mule Relays (Apr 2026).",
       "NCAA DII Cross Country Nationals 2025 (10k); Central Region 41st, team qualified; MIAA XC 32nd.",
@@ -305,7 +305,7 @@ export const en: Messages = {
     ],
     highlights: "Awards & championships",
     awards: [
-      "MIAA Cross Country team champion with Washburn (2026).",
+      "MIAA Cross Country team champion with Washburn, the first conference title in program history, and Honorable Mention All-MIAA (2026).",
       "MIAA Academic Excellence and MIAA Scholar-Athlete (2025–26).",
       "USTFCCCA All-Academic Athlete in cross country (2025); Washburn was also named a USTFCCCA All-Academic Team.",
       "Heart of America Conference: First Team All-Conference in cross country (2023, 2024) and Men's Runner of the Week (Sep 2023).",

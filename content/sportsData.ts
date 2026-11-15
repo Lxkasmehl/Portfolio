@@ -294,7 +294,7 @@ export const RECENT_RESULTS: ResultEntry[] = [
     place: '16th',
     note: 'Washburn won the team title',
     championshipLevel: 'conference',
-    championshipNote: 'Washburn won the MIAA team title',
+    championshipNote: 'First MIAA team title in program history · Honorable Mention All-MIAA',
   },
   {
     date: '2026-10-11',
