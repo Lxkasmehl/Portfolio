@@ -16,7 +16,6 @@ export const PROJECTS = [
   {
     id: "lactate",
     github: "https://github.com/Lxkasmehl/lactate-analysis",
-    link: "https://lactate.lukasmehl.com/",
   },
   {
     id: "runsync",

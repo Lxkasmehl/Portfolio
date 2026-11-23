@@ -243,9 +243,8 @@ export function ProjectsContent() {
                 {p.lactate.description}
               </Text>
               <ProjectLinks
-                liveUrl={"link" in lactateData ? lactateData.link : undefined}
                 githubUrl={lactateData.github || undefined}
-                linkLiveLabel={p.linkReport}
+                linkLiveLabel={p.linkLive}
                 linkGithubLabel={p.linkGithub}
               />
             </Box>

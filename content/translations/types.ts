@@ -67,7 +67,6 @@ export interface Messages {
     linkGithubWeb: string;
     linkGithubAndroid: string;
     linkPaper: string;
-    linkReport: string;
     privateCode: string;
     platform: {
       name: string;

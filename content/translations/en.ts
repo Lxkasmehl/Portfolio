@@ -107,7 +107,6 @@ export const en: Messages = {
     linkGithubWeb: "Web (GitHub)",
     linkGithubAndroid: "Android (GitHub)",
     linkPaper: "Read the paper",
-    linkReport: "Live report",
     privateCode: "Code is private because it runs on my personal data.",
     platform: {
       name: "Self-Hosted Automation Platform: A Server That Runs My Everyday Life",
