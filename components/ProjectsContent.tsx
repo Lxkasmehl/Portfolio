@@ -94,6 +94,46 @@ export function ProjectsContent() {
       </h1>
 
       <div className="space-y-8">
+        {/* Self-hosted automation platform (private code, no links) */}
+        <Section title="">
+          <Box
+            className="rounded-3xl p-6 border-2 card-playful"
+            style={{ borderColor: "var(--color-accent-2)", backgroundColor: "var(--color-surface-elevated)" }}
+          >
+            <Text fw={600} size="md" style={{ color: "var(--color-text)" }}>
+              {p.platform.name}
+            </Text>
+            <Text size="sm" mt={4} style={{ color: "var(--color-text-muted)" }}>
+              {p.platform.period}
+            </Text>
+            <Text size="sm" mt="sm" className="leading-relaxed" style={{ color: "var(--color-text)" }}>
+              {p.platform.description}
+            </Text>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              {p.platform.parts.map((part) => (
+                <div
+                  key={part.title}
+                  className="rounded-2xl p-4 border"
+                  style={{ borderColor: "var(--color-border)" }}
+                >
+                  <Text fw={600} size="sm" style={{ color: "var(--color-accent-2)" }}>
+                    {part.title}
+                  </Text>
+                  <Text size="sm" mt={4} className="leading-relaxed" style={{ color: "var(--color-text)" }}>
+                    {part.text}
+                  </Text>
+                </div>
+              ))}
+            </div>
+            <Text size="sm" mt="md" style={{ color: "var(--color-text-muted)" }}>
+              <strong>{p.platform.stackLabel}:</strong> {p.platform.stack}
+            </Text>
+            <Text size="xs" mt={4} fs="italic" style={{ color: "var(--color-text-muted)" }}>
+              {p.privateCode}
+            </Text>
+          </Box>
+        </Section>
+
         {/* PQCScanner */}
         {pqcscannerData && "github" in pqcscannerData && (
           <Section title="">
@@ -141,27 +181,12 @@ export function ProjectsContent() {
         )}
 
         {/* PicTur */}
-        {picturData && "github" in picturData && (
+        {picturData && "link" in picturData && (
           <Section title="">
             <Box
               className="rounded-3xl p-6 border-2 card-playful"
               style={{ borderColor: "var(--color-accent-2)", backgroundColor: "var(--color-surface-elevated)" }}
             >
-              {picturData.github && githubOgImageUrl(picturData.github) && (
-                <a
-                  href={picturData.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full max-w-[280px] rounded-xl overflow-hidden border mb-4"
-                  style={{ borderColor: "var(--color-border)" }}
-                >
-                  <img
-                    src={githubOgImageUrl(picturData.github)!}
-                    alt=""
-                    className="w-full h-auto object-cover"
-                  />
-                </a>
-              )}
               <Text fw={600} size="md" style={{ color: "var(--color-text)" }}>
                 {p.pictur.name}
               </Text>
@@ -178,8 +203,7 @@ export function ProjectsContent() {
                 ))}
               </List>
               <ProjectLinks
-                liveUrl={"link" in picturData ? picturData.link : undefined}
-                githubUrl={picturData.github || undefined}
+                liveUrl={picturData.link}
                 linkLiveLabel={p.linkLive}
                 linkGithubLabel={p.linkGithub}
               />
@@ -219,8 +243,9 @@ export function ProjectsContent() {
                 {p.lactate.description}
               </Text>
               <ProjectLinks
+                liveUrl={"link" in lactateData ? lactateData.link : undefined}
                 githubUrl={lactateData.github || undefined}
-                linkLiveLabel={p.linkLive}
+                linkLiveLabel={p.linkReport}
                 linkGithubLabel={p.linkGithub}
               />
             </Box>
@@ -258,6 +283,13 @@ export function ProjectsContent() {
               <Text size="sm" mt="sm" className="leading-relaxed" style={{ color: "var(--color-text)" }}>
                 {p.runsync.description}
               </Text>
+              {p.runsync.aspects.length > 0 && (
+                <List size="sm" mt="xs" spacing="xs" className="list-disc pl-5">
+                  {p.runsync.aspects.map((item, i) => (
+                    <List.Item key={i}>{item}</List.Item>
+                  ))}
+                </List>
+              )}
               <ProjectLinks
                 githubUrl={runsyncData.github || undefined}
                 linkLiveLabel={p.linkLive}

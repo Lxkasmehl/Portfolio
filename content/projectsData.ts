@@ -4,16 +4,19 @@
 
 export const PROJECTS = [
   {
+    id: "platform",
+  },
+  {
     id: "pqcscanner",
     github: "https://github.com/Lxkasmehl/pqc-scanner",  },
   {
     id: "pictur",
-    github: "https://github.com/Lxkasmehl/PicTur",
     link: "https://turtles.washburn.edu/",
   },
   {
     id: "lactate",
     github: "https://github.com/Lxkasmehl/lactate-analysis",
+    link: "https://lactate.lukasmehl.com/",
   },
   {
     id: "runsync",

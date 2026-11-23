@@ -100,13 +100,45 @@ export const en: Messages = {
   projects: {
     title: "Projects",
     teaser:
-      "PQCScanner, PicTur, Lactate Analysis, RunSync and more, each with a description, timeline, and links to code or live demos.",
+      "My self-hosted automation platform, PQCScanner, PicTur, Lactate Analysis, RunSync and more, each with a description, timeline, and links to code or live demos.",
     viewAll: "View all projects",
     linkLive: "Live / Demo",
     linkGithub: "View on GitHub",
     linkGithubWeb: "Web (GitHub)",
     linkGithubAndroid: "Android (GitHub)",
     linkPaper: "Read the paper",
+    linkReport: "Live report",
+    privateCode: "Code is private because it runs on my personal data.",
+    platform: {
+      name: "Self-Hosted Automation Platform: A Server That Runs My Everyday Life",
+      period: "Oct 2026 – Present",
+      description:
+        "A Linux server I run and maintain myself. It hosts n8n with more than 20 workflows, all written as JavaScript and deployed through the n8n API instead of being clicked together, plus several Python services, PostgreSQL, and a web dashboard. Everything lives in one repository, and every push to main is deployed automatically by GitHub Actions.",
+      parts: [
+        {
+          title: "Telegram assistant",
+          text: "An LLM agent I talk to by text or voice message. With more than 20 tools it manages my calendar, tasks, reminders, notes in my Obsidian vault, and water intake on Garmin, and it documents my runs. I chose the model with my own evaluation set of 18 questions in German and English that scores tool choice, parameters, reply language, latency, and cost; tools that change data are replaced by mocks, so the evaluation has no side effects.",
+        },
+        {
+          title: "Time tracking without timers",
+          text: "Records how I actually spend my time: sleep and training from Garmin, calendar events, and app and domain usage from ActivityWatch on my computers. An LLM fills gaps with suggestions I confirm, and every minute awake is rated as meaningful, neutral, or wasted. Each evening a review arrives on Telegram as a rendered timeline, timed from my own sleep data.",
+        },
+        {
+          title: "Finances and a trading bot that competes with me",
+          text: "A bridge to the unofficial internal API of my personal finance app mirrors accounts it cannot connect itself (through PSD2 open banking) and charts my net worth over time. A paper-trading bot reads the news every weekday morning and trades a play-money copy of my real portfolio on its own, so after a few months I will know whether it beats me and an MSCI World index fund.",
+        },
+        {
+          title: "Deep work laptop",
+          text: "A Linux laptop for focused work that can only reach domains on an allowlist kept on the server. Loosening the rules takes effect only after 24 hours, while tightening is instant, so the lock holds against impulses. Time on the laptop automatically becomes deep work blocks in the time tracker.",
+        },
+        {
+          title: "Operations",
+          text: "Hardened server (SSH keys only, firewall, fail2ban), a secret on every webhook, a deploy key that can run a single script, encrypted nightly off-site backups with a tested restore, and a Telegram alert whenever something fails.",
+        },
+      ],
+      stackLabel: "Stack",
+      stack: "n8n, Python, PostgreSQL, Docker Compose, Caddy, GitHub Actions, LLM APIs (OpenRouter, OpenAI), Garmin, Strava, and Google APIs",
+    },
     pqcscanner: {
       name: "PQCScanner: Post-Quantum Migration Readiness of Open-Source Software",
       period: "Mar 2026 – Oct 2026",
@@ -136,7 +168,11 @@ export const en: Messages = {
       period: "Sep 2024 – Present",
       description:
         "Python service on my self-hosted server (Docker, n8n) that keeps Strava, Garmin Connect, and my training diary in Google Sheets in sync. A Telegram bot turns text or voice notes about a run into structured entries, including interval splits and lactate tests.",
-      aspects: [],
+      aspects: [
+        "A Strava webhook starts the flow for every new run; the Telegram bot then asks about the session, shoes, and how it felt",
+        "Writes descriptions and shoes to Strava and Garmin Connect and the run to my training log, with a ledger so nothing is written twice",
+        "Interval workouts: matches the reps I describe to my watch's lap data, shows a preview with splits, and fills my lactate sheet after I confirm",
+      ],
     },
     lactate: {
       name: "Lactate Analysis: Is My Training Working?",
@@ -255,7 +291,7 @@ export const en: Messages = {
       "Web dev @ Pentos · ESEM 2026 paper (PQCScanner) · B.Sc. CIS @ Washburn",
     explore: "Explore",
     cvTeaser: "Experience, education & about",
-    projectsTeaser: "PQCScanner, PicTur, RunSync & more",
+    projectsTeaser: "Self-hosted automation platform, PQCScanner, RunSync & more",
     publicationsTeaser: "ESEM 2026 paper on post-quantum readiness, PDF and BibTeX",
     sportsTeaser: "Track & Field, results",
     statsTeaser: "Software development hours & GitHub",

@@ -99,13 +99,45 @@ export const de: Messages = {
   projects: {
     title: "Projekte",
     teaser:
-      "PQCScanner, PicTur, Laktatanalyse, RunSync und mehr, jeweils mit Beschreibung, Zeitraum und Links zu Code oder Live-Demo.",
+      "Meine eigene Automatisierungsplattform, PQCScanner, PicTur, Laktatanalyse, RunSync und mehr, jeweils mit Beschreibung, Zeitraum und Links zu Code oder Live-Demo.",
     viewAll: "Alle Projekte anzeigen",
     linkLive: "Live / Demo",
     linkGithub: "Auf GitHub ansehen",
     linkGithubWeb: "Web (GitHub)",
     linkGithubAndroid: "Android (GitHub)",
     linkPaper: "Zum Paper",
+    linkReport: "Live-Bericht",
+    privateCode: "Der Code ist privat, weil er mit meinen persönlichen Daten läuft.",
+    platform: {
+      name: "Eigene Automatisierungsplattform: Ein Server, der meinen Alltag steuert",
+      period: "Okt 2026 – heute",
+      description:
+        "Ein Linux-Server, den ich selbst betreibe und pflege. Darauf laufen n8n mit mehr als 20 Workflows, die alle als JavaScript geschrieben und über die n8n-API ausgerollt werden statt zusammengeklickt, dazu mehrere Python-Dienste, PostgreSQL und ein Web-Dashboard. Alles liegt in einem Repository, jeder Push auf main wird per GitHub Actions automatisch ausgerollt.",
+      parts: [
+        {
+          title: "Telegram-Assistent",
+          text: "Ein LLM-Agent, mit dem ich per Text oder Sprachnachricht spreche. Mit mehr als 20 Tools verwaltet er Kalender, Aufgaben, Erinnerungen, Notizen in meinem Obsidian-Vault und meine Trinkmenge in Garmin und dokumentiert meine Läufe. Das Modell habe ich mit einem eigenen Testsatz aus 18 Fragen auf Deutsch und Englisch ausgewählt, der Tool-Wahl, Parameter, Antwortsprache, Dauer und Kosten bewertet; Tools, die Daten ändern, werden dabei durch Attrappen ersetzt, sodass der Test nichts verändert.",
+        },
+        {
+          title: "Zeiterfassung ohne Stoppuhr",
+          text: "Erfasst, womit ich meine Zeit wirklich verbringe: Schlaf und Training aus Garmin, Kalendertermine und genutzte Programme und Websites aus ActivityWatch auf meinen Rechnern. Ein Sprachmodell füllt Lücken mit Vorschlägen, die ich bestätige, und jede wache Minute gilt als sinnvoll, neutral oder verschwendet. Abends kommt ein Rückblick als gezeichnete Zeitleiste per Telegram, zeitlich abgestimmt auf meine eigenen Schlafdaten.",
+        },
+        {
+          title: "Finanzen und ein Trading-Bot, der gegen mich antritt",
+          text: "Eine Brücke zur inoffiziellen internen API meiner Finanz-App spiegelt Konten, die sie selbst nicht anbinden kann (über PSD2 Open Banking), und zeigt den Verlauf meines Vermögens. Ein Papierdepot-Bot liest werktags morgens die Nachrichten und handelt selbstständig mit einer Spielgeld-Kopie meines echten Depots; nach einigen Monaten zeigt sich, ob er besser ist als ich und ein MSCI-World-ETF.",
+        },
+        {
+          title: "Deep-Work-Laptop",
+          text: "Ein Linux-Laptop für konzentriertes Arbeiten, der nur Domains auf einer Allowlist vom Server erreicht. Lockerungen wirken erst nach 24 Stunden, Verschärfungen sofort, damit die Sperre gegen spontane Impulse hält. Zeit am Laptop wird automatisch zu Deep-Work-Blöcken in der Zeiterfassung.",
+        },
+        {
+          title: "Betrieb",
+          text: "Abgesicherter Server (nur SSH-Schlüssel, Firewall, fail2ban), ein Secret an jedem Webhook, ein Deploy-Key, der nur ein einziges Skript ausführen darf, verschlüsselte nächtliche Backups außer Haus mit getesteter Wiederherstellung und eine Telegram-Meldung, sobald etwas ausfällt.",
+        },
+      ],
+      stackLabel: "Technik",
+      stack: "n8n, Python, PostgreSQL, Docker Compose, Caddy, GitHub Actions, LLM-APIs (OpenRouter, OpenAI), Garmin-, Strava- und Google-APIs",
+    },
     pqcscanner: {
       name: "PQCScanner: Wie bereit ist Open-Source-Software für Post-Quanten-Kryptografie?",
       period: "Mär 2026 – Okt 2026",
@@ -135,7 +167,11 @@ export const de: Messages = {
       period: "Sep 2024 – heute",
       description:
         "Python-Dienst auf meinem eigenen Server (Docker, n8n), der Strava, Garmin Connect und mein Trainingstagebuch in Google Sheets abgleicht. Ein Telegram-Bot macht aus Text- oder Sprachnachrichten zu einem Lauf strukturierte Einträge, inklusive Intervallzeiten und Laktatmessungen.",
-      aspects: [],
+      aspects: [
+        "Ein Strava-Webhook startet den Ablauf bei jedem neuen Lauf; danach fragt der Telegram-Bot nach Training, Schuhen und Eindrücken",
+        "Schreibt Beschreibung und Schuhe nach Strava und Garmin Connect und den Lauf ins Trainingstagebuch, ein Ledger verhindert doppelte Einträge",
+        "Intervalltraining: ordnet die beschriebenen Wiederholungen den Runden der Uhr zu, zeigt eine Vorschau mit Zwischenzeiten und trägt nach Bestätigung die Laktatwerte ein",
+      ],
     },
     lactate: {
       name: "Laktatanalyse: Wirkt mein Training?",
@@ -254,7 +290,7 @@ export const de: Messages = {
       "Webentwicklung @ Pentos · ESEM-2026-Paper (PQCScanner) · B.Sc. CIS @ Washburn",
     explore: "Entdecken",
     cvTeaser: "Erfahrung, Ausbildung und mehr über mich",
-    projectsTeaser: "PQCScanner, PicTur, RunSync & mehr",
+    projectsTeaser: "Automatisierungsplattform, PQCScanner, RunSync & mehr",
     publicationsTeaser: "ESEM-2026-Paper zu Post-Quanten-Kryptografie, mit PDF und BibTeX",
     sportsTeaser: "Leichtathletik und Ergebnisse",
     statsTeaser: "Stunden Softwareentwicklung & GitHub",

@@ -67,6 +67,16 @@ export interface Messages {
     linkGithubWeb: string;
     linkGithubAndroid: string;
     linkPaper: string;
+    linkReport: string;
+    privateCode: string;
+    platform: {
+      name: string;
+      period: string;
+      description: string;
+      parts: { title: string; text: string }[];
+      stackLabel: string;
+      stack: string;
+    };
     pictur: {
       name: string;
       period: string;
